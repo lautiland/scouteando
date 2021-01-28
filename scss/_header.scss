@@ -1,0 +1,37 @@
+@import "menu";
+
+header {
+	background-color: black;
+	background-image: url("../imagenes/noche.gif");
+
+	.top {
+		padding: 2rem;
+	}
+	.top2 {
+		padding: 0.3rem;
+		width: 100%;
+	}
+
+	img, svg {
+		vertical-align: top; 
+	}
+
+	#titulo {
+		color: white;
+		margin-bottom: 0.5rem;
+		padding: 2.5rem;
+		font-size: 5rem;
+		font-family: 'Langar', cursive;
+		display: inline;
+		margin-left: 2rem;
+
+
+	}
+
+}
+
+@media only screen and (max-width: 512px) {
+	#titulo {
+		font-size: 5%;
+	}
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>			<!-- Indica que es html 5 -->
+<html lang="en">
+
+<head>			<!-- "head" es solo metadata para el navegador -->
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Scouteando</title>			<!-- "title" titulo que aparece en la pestaña del navegador -->
+
+	<meta name="description" content="Este es un blog dedicado a compartir información sobre él Movimiento Scout con todos aquellos que tengan algun interés sobre el o sencillamente les de curiosidad.">
+	<meta name="keywords" content="SCOUT, MOVIMIENTO, OMMS, BLOG, INFORMACION, PRINCIPAL, ENTRADAS">
+
+	<link rel="stylesheet" href="css/reset.css">			<!-- "link" permite añadir estilos de una hoja de estilos en css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">			<!-- Fuente Eczar -->
+	<link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">			<!-- Funete Langar -->
+	<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">	
+
+</head>
+
+<body>			<!-- "body" muestra el contenido de la página -->
+
+	<header>			<!--"header" define el encabezado -->
+
+		<div class="top">
+			<img src="imagenes/logo.ico" width="50" height="50" class="img-fluid" />			<!-- "img" sirve para insertar imagenes, es este caso el logo de la página -->
+
+			<h1 id="titulo">Scouteando</h1>			<!-- Título del blog en elemento de bloque -->
+
+			<input type="checkbox" id="menu_hamb">
+			<label for="manu_hamb" class="label_menu">
+				<span id="span1"></span>
+				<span id="span2"></span>
+				<span id="span3"></span>
+			</label><br>
+
+
+			<div class="menu_des">
+				<h1>Menú</h1>
+				<a href="">
+					<button id="menu_hamb_close">
+					</button>
+					<div class="label_menu_close">
+						<span id="span4"></span>
+						<span id="span6"></span>
+					</div>
+				</a>
+				<ul>
+					<li>
+						<a href="index.html" class="enlaces">Inicio</a>					
+					</li><br><br>
+					<li>
+						<a href="html/que_es.html" class="enlaces">¿Qué es el movimiento Scout?</a>
+						<ul>
+							<li>
+								<a href="html/que_es.html #cual_es_el_objetivo" class="enlaces">¿Cuál es el objetivo del movimiento?</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #los_principios_scout" class="enlaces">Los principios Scout</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #quien_fue_el_creador" class="enlaces">¿Quién fue el creador del escultismo?</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #la_ley_scout" class="enlaces">La ley Scout</a>
+							</li>
+							<br>
+						</ul><br>	
+					</li>
+					<li>
+						<a href="html/como_se.html" class="enlaces">¿Cómo se compone?</a>
+						<ul>
+							<li>
+								<a href="html/como_se.html #movimiento_scout_a_nivel_mundial" class="enlaces">Organización a nivel mundial</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #asociaciones_scout_y_su_distribucion" class="enlaces">Asociaciones Scout</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #zona_y_distrito" class="enlaces">Zona y distrito</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #organizacion_grupal" class="enlaces">Organización grupal</a>
+							</li>
+							<br>
+						</ul><br>
+					</li>
+					<li>
+						<a href="html/inicios.html" class="enlaces">El movimiento en sus inicios</a>
+						<ul>
+							<li>
+								<a href="html/inicios.html #como_se_creo" class="enlaces">¿Cómo se creó?</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #el_primer_campamento_scout" class="enlaces">El primer campamento</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #donde_esta_brownsea" class="enlaces">¿Dónde se creó?</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #quien_es_kim" class="enlaces">¿Quién es Kim?</a>
+							</li>
+							<br>
+						</ul><br>
+					</li>
+					<li>
+						<a href="html/contacto.html" class="enlaces">Contacto</a>
+					</li><br>
+				</ul>
+			</div>
+
+			<div class="top2">
+				<ul class="menu">			<!-- "ul" es usado para hacer una lista desordenada, en este caso, el menú -->
+
+					<li>
+						<a href="index.html" class="enlaces">Inicio</a>			<!-- "a" es usado para redireccionar a una página, en este caso es a una local, una sección del sitio -->
+						<ul>
+							<li>
+								<a href="#introduccion"  class="enlaces">Introducción</a>
+							</li>
+							<li>
+								<a href="#recientes"  class="enlaces">Entradas recientes</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="html/que_es.html" class="enlaces">¿Qué es el movimiento Scout?</a>
+						<ul>
+							<li>
+								<a href="html/que_es.html #cual_es_el_objetivo" class="enlaces">¿Cuál es el objetivo del movimiento?</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #los_principios_scout" class="enlaces">Los principios Scout</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #quien_fue_el_creador" class="enlaces">¿Quién fue el creador del escultismo?</a>
+							</li>
+							<li>
+								<a href="html/que_es.html #la_ley_scout" class="enlaces">La ley Scout</a>
+							</li>
+							<br>
+						</ul>	
+					</li>
+					<li>
+						<a href="html/como_se.html" class="enlaces">¿Cómo se compone?</a>
+						<ul>
+							<li>
+								<a href="html/como_se.html #movimiento_scout_a_nivel_mundial" class="enlaces">Organización a nivel mundial</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #asociaciones_scout_y_su_distribucion" class="enlaces">Asociaciones Scout</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #zona_y_distrito" class="enlaces">Zona y distrito</a>
+							</li>
+							<li>
+								<a href="html/como_se.html #organizacion_grupal" class="enlaces">Organización grupal</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="html/inicios.html" class="enlaces">El movimiento en sus inicios</a>
+						<ul>
+							<li>
+								<a href="html/inicios.html #como_se_creo" class="enlaces">¿Cómo se creó?</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #el_primer_campamento_scout" class="enlaces">El primer campamento</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #donde_esta_brownsea" class="enlaces">¿Dónde se creó?</a>
+							</li>
+							<li>
+								<a href="html/inicios.html #quien_es_kim" class="enlaces">¿Quién es Kim?</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="html/contacto.html" class="enlaces">Contacto</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+
+	</header>
+
+	<section class="container">			<!--Etiqueta semántica que define el cuerpo de la página-->
+		<div class="row justify-content-between">
+
+			<h2 id="introduccion" class="col-12">Introducción</h2>
+
+			<div class="col-sm-12 col-md-12 col-lg-12 cuadro">
+				<article>
+
+					<h3>¿De qué se trata este proyecto?</h3><br>			<!--Título de la entrada en elemento de bloque-->
+					<p>			<!--"p" significa parafo-->
+						Este blog fue creado con el objetivo de hacer una comunidad dedicada a compartir información sobre él <strong>Movimiento Scout</strong> con todos aquellos que tengan algun interés sobre el o sencillamente les de curiosidad.			<!--"strong" significa negrita-->
+					</p>
+				</article><br>
+			</div>
+
+			<h2 id="recientes" class="col-12">Entradas recientes</h2>
+
+
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>¿Cuál es el objetivo del movimiento?</h3>
+					<p>
+						El Movimiento Scout o escultismo nació como una manera de combatir la delincuencia en la Inglaterra de principios del siglo xx, buscando el desarrollo físico, espiritual y mental de los jóvenes para que llegaran a ser buenos ciudadanos.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/que_es.html #cual_es_el_objetivo" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>¿Quién fué el creador del escultismo?</h3>
+					<p>
+						Robert Stephenson Smith Baden Powell nació el 22 de febrero de 1857 en Londres, Inglaterra. Su padre fue el reverendo Baden Powell, doctor en filosofía y profesor en la Universidad de Oxford; su madre fue Henrietta Grace Smyth, hija de un reconocido colonizador inglés.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/que_es.html #quien_fue_el_creador" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>¿Cómo se creó?</h3>
+					<p>
+						Comenzó formalmente en 1907, cuando Robert Baden Powell, su fundador, llevó a cabo el primer campamento scout en la isla de Brownsea, en Inglaterra. En 1908 escribió en su libro "Escultismo para muchachos" lo que serían los principios del movimiento
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/inicios.html #como_se_creo" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>El Movimiento Scout a nivel Mundial: La OMMS</h3>
+					<p>	
+						Los scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas. OMMS es la sigla que significa Organización Mundial del Movimiento scout. Gracias a ella, contamos con una base principal sobre como trabajar los valores scout establecidos por nuestro fundador. Actualmente su presidente es Craig Turpie y su central se encuentra en la ciudad de Ginebra.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/como_se.html #movimiento_scout_a_nivel_mundial" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>Asociaciones Scout y su distribución</h3>
+					<p>
+						Para facilitar la gestión y asegurar la personalización del movimiento, la organización esta distribuida en 172 asociaciones nacionales que actúan en los distintos países. En el caso de Scouts de Argentina (SAAC), la hemos distribuido en regiones, que a su vez están divididas en en 47 zonas distintas. Dentro de cada zona, encontramos los distritos, y por cada distrito hay por lo menos 5 grupos scouts activos. Todo esto funciona dentro de nuestro país. Para encontrar el grupo que esté más cerca de tu casa ingresá a <a href="ttps://www.scouts.org.ar/grupos-scouts">www.scouts.org.ar</a> 
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/como_se.html #asociaciones_scout_y_su_distribucion" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>¿Dónde está la isla de Brownsea?</h3>
+					<p>
+						La isla de Brownsea está situada en el puerto de Poole, Dorset, Inglaterra. La isla pertenece al National Trust. La mayor parte de la isla es accesible al público. La isla tiene zonas de bosque y páramo y es hábitat de gran cantidad de aves y fauna autóctona. Actualmente, constituye una reserva natural.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/inicios.html #donde_esta_brownsea" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>El funcionamiento del grupo: las ramas</h3>
+					<p>
+						Nuestra vida scout cuenta con muchas distintas ramas y etapas por las que atravesaremos a medida que crecemos. En las ramas, los jóvenes somos agrupados según la edad que tenemos, existen 6 de ellas: Castores, para niños y niñas entre 4-6 años, la Manada, para chicos y chicas entre 7-11 años, la Unidad, entre 12-14 años, Caminantes, 14-17 años y Rover, 17-21 años. Estas a su vez están divididas en etapas de progresión que iremos alcanzando a medida que vayamos evolucionando y aprendiendo dentro del movimiento.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/como_se.html #organizacion_grupal" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>Zona y Distrito</h3>
+					<p>
+						El Movimiento Scout en Argentina busca la forma más efectiva de administrar y gestionar para asegurarse de que todos sus grupos cuenten con los recursos y puedan acceder a la información. 
+						Es por eso, que las Zonas y Distrito cuentan con personas que ocuparán cargos para facilitar esta tarea.
+						En la Cima de esta línea de comunicación encontramos a los y las Directores de Zonas, ellos se encargan de asegurarse de que las tareas en los distritos sean cumplidas, así como las normas.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="html/como_se.html #zona_y_distrito" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+		</div><br>
+		<br>
+		<br>
+
+	</section>
+
+	<footer>			<!--Etiqueta semántica que define el pie de página-->
+
+		<div id="footer_1">
+			<h4>Redes sociales</h4>
+			<ul>
+				<li>
+					<a href="https://www.instagram.com/scouteando.blog/" class="enlaces">Instagram</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/ScouteandoB" class="enlaces">Twitter</a>
+				</li>
+				<li>
+					<a href="https://ar.pinterest.com/scouteandoblog/" class="enlaces">Pinterest</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="footer_2">
+			<img src="imagenes/logo.ico" width="100" height="100"/>
+		</div>
+
+		<div id="footer_3">
+			<h4>Otras páginas del sitio</h4>
+			<ul>
+				<li>
+					<a href="html/que_es.html" class="enlaces">¿Qué es el movimiento scout?</a>
+				</li>
+				<li>
+					<a href="html/como_se.html" class="enlaces">¿Cómo se compone?</a>
+				</li>
+				<li>
+					<a href="html/inicios.html" class="enlaces">El movimiento en sus inicios</a>
+				</li>
+				<li>
+					<a href="html/contacto.html" class="enlaces">Contacto</a>
+				</li>
+			</ul><br>	
+
+		</div>
+
+	</footer>
+
+
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

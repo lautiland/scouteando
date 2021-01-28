@@ -1,0 +1,346 @@
+<!DOCTYPE html>			<!-- Indica que es html 5 -->
+<html lang="en">
+
+<head>			<!-- "head" es solo metadata para el navegador -->
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Scouteando</title>			<!-- "title" titulo que aparece en la pestaña del navegador -->
+
+	<meta name="description" content="Quieres saber que significan los Scouts o estas buscando mas información acerca, estamos aqui para que puedas descubrirlo.">
+	<meta name="keywords" content="SCOUT, MOVIMIENTO, OMMS, BLOG, INFORMACION, QUE, ES, PORQUE">
+
+	<link rel="stylesheet" href="../css/reset.css">			<!-- "link" permite añadir estilos de una hoja de estilos en css -->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">			<!-- Fuente Eczar -->
+	<link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">			<!-- Funete Langar -->
+	<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>			<!-- "body" muestra el contenido de la página -->
+
+	<header>			<!-- "header" define el encabezado -->
+		<div class="top">
+			<img src="../imagenes/logo.ico" width="50" height="50"/>			<!-- "img" sirve para insertar imagenes, es este caso el logo de la página -->
+
+			<h1 id="titulo">Scouteando</h1>			<!-- Título del blog en elemento de bloque -->
+			<input type="checkbox" id="menu_hamb">
+			<label for="manu_hamb" class="label_menu">
+				<span id="span1"></span>
+				<span id="span2"></span>
+				<span id="span3"></span>
+			</label><br>
+
+			<div class="menu_des">
+				<h1>Menú</h1>
+				<a href="">
+					<button id="menu_hamb_close">
+					</button>
+					<div class="label_menu_close">
+						<span id="span4"></span>
+						<span id="span6"></span>
+					</div>
+				</a>
+				<ul>
+					<li>
+						<a href="../index.html" class="enlaces">Inicio</a>					
+					</li><br><br>
+					<li>
+						<a href="que_es.html" class="enlaces">¿Qué es el movimiento Scout?</a>
+						<ul>
+							<li>
+								<a href="que_es.html #cual_es_el_objetivo" class="enlaces">¿Cuál es el objetivo del movimiento?</a>
+							</li>
+							<li>
+								<a href="que_es.html #los_principios_scout" class="enlaces">Los principios Scout</a>
+							</li>
+							<li>
+								<a href="que_es.html #quien_fue_el_creador" class="enlaces">¿Quién fue el creador del escultismo?</a>
+							</li>
+							<li>
+								<a href="que_es.html #la_ley_scout" class="enlaces">La ley Scout</a>
+							</li>
+							<br>
+						</ul><br>	
+					</li>
+					<li>
+						<a href="como_se.html" class="enlaces">¿Cómo se compone?</a>
+						<ul>
+							<li>
+								<a href="como_se.html #movimiento_scout_a_nivel_mundial" class="enlaces">Organización a nivel mundial</a>
+							</li>
+							<li>
+								<a href="como_se.html #asociaciones_scout_y_su_distribucion" class="enlaces">Asociaciones Scout</a>
+							</li>
+							<li>
+								<a href="como_se.html #zona_y_distrito" class="enlaces">Zona y distrito</a>
+							</li>
+							<li>
+								<a href="como_se.html #organizacion_grupal" class="enlaces">Organización grupal</a>
+							</li>
+							<br>
+						</ul><br>
+					</li>
+					<li>
+						<a href="inicios.html" class="enlaces">El movimiento en sus inicios</a>
+						<ul>
+							<li>
+								<a href="inicios.html #como_se_creo" class="enlaces">¿Cómo se creó?</a>
+							</li>
+							<li>
+								<a href="inicios.html #el_primer_campamento_scout" class="enlaces">El primer campamento</a>
+							</li>
+							<li>
+								<a href="inicios.html #donde_esta_brownsea" class="enlaces">¿Dónde se creó?</a>
+							</li>
+							<li>
+								<a href="inicios.html #quien_es_kim" class="enlaces">¿Quién es Kim?</a>
+							</li>
+							<br>
+						</ul><br>
+					</li>
+					<li>
+						<a href="contacto.html" class="enlaces">Contacto</a>
+					</li><br>
+				</ul>
+			</div>
+
+			<div class="top2">
+				<ul class="menu">
+					<li>
+						<a href="../index.html" class="enlaces">Inicio</a>
+						<ul>
+							<li>
+								<a href="../index.html #introduccion"  class="enlaces">Introducción</a>
+							</li>
+							<li>
+								<a href="../index.html #recientes"  class="enlaces">Entradas recientes</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="que_es.html" class="enlaces activo">¿Qué es el movimiento scout?</a>
+						<ul>
+							<li>
+								<a href="#cual_es_el_objetivo" class="enlaces">¿Cuál es el objetivo del movimiento?</a>
+							</li>
+							<li>
+								<a href="#los_principios_scout" class="enlaces">Los principios Scout</a>
+							</li>
+							<li>
+								<a href="#quien_fue_el_creador" class="enlaces">¿Quién fue el creador del escultismo?</a>
+							</li>
+							<li>
+								<a href="#la_ley_scout" class="enlaces">La ley Scout</a>
+							</li>
+							<br>
+						</ul>
+					</li>
+					<li>
+						<a href="como_se.html" class="enlaces">¿Cómo se compone?</a>
+						<ul>
+							<li>
+								<a href="como_se.html #movimiento_scout_a_nivel_mundial" class="enlaces">Organizacion a nivel mundial</a>
+							</li>
+							<li>
+								<a href="como_se.html #asociaciones_scout_y_su_distribucion" class="enlaces">Asociaciones Scout</a>
+							</li>
+							<li>
+								<a href="como_se.html #zona_y_distrito" class="enlaces">Zona y distrito</a>
+							</li>
+							<li>
+								<a href="como_se.html #organizacion_grupal" class="enlaces">Organizacion grupal</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="inicios.html" class="enlaces">El movimiento en sus inicios</a>
+						<ul>
+							<li>
+								<a href="inicios.html #como_se_creo" class="enlaces">¿Cómo se creó?</a>
+							</li>
+							<li>
+								<a href="inicios.html #el_primer_campamento_scout" class="enlaces">El primer campamento</a>
+							</li>
+							<li>
+								<a href="inicios.html #donde_esta_brownsea" class="enlaces">¿Donde se creó?</a>
+							</li>
+							<li>
+								<a href="inicios.html #quien_es_kim" class="enlaces">¿Quién es Kim?</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contacto.html" class="enlaces">Contacto</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+
+
+
+	</header>
+
+	<section class="container">			<!-- "section" es una etiqueta semántica que define el cuerpo de la página -->
+		<div class="row justify-content-between">
+			<h2 class="col-12">¿Qué es el movimiento Scout?</h2><br>			<!-- Título de la página en elemento de bloque -->
+
+			<div class="col-12 cuadro">
+				<article>			<!-- Etiqueta semántica que define una entrada -->
+					<h3 id="cual_es_el_objetivo">¿Cuál es el objetivo del movimiento?</h3>			<!-- Título de la entrada en elemento de bloque -->
+					<p>			<!-- "p" significa parafo -->
+						El Movimiento Scout o escultismo nació como una manera de combatir la delincuencia en la Inglaterra de principios del siglo xx, buscando el desarrollo físico, espiritual y mental de los jóvenes para que llegaran a ser buenos ciudadanos.
+					</p>
+
+					<img src="../imagenes/fuego.gif" class="img-fluid rounded mx-auto d-block" /><br>
+
+				</article>
+			</div>
+			<div class="col-12 cuadro">
+				<article>
+					<h3 id="los_principios_scout">Los principios Scout</h3>
+					<p>
+						Un principio es un criterio o norma moral que guía la conducta de una comunidad, como los y las Scouts, y nuestro creador, estableció nuestros principios basándose en los deberes que habremos de tener a lo largo de nuestra vida, son los siguientes:
+						<ul>
+							<li>
+								Deberes para con Dios y la Patria: son aquellos que nuestro sistema de creencias nos otorgará, como por ejemplo los Mandamientos de las religiones católicas, judías y del ISLAM, o nuestro deber como ciudadanos.
+							</li>
+							<li>
+								Deberes para con los demás: son aquellos que surgen en nuestro contexto social, deberes para con nuestros amigos, familias y el prójimo.
+							</li>
+							<li>
+								Deberes para con uno mismo: son aquellos que surgen con nuestra mera existencia, los deberes de cuidar nustra salud y nuestro cuerpo, de alimentar nuestra mente, de aprender a amarnos y creer en nosotros mismos, entre otros similares.
+							</li>
+						</ul>
+					</p>
+					
+				</article>
+			</div>
+			<div class="col-12 cuadro">
+				<article>
+					<h3 id="quien_fue_el_creador">¿Quién fué el creador del escultismo?</h3>
+					<p>
+						Robert Stephenson Smith Baden Powell nació el 22 de febrero de 1857 en Londres, Inglaterra. Su padre fue el reverendo Baden Powell, doctor en filosofía y profesor en la Universidad de Oxford; su madre fue Henrietta Grace Smyth, hija de un reconocido colonizador inglés.
+					</p>
+
+					<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="../imagenes/bp1.jpg" class="d-block w-100">
+							</div>
+							<div class="carousel-item">
+								<img src="../imagenes/bp2.jpg" class="d-block w-100">
+							</div>
+							<div class="carousel-item">
+								<img src="../imagenes/bp3.jpg" class="d-block w-100">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</a>
+					</div>
+
+				</article>
+			</div>
+			<div class="col-12 cuadro">
+				<article>
+					<h3 id="la_ley_scout">La ley Scout</h3>
+					<p>
+						El movimiento scout a nivel mundial es un conjunto de valores que deberíamos aceptar voluntariamente para "jugar" al Escultismo. Baden Powell escribió la ley pensando que  a los y las jóvenes recibimos mejor el mensaje cuando se nos dice que hacer y no cuando se nos prohíben cosas, es por esto que cada ley comienza con "El/La Scout es" y dicen lo siguiente.
+					</p><br>
+					<div class="row">
+						<div class="col-sm-12 col-md-6 col-lg-6 cuadro">
+							<ul>
+								<li>El Scout ama a Dios y vive plenamente su fe.</li>
+								<li>El Scout es leal y digno de toda confianza.</li>
+								<li>El scout es generoso, cortés y solidario.</li>
+								<li>El Scout es respetuoso y hermano de todos.</li>
+								<li>El Scout defiende y valora la familia.</li>
+								<li>El Scout ama y defiende la vida y la naturaleza.</li>
+								<li>El Scout sabe obedecer, elige y actúa con responsabilidad.</li>
+								<li>El Scout es optimista aún en las dificultadas.</li>
+								<li>El Scout es económico, trabajador y respetuoso del bien ajeno.</li>
+								<li>El Scout es puro y lleva una vida sana.</li>
+							</ul>
+						</div>
+						<div class="col-sm-12 col-md-6 col-lg-6 cuadro">
+							<ul>
+								<li>la Scout ama a Dios y vive plenamente su fe.</li>
+								<li>la Scout es leal y digna de toda confianza.</li>
+								<li>la scout es generosa, cortés y solidaria.</li>
+								<li>la Scout es respetuosa y hermana de todos.</li>
+								<li>la Scout defiende y valora la familia.</li>
+								<li>la Scout ama y defiende la vida y la naturaleza.</li>
+								<li>la Scout sabe obedecer, elige y actúa con responsabilidad.</li>
+								<li>la Scout es optimista aún en las dificultadas.</li>
+								<li>la Scout es económica, trabajadora y respetuosa del bien ajeno.</li>
+								<li>la Scout es pura y lleva una vida sana.</li>
+							</ul>
+						</div>
+					</div>
+
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<footer>			<!-- Etiqueta semántica que define el pie de página -->
+
+		<div id="footer_1">
+			<h4>Redes sociales</h4>
+			<ul>
+				<li>
+					<a href="https://www.instagram.com/scouteando.blog/" class="enlaces">Instagram</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/ScouteandoB" class="enlaces">Twitter</a>
+				</li>
+				<li>
+					<a href="https://ar.pinterest.com/scouteandoblog/" class="enlaces">Pinterest</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="footer_2">
+			<img src="../imagenes/logo.ico" width="100" height="100"/>
+		</div>
+
+		<div id="footer_3">
+			<h4>Otras páginas del sitio</h4>
+			<ul>
+				<li>
+					<a href="../index.html" class="enlaces">Inicio</a>
+				</li>
+				<li>
+					<a href="como_se.html" class="enlaces">¿Cómo se compone?</a>
+				</li>
+				<li>
+					<a href="inicios.html" class="enlaces">El movimiento en sus inicios</a>
+				</li>
+				<li>
+					<a href="contacto.html" class="enlaces">Contacto</a>
+				</li>
+			</ul><br>
+			
+		</div>
+
+	</footer>
+
+	<script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>

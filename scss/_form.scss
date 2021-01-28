@@ -1,0 +1,38 @@
+.formulario_de_contacto {
+	padding: 1rem;
+	margin: 2rem;
+	background-color: $violeta_oscuro_scouteando;
+	width: 40%;
+	legend {
+		color: white;
+		font-size: 3rem;
+		font-family: 'Langar', cursive;
+		text-align: center;
+	}
+	input {
+		background-color: white;
+		color: black;
+		font-size: 1.5rem;
+		font-family: 'Eczar', serif;
+		margin: 1rem 0;
+	}
+	textarea {
+		resize: none;
+	}
+	.label {
+		color: white;
+		font-size: 1.9rem;
+		font-family: 'Eczar', serif;
+	}
+	.button {
+		background-color: $azul_claro_scouteando;
+		font-size: 1.5rem;
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+	.button:hover {
+		background-color: white;
+		color: $violeta_oscuro_scouteando;
+	}
+	
+}

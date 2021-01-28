@@ -1,0 +1,37 @@
+//variables
+$violeta_claro_scouteando: #5D1F89;
+$violeta_oscuro_scouteando: #460871;
+$azul_claro_scouteando: #3FA9BA;
+$azul_oscuro_scouteando: #2952A0;
+$gris_scouteando: #535353;
+$semi_tran_scouteando: rgba(0, 0, 0, 0.05);
+//importaciones
+@import "header";
+@import "section";
+@import "footer";
+//codigo general
+.enlaces {
+	color: white;
+	text-decoration: none;
+	font-family: 'Eczar', serif;
+}
+.centrar {
+	text-align: center;
+}
+button {
+	font-family: 'Langar', cursive;
+	font-size: 1.2rem;
+	color: white;
+	background-color: $azul_claro_scouteando;
+	border-width: 0rem;
+	padding: 0.2rem;
+	border-radius: 5px;
+}
+button:hover {
+	background-color: $violeta_claro_scouteando;
+}
+h4 {
+		color: $azul_oscuro_scouteando;
+		font-size: 2rem;
+		font-family: 'Langar', cursive;
+}
