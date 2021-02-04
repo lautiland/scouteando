@@ -205,17 +205,21 @@ header {
   header img, header svg {
     vertical-align: top; }
   header #titulo {
-    color: white;
     margin-bottom: 0.5rem;
+    color: white;
     padding: 2.5rem;
     font-size: 5rem;
     font-family: 'Langar', cursive;
     display: inline;
     margin-left: 2rem; }
-
-@media only screen and (max-width: 512px) {
-  #titulo {
-    font-size: 5%; } }
+    @media screen and (max-width: 1024px) {
+      header #titulo {
+        position: relative;
+        top: 1rem;
+        font-size: 3rem;
+        padding-bottom: 1.5rem;
+        padding: auto;
+        margin: 0.5rem; } }
 
 section {
   margin: 0.5rem;
