@@ -27,18 +27,9 @@ header .menu ul li {
 
 header .menu li:hover ul {
   display: block;
-  animation-duration: 500ms;
-  animation-name: menu_slide; }
-
-@keyframes menu_slide {
-  0% {
-    top: 25px; }
-  50% {
-    top: 50px; }
-  75% {
-    top: 45px; }
-  100% {
-    top: 25px; } }
+  animation-duration: 200ms;
+  animation-name: menu_slide;
+  animation-fill-mode: both; }
 
 header .menu li a:hover {
   background-color: white;
@@ -46,41 +37,21 @@ header .menu li a:hover {
   border-radius: 5px; }
 
 header .menu_des {
+  margin-top: 1.5rem;
   display: none;
   list-style: none;
-  padding-left: 25px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  background-repeat: repeat-y; }
+  width: 100%; }
 
-header .menu_des h1 {
-  display: inline;
-  list-style: none;
-  color: white;
-  text-align: center;
-  font-size: 5vh;
-  padding: 3rem;
-  margin-left: 4rem;
-  font-family: 'Langar', cursive; }
+header .menu_des li {
+  margin: 1rem; }
 
 header .menu_des li a {
   list-style: none;
-  color: #3FA9BA;
-  font-size: 4vh;
-  margin: 0.05vh;
-  padding: 0.1vh;
+  color: white;
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   font-family: 'Langar', cursive; }
-
-header .menu_des li ul li a {
-  list-style: none;
-  color: #5D1F89;
-  font-size: 3vh;
-  margin: 0.01vh;
-  padding: 0.1vh;
-  font-family: 'Eczar', serif; }
 
 header .menu_des a:hover {
   background-color: white;
@@ -109,7 +80,7 @@ header .label_menu {
 header .label_menu #span1, header #span2, header #span3 {
   position: absolute;
   right: -12.5px;
-  top: 18px;
+  top: 10px;
   content: '';
   background: white;
   width: 3.5rem;
@@ -117,14 +88,11 @@ header .label_menu #span1, header #span2, header #span3 {
   border-radius: 0.5rem;
   transition: all 500ms ease; }
 
-header #span1 {
-  top: 18px; }
-
 header #span2 {
-  top: 32px; }
+  top: 23px; }
 
 header #span3 {
-  top: 47px; }
+  top: 37px; }
 
 @media screen and (min-width: 1024px) {
   header #menu_hamb {
@@ -136,13 +104,14 @@ header #span3 {
   header .top2 {
     display: none; }
   header #menu_hamb:checked ~ .menu_des {
-    display: grid;
-    z-index: 100; } }
+    display: block;
+    z-index: 100;
+    animation-duration: 200ms;
+    animation-name: menu_slide; } }
 
 header #menu_hamb:checked ~ .label_menu #span1 {
   transform: rotate(135deg);
-  top: 32px;
-  opacity: 0; }
+  top: 23px; }
 
 header #menu_hamb:checked ~ .label_menu #span2 {
   transform: rotate(360deg);
@@ -150,49 +119,15 @@ header #menu_hamb:checked ~ .label_menu #span2 {
 
 header #menu_hamb:checked ~ .label_menu #span3 {
   transform: rotate(-135deg);
-  top: 32px;
-  opacity: 0; }
+  top: 23px; }
 
-header #menu_hamb_close {
-  display: all;
-  float: right;
-  top: 40px;
-  right: 65px;
-  opacity: 0;
-  width: 3rem;
-  height: 3rem;
-  transform: scale(1.3);
-  cursor: pointer;
-  position: absolute;
-  z-index: 200; }
-
-header .label_menu_close {
-  display: all;
-  z-index: 180;
-  float: right;
-  position: relative; }
-
-header #span4, header #span6 {
-  opacity: 1;
-  position: absolute;
-  top: 40px;
-  right: 65px;
-  content: '';
-  background: white;
-  width: 3.5rem;
-  height: 0.5rem;
-  border-radius: 0.5rem;
-  z-index: 180; }
-
-header #span4 {
-  transform: rotate(135deg);
-  top: -66px;
-  right: 63.4px; }
-
-header #span6 {
-  transform: rotate(-135deg);
-  top: -66px;
-  right: 63.4px; }
+@keyframes menu_slide {
+  0% {
+    top: 27px; }
+  50% {
+    top: 32px; }
+  100% {
+    top: 27px; } }
 
 header {
   background-color: black;
@@ -238,7 +173,7 @@ section {
     margin: 0.125rem;
     padding: 1rem;
     font-family: 'Langar', cursive; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 767px) {
       section h2 {
         font-size: 2.5rem; } }
   section h3 {
@@ -246,7 +181,7 @@ section {
     font-size: 2.5rem;
     margin: 0.125rem;
     font-family: 'Langar', cursive; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 767px) {
       section h3 {
         font-size: 2rem; } }
   section .cuadro {
@@ -297,31 +232,36 @@ footer {
   padding: 2rem;
   background-color: black;
   background-image: url("../imagenes/noche.gif");
+  background-size: cover;
   display: grid;
-  grid-template-areas: "f1 f2 f3";
+  grid-template-areas: "redes logo otras_paginas";
   justify-content: space-around;
   align-content: center; }
   @media screen and (max-width: 560px) {
     footer {
-      grid-template-areas: "f1" "f3" "f2"; }
+      grid-template-areas: "redes" "otras_paginas" "logo"; }
       footer footer #footer_1, footer #footer_2, footer #footer_3 {
-        margin-bottom: 2rem;
+        margin-top: 2rem;
         text-align: center;
         width: auto; } }
+  footer h4 {
+    text-align: center; }
   footer ul {
-    list-style-type: none; }
+    list-style-type: none;
+    padding-left: 0; }
   footer li {
+    text-align: center;
     color: white;
     font-size: 1.5rem;
     margin: 0 0.3rem;
     padding: 0.5rem; }
   footer footer #footer_1 {
-    grid-area: f1; }
+    grid-area: redes; }
   footer footer #footer_2 {
     align-self: center;
-    grid-area: f2; }
+    grid-area: logo; }
   footer footer #footer_3 {
-    grid-area: f3; }
+    grid-area: otras_paginas; }
 
 .enlaces {
   color: white;

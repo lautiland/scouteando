@@ -27,15 +27,10 @@ header {
 		width: 100%;
 	}
 	.menu li:hover ul {
-		@keyframes menu_slide {
-			0% {top: 25px;}
-			50% {top: 50px;}
-			75% {top: 45px;}
-			100%{top: 25px;}
-		}
 		display: block;
-		animation-duration: 500ms;
+		animation-duration: 200ms;
 		animation-name: menu_slide;
+		animation-fill-mode: both;
 	}
 	.menu li a:hover {
 		background-color: white;
@@ -43,41 +38,21 @@ header {
 		border-radius: 5px;
 	}
 	.menu_des {
+		margin-top: 1.5rem;
 		display: none;
 		list-style: none;
-		padding-left: 25px;
-		position: absolute;
 		width: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(0, 0, 0, 0.95);
-		background-repeat: repeat-y;
 	}
-	.menu_des h1 {
-		display: inline;
-		list-style: none;
-		color: white;
-		text-align: center;
-		font-size: 5vh;
-		padding: 3rem;
-		margin-left: 4rem;
-		font-family: 'Langar', cursive;
+	.menu_des li {
+		margin: 1rem;
 	}
 	.menu_des li a {
 		list-style: none;
-		color: #3FA9BA;
-		font-size: 4vh;
-		margin: 0.05vh;
-		padding: 0.1vh;
+		color: white;
+		font-size: 2rem;
+		margin: 0.5rem;
+		padding: 0.5rem;
 		font-family: 'Langar', cursive;
-	}
-	.menu_des li ul li a {
-		list-style: none;
-		color: #5D1F89;
-		font-size: 3vh;
-		margin: 0.01vh;
-		padding: 0.1vh;
-		font-family: 'Eczar', serif;
 	}
 	.menu_des a:hover {
 		background-color: white;
@@ -106,7 +81,7 @@ header {
 	.label_menu #span1,#span2,#span3 {
 		position: absolute;
 		right: -12.5px;
-		top: 18px;
+		top: 10px;
 		content: '';
 		background: white;
 		width: 3.5rem;
@@ -114,14 +89,11 @@ header {
 		border-radius: 0.5rem;
 		transition: all 500ms ease;
 	}
-	#span1 {
-		top: 18px;
-	}
 	#span2 {
-		top: 32px;
+		top: 23px;
 	}
 	#span3 {
-		top: 47px;
+		top: 37px;
 	}
 	@media screen and (min-width: 1024px) {
 		#menu_hamb {
@@ -137,15 +109,16 @@ header {
 			display: none;
 		}
 		#menu_hamb:checked ~ .menu_des {
-			display: grid;
+			display: block;
 			z-index: 100;
+			animation-duration: 200ms;
+			animation-name: menu_slide;
 		}
 	}
 
 	#menu_hamb:checked ~ .label_menu #span1 {
 		transform: rotate(135deg);
-		top: 32px;
-		opacity: 0;
+		top: 23px;
 	}
 	#menu_hamb:checked ~ .label_menu #span2 {
 		transform: rotate(360deg);
@@ -153,48 +126,11 @@ header {
 	}
 	#menu_hamb:checked ~ .label_menu #span3 {
 		transform: rotate(-135deg);
-		top: 32px;
-		opacity: 0;
+		top: 23px;
 	}
-	#menu_hamb_close {
-		display: all;
-		float: right;
-		top: 40px;
-		right: 65px;
-		opacity: 0;
-		width: 3rem;
-		height: 3rem;
-		transform: scale(1.3);
-		cursor: pointer;
-		position: absolute;
-		z-index: 200;
-	}
-	.label_menu_close {
-		display: all;
-		z-index: 180;
-		float: right;
-		position: relative;
-	}
-	#span4,#span6 {
-		opacity: 1;
-		position: absolute;
-		top: 40px;
-		right: 65px;
-		content: '';
-		background: white;
-		width: 3.5rem;
-		height: 0.5rem;
-		border-radius: 0.5rem;
-		z-index: 180;
-	}
-	#span4 {
-		transform: rotate(135deg);
-		top: -66px;
-		right: 63.4px;
-	}
-	#span6 {
-		transform: rotate(-135deg);
-		top: -66px;
-		right: 63.4px;
+	@keyframes menu_slide {
+		0% {top: 27px;}
+		50% {top: 32px;}
+		100%{top: 27px;}
 	}
 }
