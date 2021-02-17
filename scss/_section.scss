@@ -43,7 +43,20 @@ section {
 		color: black;
 		font-size: 1.2rem;
 	}
-	
+	.video_saac {
+		width: 50%;
+		height: 300px;
+		@media screen and (max-width: 1200px) {
+			height: 250px;
+		}
+		@media screen and (max-width: 995px) {
+			height: 160px;
+		}
+		@media screen and (max-width: 780px) {
+			width: 80%;
+			height: 140px;
+		}
+	}
 }
 
 @import "form";

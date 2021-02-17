@@ -1,9 +1,9 @@
 footer {
-	margin-top: 0.5rem;
+	margin-top: 2rem;
 	padding: 2rem;
 	background-color: black;
 	background-image: url("../imagenes/noche.gif");
-	background-size: cover;
+	background-size: auto;
 	display: grid;
 	grid-template-areas: 
 	"redes logo otras_paginas";
@@ -19,6 +19,7 @@ footer {
 				text-align: center;
 				width: auto;
 			}
+			background-size: cover;
 		}
 	h4 {
 		text-align: center;

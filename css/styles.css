@@ -195,6 +195,19 @@ section {
     font-family: 'Eczar', serif;
     color: black;
     font-size: 1.2rem; }
+  section .video_saac {
+    width: 50%;
+    height: 300px; }
+    @media screen and (max-width: 1200px) {
+      section .video_saac {
+        height: 250px; } }
+    @media screen and (max-width: 995px) {
+      section .video_saac {
+        height: 160px; } }
+    @media screen and (max-width: 780px) {
+      section .video_saac {
+        width: 80%;
+        height: 140px; } }
 
 .formulario_de_contacto {
   padding: 1rem;
@@ -226,20 +239,26 @@ section {
   .formulario_de_contacto .button:hover {
     background-color: white;
     color: #460871; }
+  .formulario_de_contacto .ratio {
+    margin-left: 2rem; }
+  @media screen and (max-width: 995px) {
+    .formulario_de_contacto {
+      width: 80%; } }
 
 footer {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   padding: 2rem;
   background-color: black;
   background-image: url("../imagenes/noche.gif");
-  background-size: cover;
+  background-size: auto;
   display: grid;
   grid-template-areas: "redes logo otras_paginas";
   justify-content: space-around;
   align-content: center; }
   @media screen and (max-width: 560px) {
     footer {
-      grid-template-areas: "redes" "otras_paginas" "logo"; }
+      grid-template-areas: "redes" "otras_paginas" "logo";
+      background-size: cover; }
       footer footer #footer_1, footer #footer_2, footer #footer_3 {
         margin-top: 2rem;
         text-align: center;

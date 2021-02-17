@@ -34,5 +34,11 @@
 		background-color: white;
 		color: $violeta_oscuro_scouteando;
 	}
+	.ratio {
+		margin-left: 2rem;
+	}
+	@media screen and (max-width: 995px) {
+			width: 80%;
+		}
 	
 }
