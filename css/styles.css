@@ -104,10 +104,7 @@ header #span3 {
   header .top2 {
     display: none; }
   header #menu_hamb:checked ~ .menu_des {
-    display: block;
-    z-index: 100;
-    animation-duration: 200ms;
-    animation-name: menu_slide; } }
+    display: block; } }
 
 header #menu_hamb:checked ~ .label_menu #span1 {
   transform: rotate(135deg);
@@ -282,18 +279,18 @@ footer {
   footer footer #footer_3 {
     grid-area: otras_paginas; }
 
-.enlaces {
-  color: white;
-  text-decoration: none;
-  font-family: 'Eczar', serif; }
-
 .centrar {
   text-align: center; }
 
+.enlaces {
+  text-decoration: none;
+  color: white;
+  font-family: 'Eczar', serif; }
+
 button {
+  color: white;
   font-family: 'Langar', cursive;
   font-size: 1.2rem;
-  color: white;
   background-color: #3FA9BA;
   border-width: 0rem;
   padding: 0.2rem;
@@ -301,6 +298,8 @@ button {
 
 button:hover {
   background-color: #5D1F89; }
+  button:hover a {
+    color: white; }
 
 h4 {
   color: #2952A0;

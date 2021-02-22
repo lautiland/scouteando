@@ -10,18 +10,18 @@ $semi_tran_scouteando: rgba(0, 0, 0, 0.05);
 @import "section";
 @import "footer";
 //codigo general
-.enlaces {
-	color: white;
-	text-decoration: none;
-	font-family: 'Eczar', serif;
-}
 .centrar {
 	text-align: center;
 }
+.enlaces {
+	text-decoration: none;
+	color: white;
+	font-family: 'Eczar', serif;
+}
 button {
+	color: white;
 	font-family: 'Langar', cursive;
 	font-size: 1.2rem;
-	color: white;
 	background-color: $azul_claro_scouteando;
 	border-width: 0rem;
 	padding: 0.2rem;
@@ -29,9 +29,12 @@ button {
 }
 button:hover {
 	background-color: $violeta_claro_scouteando;
+	a {
+		color: white;
+	}
 }
 h4 {
-		color: $azul_oscuro_scouteando;
-		font-size: 2rem;
-		font-family: 'Langar', cursive;
+	color: $azul_oscuro_scouteando;
+	font-size: 2rem;
+	font-family: 'Langar', cursive;
 }

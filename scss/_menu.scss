@@ -110,12 +110,8 @@ header {
 		}
 		#menu_hamb:checked ~ .menu_des {
 			display: block;
-			z-index: 100;
-			animation-duration: 200ms;
-			animation-name: menu_slide;
 		}
 	}
-
 	#menu_hamb:checked ~ .label_menu #span1 {
 		transform: rotate(135deg);
 		top: 23px;
