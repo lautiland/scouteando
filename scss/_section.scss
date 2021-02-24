@@ -29,13 +29,15 @@ section {
 			font-size: 2rem;
 		}
 	}
+	h5 {
+		font-family: 'Eczar', serif;
+		font-variant: small-caps;
+	}
 	.sub_titulo {
-		font-style: italic;
 		color: $azul_oscuro_scouteando;
 	}
 	.bienvenida {
 		font-style: italic;
-		font-size: 2rem;
 	}
 	.cuadro {
 		background-color: $semi_tran_scouteando;

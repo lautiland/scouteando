@@ -181,12 +181,13 @@ section {
     @media screen and (max-width: 767px) {
       section h3 {
         font-size: 2rem; } }
+  section h5 {
+    font-family: 'Eczar', serif;
+    font-variant: small-caps; }
   section .sub_titulo {
-    font-style: italic;
     color: #2952A0; }
   section .bienvenida {
-    font-style: italic;
-    font-size: 2rem; }
+    font-style: italic; }
   section .cuadro {
     background-color: rgba(0, 0, 0, 0.05);
     padding: 1.5rem;
