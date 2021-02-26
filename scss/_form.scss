@@ -1,52 +1,56 @@
-.formulario_de_contacto {
-	padding: 1rem;
-	margin: 2rem;
-	background-color: $violeta_oscuro_scouteando;
-	width: 40%;
+section	{
 
-	legend {
-		color: white;
-		font-size: 3rem;
-		font-family: 'Langar', cursive;
-		text-align: center;
-	}
+	.formulario_de_contacto {
+		padding: 1rem;
+		margin: 2rem;
+		background-color: $violeta_oscuro_scouteando;
+		width: 40%;
 
-	input {
-		background-color: white;
-		color: black;
-		font-size: 1.5rem;
-		font-family: 'Eczar', serif;
-		margin: 1rem 0;
-	}
+		legend {
+			color: white;
+			font-size: 3rem;
+			font-family: 'Langar', cursive;
+			text-align: center;
+		}
 
-	textarea {
-		resize: none;
-	}
+		input {
+			background-color: white;
+			color: black;
+			font-size: 1.5rem;
+			font-family: 'Eczar', serif;
+			margin: 1rem 0;
+		}
 
-	.label {
-		color: white;
-		font-size: 1.9rem;
-		font-family: 'Eczar', serif;
-	}
+		textarea {
+			resize: none;
+		}
 
-	.button {
-		background-color: $azul_claro_scouteando;
-		font-size: 1.5rem;
-		padding: 0.5rem;
-		margin: 0.5rem;
-	}
+		.label {
+			color: white;
+			font-size: 1.9rem;
+			font-family: 'Eczar', serif;
+		}
 
-	.button:hover {
-		background-color: white;
-		color: $violeta_oscuro_scouteando;
-	}
+		.button {
+			background-color: $azul_claro_scouteando;
+			font-size: 1.5rem;
+			padding: 0.5rem;
+			margin: 0.5rem;
+		}
 
-	.ratio {
-		margin-left: 2rem;
-	}
+		.button:hover {
+			background-color: white;
+			color: $violeta_oscuro_scouteando;
+		}
 
-	@media screen and (max-width: 995px) {
+		.ratio {
+			margin-left: 2rem;
+		}
+
+		@media screen and (max-width: 995px) {
 			width: 80%;
 		}
-	
+
+	}
+
 }

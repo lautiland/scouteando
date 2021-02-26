@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .menu {
   font-size: 0;
   list-style-type: none;
@@ -142,40 +143,40 @@ header {
         padding: auto;
         margin: 0.5rem; } }
 
-.formulario_de_contacto {
+section .formulario_de_contacto {
   padding: 1rem;
   margin: 2rem;
   background-color: #460871;
   width: 40%; }
-  .formulario_de_contacto legend {
+  section .formulario_de_contacto legend {
     color: white;
     font-size: 3rem;
     font-family: 'Langar', cursive;
     text-align: center; }
-  .formulario_de_contacto input {
+  section .formulario_de_contacto input {
     background-color: white;
     color: black;
     font-size: 1.5rem;
     font-family: 'Eczar', serif;
     margin: 1rem 0; }
-  .formulario_de_contacto textarea {
+  section .formulario_de_contacto textarea {
     resize: none; }
-  .formulario_de_contacto .label {
+  section .formulario_de_contacto .label {
     color: white;
     font-size: 1.9rem;
     font-family: 'Eczar', serif; }
-  .formulario_de_contacto .button {
+  section .formulario_de_contacto .button {
     background-color: #3FA9BA;
     font-size: 1.5rem;
     padding: 0.5rem;
     margin: 0.5rem; }
-  .formulario_de_contacto .button:hover {
+  section .formulario_de_contacto .button:hover {
     background-color: white;
     color: #460871; }
-  .formulario_de_contacto .ratio {
+  section .formulario_de_contacto .ratio {
     margin-left: 2rem; }
   @media screen and (max-width: 995px) {
-    .formulario_de_contacto {
+    section .formulario_de_contacto {
       width: 80%; } }
 
 section {
@@ -211,8 +212,9 @@ section {
     font-variant: small-caps; }
   section article ul li {
     font-family: 'Eczar', serif;
-    color: black;
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    list-style: "⚜️ ";
+    font-weight: 700; }
   section .bienvenida {
     font-style: italic; }
   section .cuadro {
@@ -264,11 +266,13 @@ footer {
     margin: 0 0.3rem;
     padding: 0.5rem; }
   footer #footer_1 {
+    align-self: top;
     grid-area: redes; }
   footer #footer_2 {
     align-self: center;
     grid-area: logo; }
   footer #footer_3 {
+    align-self: top;
     grid-area: otras_paginas; }
   @media screen and (max-width: 560px) {
     footer {
