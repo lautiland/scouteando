@@ -4,16 +4,16 @@ header {
 	background-color: black;
 	background-image: url("../imagenes/noche.gif");
 
+	img, svg {
+		vertical-align: top; 
+	}
+
 	.top {
 		padding: 2rem;
 	}
 	.top2 {
 		padding: 0.3rem;
 		width: 100%;
-	}
-
-	img, svg {
-		vertical-align: top; 
 	}
 
 	#titulo {

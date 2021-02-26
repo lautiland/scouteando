@@ -9,25 +9,16 @@ footer {
 	"redes logo otras_paginas";
 	justify-content: space-around;
 	align-content: center;
-		@media screen and (max-width: 560px) {
-			grid-template-areas: 
-				"redes"
-				"otras_paginas"
-				"logo";
-			footer #footer_1,#footer_2,#footer_3 {
-				margin-top: 2rem;
-				text-align: center;
-				width: auto;
-			}
-			background-size: cover;
-		}
+
 	h4 {
 		text-align: center;
 	}
+
 	ul {
 		list-style-type: none;
 		padding-left: 0;
 	}
+
 	li {
 		text-align: center;
 		color: white;
@@ -35,15 +26,34 @@ footer {
 		margin: 0 0.3rem;
 		padding: 0.5rem;
 	}
-	footer #footer_1 {
+
+	#footer_1 {
 		grid-area: redes;
 	}
-	footer #footer_2 {
+
+	#footer_2 {
 		align-self: center;
 		grid-area: logo; 
 	}
-	footer #footer_3 {
+
+	#footer_3 {
 		grid-area: otras_paginas; 
 	}
+
+		@media screen and (max-width: 560px) {
+
+			grid-template-areas: 
+				"redes"
+				"otras_paginas"
+				"logo";
+			background-size: cover;
+
+			#footer_1,#footer_2,#footer_3 {
+				margin-top: 2rem;
+				text-align: center;
+				width: auto;
+			}
+
+		}
 
 }

@@ -28,13 +28,13 @@
 
 </head>
 
-<body>			<!--"body" muestra el contenido de la página-->
+<body>
 
-	<header>			<!--"header" define el encabezado-->
+	<header>	<!--Etiqueta semántica-->
 		<div class="top">
-			<img src="../imagenes/logo.ico" width="50" height="50"/>			<!--"img" sirve para insertar imagenes, es este caso el logo de la página-->
+			<img src="../imagenes/logo.ico" width="50" height="50"/>
 
-			<h1 id="titulo">Scouteando</h1>			<!--Título del blog en elemento de bloque-->
+			<h1 id="titulo">Scouteando</h1>
 			<input type="checkbox" id="menu_hamb">
 			<label for="manu_hamb" class="label_menu">
 				<span id="span1"></span>
@@ -137,9 +137,23 @@
 
 	</header>
 
-	<section>			<!--"section" es una etiqueta semántica que define el cuerpo de la página-->
+	<section>	<!--Etiqueta semántica-->
 
-		<h2>Formulario de contacto</h2><br>			<!--Título de la página en elemento de bloque-->
+		<h2 class="col-12">Contacto</h2>
+
+		<div class="col-sm-12 col-md-12 col-lg-12">
+
+			<div class="col-sm-12 col-md-6 cuadro m-auto">
+
+				<p class="bienvenida">
+					Si encontraste algún error, te interesa colaborar o querés sugerir alguna mejoría, contáctanos llenando este formulario
+				</p>
+
+			</div><br>
+
+		</div><br>
+
+		<h2>Formulario de contacto</h2><br>
 		<div class="row justify-content-center">
 			<form class="formulario_de_contacto row">
 
@@ -209,7 +223,7 @@
 
 </section>
 
-<footer>			<!--Etiqueta semántica que define el pie de página-->
+<footer>	<!--Etiqueta semántica-->
 
 	<div id="footer_1">
 		<h4>Redes sociales</h4>
