@@ -7,16 +7,17 @@ header .menu {
   align-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  margin-top: 1rem; }
+  margin-top: 1rem;}
   header .menu li {
     position: relative;
     width: 20%;
     text-align: center;
-    font-size: 1.5rem; }
+    font-size: 2rem;}
     header .menu li a:hover {
       background-color: white;
       color: black;
-      border-radius: 5px; }
+      border-radius: 5px;
+      padding: 0rem 0.5rem; }
   header .menu li:hover ul {
     display: block;
     animation-duration: 200ms;
@@ -123,7 +124,11 @@ header {
   header img, header svg {
     vertical-align: top; }
   header .top {
-    padding: 2rem; }
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    @media screen and (max-width: 1024px){
+      padding-bottom: 2rem;}}
   header .top2 {
     padding: 0.3rem;
     width: 100%; }
@@ -190,7 +195,7 @@ section {
   background-color: white; }
   section p {
     color: #535353;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0.3rem;
     padding: 0.5rem;
     font-family: 'Eczar', serif; }
@@ -235,19 +240,6 @@ section {
     @media screen and (min-width: 1200px) {
       section .slider_contenido {
         top: 40%; } }
-  section .video_saac {
-    width: 50%;
-    height: 300px; }
-    @media screen and (max-width: 1200px) {
-      section .video_saac {
-        height: 250px; } }
-    @media screen and (max-width: 995px) {
-      section .video_saac {
-        height: 160px; } }
-    @media screen and (max-width: 780px) {
-      section .video_saac {
-        width: 80%;
-        height: 140px; } }
 
 footer {
   margin-top: 2rem;
@@ -281,7 +273,9 @@ footer {
     grid-area: otras_paginas; }
   @media screen and (max-width: 560px) {
     footer {
-      grid-template-areas: "redes" "otras_paginas" "logo";
+      grid-template-areas: "redes"
+ "otras_paginas"
+ "logo";
       background-size: cover; }
       footer #footer_1, footer #footer_2, footer #footer_3 {
         margin-top: 2rem;
@@ -294,7 +288,7 @@ footer {
 .enlaces {
   text-decoration: none;
   color: white;
-  font-family: 'Eczar', serif; }
+  font-family: 'Langar', cursive;}
 
 button {
   color: white;
@@ -302,7 +296,7 @@ button {
   font-size: 1.2rem;
   background-color: #3FA9BA;
   border-width: 0rem;
-  padding: 0.2rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 5px; }
 
 button:hover {
