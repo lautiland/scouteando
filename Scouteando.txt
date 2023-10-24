@@ -5,16 +5,14 @@ Scouteando:
 		-Frases de BP
 		-Nuevas entradas
 
-	-Movimiento
+	-Organización
 		-Esctructura del movimiento a nivel mundial/nacional/grupal/equipo
 		-Campamentos mundiales/nacionales/grupales
-		-Actualidad scout, lideres, figuras
-		-Proyectos scout
-
-	-Espiritu
+	
+	-Teoría
 		-Leyes scout, principios y virtudes
+		-Promesa scout, texto de la promesa
 		-Desarrollo personal, areas de crecimiento, hoja de marcha/ppa
-		-
 
 	-Historia
 		-BP
