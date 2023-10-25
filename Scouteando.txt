@@ -6,18 +6,40 @@ Scouteando:
 		-Nuevas entradas
 
 	-Organización
-		-Esctructura del movimiento a nivel mundial/nacional/grupal/equipo
-		-Campamentos mundiales/nacionales/grupales
+		-Esctructura a nivel mundial
+			-OMMS y otras organizaciones
+				-Iniciativas ODS (earthtribe, Mensajeros de la paz)
+			-Eventos mundiales scout (Jamboree, JOTA-JOTI)
+			-Moot
+		-Esctructura a nivel nacional
+			-SAAC
+				-Eventos nacionales
+					-Gran Aullido
+					-CaNaPa
+					-Sosneado
+					-Moot
+		-Esctructura a nivel Grupal
 	
 	-Teoría
-		-Leyes scout, principios y virtudes
-		-Promesa scout, texto de la promesa
-		-Desarrollo personal, areas de crecimiento, hoja de marcha/ppa
+		-Leyes scout
+		-Principios, virtudes y saludo scout
+		-Uniforme
+		-Promesa scout
+			-Origen
+			-Ceremonia
+			-Texto de la promesa
+			-Fuego de la ley
+		-Desarrollo personal
+			-Areas de crecimiento
+			-Hoja de marcha/ppa
+			-Escollos
 
 	-Historia
 		-BP
+			-Biografía
 		-Brownsea
 		-Kim y la batalla de Mafeking
+		-Comienzos en Argentina
 		
 	-Biblioteca
 		-Escultimo para muchachos
