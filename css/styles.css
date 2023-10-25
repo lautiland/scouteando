@@ -225,6 +225,14 @@ section {
     font-size: 1.2rem;
     list-style: "⚜️ ";
     font-weight: 700; }
+  section table tr th {
+    font-family: 'Eczar', serif;
+    font-size: 1.2rem;
+    font-weight: 700; }
+  section table tr td {
+    font-family: 'Eczar', serif;
+    font-size: 1.2rem; 
+    font-weight: 300; }
   section .bienvenida {
     font-style: italic; }
   section .cuadro {
