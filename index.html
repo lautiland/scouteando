@@ -1,5 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
-    <meta http-equiv="Refresh" content="0;url='html/inicio.html'">
+	<title>Scouteando</title>
+	<link rel="icon" href="imagenes/logo.ico">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property='og:title' content='Scouteando: Un blog sobre el movimiento scout'/>
+	<meta property='og:url' content='https://scouteando.net.ar'/>
+	<meta property='og:description' content='Este es sitio dedicado a compartir información sobre el Movimiento Scout con todos aquellos que tengan algun interés o simplemente les de curiosidad.' />
+	<meta property='og:type' content='website'/>
+	<meta property='og:image' content='https://scouteando.net.ar/imagenes/social_media_share.jpg'/>
+	<meta name="description" content="Este sitio dedicado a compartir información sobre el Movimiento Scout con todos aquellos que tengan algun interés o simplemente les de curiosidad.">
+	<meta name="keywords" content="SCOUT, MOVIMIENTO, OMMS, BLOG, INFORMACION, PRINCIPAL, ENTRADAS">
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">	
 </head>
+
 <body>
+
+	<header>	<!--Etiqueta semántica-->
+
+		<div class="top">
+			<a href="../index.html" class="enlaces">
+
+				<img src="imagenes/logo.ico" width="50" height="50" class="img-fluid" alt="logo del sitio" />
+
+				<h1 id="titulo">Scouteando</h1>
+
+			</a>
+			
+
+			<input type="checkbox" id="menu_hamb">
+			<label for="manu_hamb" class="label_menu">
+				<span id="span1"></span>
+				<span id="span2"></span>
+				<span id="span3"></span>
+			</label><br>
+
+
+			<div class="menu_des">
+				<ul>
+					<li>
+						<a href="index.html" class="enlaces">Inicio</a>					
+					</li>
+					<li>
+						<a href="organizacion.html" class="enlaces">Organización</a>
+					</li>
+					<li>
+						<a href="teoria.html" class="enlaces">Teoría</a>
+					</li>
+					<li>
+						<a href="campismo.html" class="enlaces">Campismo</a>
+					</li>
+					<li>
+						<a href="historia.html" class="enlaces">Historia</a>
+					</li>
+					<li>
+						<a href="biblioteca.html" class="enlaces">Biblioteca</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="top2">
+				<ul class="menu">
+					<li>
+						<a href="index.html" class="enlaces">Inicio</a>					
+					</li>
+					<li>
+						<a href="organizacion.html" class="enlaces">Organización</a>
+					</li>
+					<li>
+						<a href="teoria.html" class="enlaces">Teoría</a>
+					</li>
+					<li>
+						<a href="campismo.html" class="enlaces">Campismo</a>
+					</li>
+					<li>
+						<a href="historia.html" class="enlaces">Historia</a>
+					</li>
+					<li>
+						<a href="biblioteca.html" class="enlaces">Biblioteca</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+
+	<section class="container">	<!--Etiqueta semántica-->
+
+			<h2 class="col-12">Te damos la bienvenida a este gran juego: La Vida Scout</h2>
+
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<article>
+	
+				<p class="bienvenida">
+					Venimos a compartir con vos un espacio dedicado al apasionante mundo del movimiento scout. Este sitio está diseñado para explorar en profundidad los aspectos fundamentales del escultismo, desde sus valores hasta su estructura organizativa, pasando por su rica historia y por las obras literarias que han guiado a generaciones de scouts. En este lugar, encontrarás información objetiva y detallada sobre el movimiento scout, diseñada para informar y educar a aquellos interesados en este noble legado. 
+				</p>
+
+			</article><br>
+		</div><br>
+
+		<div id="carouselExampleInterval" class="carousel slide col-sm-10 col-md-8 m-auto" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				
+				<div class="carousel-item active" data-bs-interval="4500">
+					<img src="imagenes/frase_1.jpg" class="d-block w-100" alt="un joven haciendo una actividad scout">
+					<div class="carousel-caption slider_contenido">
+						<h5 class="m-auto fs-1">"Tratad de dejar este mundo en mejores condiciones de como lo encontrasteis" -BP</h5>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="4500">
+					<img src="imagenes/frase_2.jpg" class="d-block w-100" alt="muchos scout posando para una foto">
+					<div class="carousel-caption slider_contenido">
+						<h5 class="m-auto fs-1">“... la verdadera manera de obtener la felicidad es haciendo felices a los demás.” -BP</h5>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="4500">
+					<img src="imagenes/frase_3.jpg" class="d-block w-100" alt="un evento nacional scout con baile">
+					<div class="carousel-caption slider_contenido">
+						<h5 class="m-auto fs-1">“Ser scout es hablar de tus aventuras sin parar de sonreir." -BP</h5>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="4500">
+					<img src="imagenes/frase_4.jpg" class="d-block w-100" alt="un evento nacional scout">
+					<div class="carousel-caption slider_contenido">
+						<h5 class="m-auto fs-1">“Una dificultad deja de serlo tan pronto como sonrías ante ella y la afrontas.” -BP</h5>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="4500">
+					<img src="imagenes/frase_5.jpg" class="d-block w-100" alt="una fogata scout">
+					<div class="carousel-caption slider_contenido">
+						<h5 class="m-auto fs-1"><br>estad listos, estad listas.</h5>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row justify-content-between"><br>
+
+			<h2 id="recientes" class="col-12">Entradas recientes</h2>
+
+
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>Organización del movimiento a nivel mundial</h3>
+					<p>
+						Los scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="organizacion.html#organización_del_movimiento_a_nivel_mundial" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>Movimiento a nivel nacional en Argentina</h3>
+					<p>
+						En scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, en la cual se encuentran las oficinas de la organización, y es donde se gestionan las actividades y eventos que se realizan en el país.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="organizacion.html#movimiento_a_nivel_nacional_en_argentina" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>Zona y Distrito</h3>
+					<p>
+						El movimiento scout en Argentina busca la forma más efectiva de administrar y gestionar para asegurarse de que todos sus grupos cuenten con los recursos y puedan acceder a la información. Es por eso, que las Zonas y Distrito cuentan con personas que ocuparán cargos para facilitar esta tarea.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="organizacion.html#zona_y_distrito" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+			<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
+				<article>
+					<h3>La organización dentro del grupo: las ramas</h3>
+					<p>
+						Nuestra vida scout cuenta con distintas etapas por las que atravesaremos a medida que crecemos. Para cada una de ellas existe una rama, cada una tiene su propio fondo motivador y nos ayudan a desarrollar distintas habilidades y capacidades a lo largo de nuestra vida.
+					</p>
+
+					<div class="centrar">
+						<button>
+							<a href="organizacion.html#organizacion_grupal" class="enlaces">Leer más</a>
+						</button>
+					</div>
+				</article><br>
+			</div>
+		</div><br>
+		<br>
+		<br>
+
+	</section>
+
+	<footer id="footer_background">	<!--Etiqueta semántica-->
+		<div id="footer_2">
+			<img src="imagenes/logo.ico" width="100" height="100" alt="logo del sitio" />
+		</div>	
+	</footer>
+
+
+	<script src="js/bootstrap.min.js"></script>
 </body>
+
+</html>
