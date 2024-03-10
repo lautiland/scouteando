@@ -4,7 +4,7 @@ categoria: organizacion
 autor: lauti
 fecha: 09/03/24
 descripcion: Los Scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas...
-id: 001
+id: 1
 ---
 
 Los Scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas. La OMMS (Organización Mundial del Movimiento scout) fue creada en 1920 y tiene su sede central en Ginebra, Suiza. Gracias a ella, contamos con una base principal sobre como trabajar los valores scout establecidos por nuestro fundador. 

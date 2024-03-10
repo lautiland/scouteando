@@ -4,7 +4,7 @@ categoria: organizacion
 autor: lauti
 fecha: 09/03/24
 descripcion: En scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, donde se encuentran las oficinas de la organización, en la cual se gestionan las actividades y eventos que se realizan en el país...
-id: 002
+id: 2
 ---
 
 En scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, donde se encuentran las oficinas de la organización, en la cual se gestionan las actividades y eventos que se realizan en el país. También contamos con una sede en la ciudad de Rosario, la cual aloja el Centro Nacional de Formación Scout, donde se realizan las capacitaciones para los adultos que forman parte del movimiento.
