@@ -120,7 +120,7 @@ header .label_menu {
 
 header {
   background-color: black;
-  background-image: url("../imagenes/noche.gif"); }
+  background-image: url("../media/noche.png"); }
   header img, header svg {
     vertical-align: top; }
   header .top {
@@ -149,46 +149,6 @@ header {
         padding: auto;
         margin: 0.5rem; } }
 
-section .formulario_de_contacto {
-  padding: 1rem;
-  margin: 2rem;
-  background-color: #460871;
-  width: 40%; }
-  section .formulario_de_contacto legend {
-    color: white;
-    font-size: 3rem;
-    font-family: 'Langar', cursive;
-    text-align: center; }
-  section .formulario_de_contacto input {
-    background-color: white;
-    color: black;
-    font-size: 1.5rem;
-    font-family: 'Eczar', serif;
-    margin: 1rem 0; }
-  section .formulario_de_contacto textarea {
-    resize: none;
-    background-color: white;
-    color: black;
-    font-size: 1.5rem;
-    font-family: 'Eczar', serif; }
-  section .formulario_de_contacto .label {
-    color: white;
-    font-size: 1.9rem;
-    font-family: 'Eczar', serif; }
-  section .formulario_de_contacto .button {
-    background-color: #3FA9BA;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    margin: 0.5rem; }
-  section .formulario_de_contacto .button:hover {
-    background-color: white;
-    color: #460871; }
-  section .formulario_de_contacto .ratio {
-    margin-left: 2rem; }
-  @media screen and (max-width: 995px) {
-    section .formulario_de_contacto {
-      width: 80%; } }
-
 section {
   margin: 0.5rem;
   padding: 0.5rem;
@@ -199,6 +159,12 @@ section {
     margin: 0.3rem;
     padding: 0.5rem;
     font-family: 'Eczar', serif; }
+  section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;}
   section h2 {
     color: #460871;
     text-align: center;
@@ -253,7 +219,7 @@ footer {
   margin-top: 2rem;
   padding: 2rem;
   background-color: black;
-  background-image: url("../imagenes/noche.gif");
+  background-image: url("../media/noche.png");
   background-size: auto;
   display: grid;
   grid-template-areas: "redes logo otras_paginas";
