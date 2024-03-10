@@ -38,14 +38,18 @@ const getOutputFilename = (id, outPath) => {
 const insertArticleInCategory = (file, categorias) => {
 	// Crear un elemento HTML para el artículo
 	const articuloElemento = `
-	<a href="/articulos/${file.data.id}.html" style="text-decoration: none;">
-		<div class="cuadro">
-			<article>
-				<h3>${file.data.titulo}</h3>
-				<p>${file.data.descripcion}</p>
-			</article>
-		</div>
-	</a>`;
+	<div class="cuadro">
+		<article>
+			<h3>${file.data.titulo}</h3>
+			<p>${file.data.descripcion}</p>
+
+			<div class="centrar">
+				<button>
+					<a href="articulos/${file.data.id}.html" class="enlaces">Leer mas</a>
+				</button>
+			</div>
+		</article>
+	</div>`;
 
 	// Crear el comentario de la categoría
 	const comentarioCategoria = `<!-- ARTICULOS ${file.data.categoria.toUpperCase()}-->`;
