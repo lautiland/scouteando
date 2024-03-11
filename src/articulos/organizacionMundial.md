@@ -2,7 +2,7 @@
 titulo: Organización del movimiento a nivel mundial
 categoria: organizacion
 autor: lauti
-fecha: 09/03/24
+fecha: 09/03/2024
 descripcion: Los Scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas...
 id: 1
 ---

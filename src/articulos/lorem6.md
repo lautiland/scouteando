@@ -2,7 +2,7 @@
 titulo: lorem 6
 categoria: teoria
 autor: lauti
-fecha: 09/03/24
+fecha: 11/03/2024
 descripcion: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien.
 id: 6
 ---

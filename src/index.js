@@ -7,12 +7,22 @@ import mkdirp from 'mkdirp'
 import path from 'path'
 
 const readFile = (filename) => {
-	const rawFile = fs.readFileSync(filename, 'utf8')
-	const parsed = matter(rawFile)
-	const html = marked(parsed.content)
+    const rawFile = fs.readFileSync(filename, 'utf8');
+    const parsed = matter(rawFile);
 
-	return { ...parsed, html }
-}
+    // Verificar que la fecha es válida antes de procesarla
+    const fecha = parsed.data.fecha;
+    const isValidDate = /^\d{1,2}\/\d{1,2}\/\d{4}$/.test(fecha);
+
+    if (!isValidDate) {
+        console.error(`Fecha no válida en el archivo: ${filename}`);
+        return null; // O manejar el caso de fecha no válida según tus necesidades
+    }
+
+    const html = marked(parsed.content);
+
+    return { ...parsed, html };
+};
 
 const templatize = (template, {titulo, categoria, autor, fecha, content}) =>
 	template
@@ -104,35 +114,50 @@ const deleteFilesCategory = (categorias) => {
 }
 
 const getRecentArticles = (directory) => {
-	// Leer todos los archivos en el directorio
-	const files = glob.sync(path.join(directory, '*.md'));
-  
-	// Leer y parsear cada archivo
-	const articles = files.map(filename => {
-	  const article = readFile(filename);
-	  // Usar el id del artículo como id
-	  article.id = article.data.id;
-	  return article;
-	});
-  
-	// Ordenar los artículos por fecha (más reciente primero)
-	articles.sort((a, b) => Date.parse(b.data.fecha.split('/').reverse().join('-')) - Date.parse(a.data.fecha.split('/').reverse().join('-')));
-  
-	// Si hay más de 4 artículos con la misma fecha más temprana, seleccionar solo los primeros 4
-	const recentArticles = articles.slice(0, 4);
-  
-	return recentArticles.map(({ data: { titulo, descripcion }, id }) => ({
-	  titulo,
-	  descripcion,
-	  id,
-	}));
+    // Leer todos los archivos en el directorio
+    const files = glob.sync(path.join(directory, '*.md'));
+
+    // Leer y parsear cada archivo
+    const articles = files.map(filename => {
+        const article = readFile(filename);
+        if (!article) {
+            console.error(`No se pudo leer el archivo correctamente: ${filename}`);
+        }
+        // Usar el id del artículo como id
+        article.id = article.data.id;
+        return article;
+    });
+
+    // Filtrar los artículos con fechas válidas y obtener los más recientes
+    const validArticles = articles.filter(article => {
+        if (!article) {
+            return false;
+        }
+        return !isNaN(new Date(article.data.fecha));
+    });
+
+    // Ordenar los artículos por fecha (más reciente primero)
+    validArticles.sort((a, b) => {
+        const dateA = new Date(a.data.fecha.split('/').reverse().join('-'));
+        const dateB = new Date(b.data.fecha.split('/').reverse().join('-'));
+        return dateB - dateA;
+    });
+
+    // Obtener los más recientes
+    const recentArticles = validArticles.slice(0, 4);
+
+    return recentArticles.map(({ data: { titulo, descripcion }, id }) => ({
+        titulo,
+        descripcion,
+        id,
+    }));
 }
   
 const generateIndex = (templatePath, recentArticles) => {
 	// Eliminar el archivo index.html si existe
 	const indexPath = path.join(process.cwd(), 'index.html');
 	if (fs.existsSync(indexPath)) {
-	  fs.unlinkSync(indexPath);
+	  	fs.unlinkSync(indexPath);
 	}
   
 	// Leer el template
@@ -140,18 +165,18 @@ const generateIndex = (templatePath, recentArticles) => {
   
 	// Crear el contenido para las entradas recientes
 	const recentEntries = recentArticles.map(article => `
-	<div class="col-sm-12 col-md-6 col-lg-3 cuadro">
-	  <article>
-		<h3>${article.titulo}</h3>
-		<p>${article.descripcion}</p>
-  
-	  <div class="centrar">
-		<button>
-		  <a href="articulos/${article.id}.html" class="enlaces">Leer mas</a>
-		</button>
-	  </div>
-  
-	  </article><br>
+	<div class="col-sm-12 col-md-6 col-lg-3">
+		<article class="cuadro">
+			<h3>${article.titulo}</h3>
+			<p>${article.descripcion}</p>
+	
+		<div class="row justify-content-center">
+			<button class="col-6">
+				<a href="articulos/${article.id}.html" class="enlaces">Leer mas</a>
+			</button>
+		</div>
+	
+		</article><br>
 	</div>
 	`).join('');
   

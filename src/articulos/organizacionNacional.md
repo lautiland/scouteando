@@ -2,7 +2,7 @@
 titulo: Movimiento a nivel nacional en Argentina
 categoria: organizacion
 autor: lauti
-fecha: 09/03/24
+fecha: 09/03/2024
 descripcion: En scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, donde se encuentran las oficinas de la organización, en la cual se gestionan las actividades y eventos que se realizan en el país...
 id: 2
 ---
