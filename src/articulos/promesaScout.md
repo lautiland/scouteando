@@ -3,7 +3,7 @@ titulo: Promesa Scout
 categoria: teoria
 autor: lauti
 fecha: 11/03/2024
-descripcion: Es la seremonia scout mas importante, en la cual nos comprometemos a vivir la ley y adoptar sus principios y valores para asi ser ciudadanos ejemplares.
+descripcion: Es la ceremonia scout mas importante, en la cual nos comprometemos a vivir la ley y adoptar sus principios y valores para asi ser ciudadanos ejemplares.
 id: 6
 ---
 

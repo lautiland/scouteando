@@ -3,7 +3,7 @@ titulo: Misticas
 categoria: teoria
 autor: lauti
 fecha: 09/03/2024
-descripcion: El movimiento aveces se trata de no entender que es lo que está pasando y entregarse a los momentos con una actitud scout, hay muchas ceremonias, distinciones y tradiciones secretas que se rigen en cada grupo.
+descripcion: El movimiento aveces se trata de no entender que es lo que está pasando y entregarse a los momentos con una actitud scout, hay muchas seremonias, distinciones y tradiciones secretas que se rigen en cada grupo.
 id: 11
 ---
 
