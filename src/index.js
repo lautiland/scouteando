@@ -54,9 +54,11 @@ const insertArticleInCategory = (file, categorias) => {
 			<p>${file.data.descripcion}</p>
 
 			<div class="centrar">
-				<button class="col-6>
-					<a href="articulos/${file.data.id}.html" class="enlaces">Leer mas</a>
-				</button>
+				<form>
+					<button type="reset" onclick="location.href='articulos/${file.data.id}.html'">
+						Leer mas
+					</button>
+				</form>
 			</div>
 		</article>
 	</div>`;
@@ -171,9 +173,13 @@ const generateIndex = (templatePath, recentArticles) => {
 			<p>${article.descripcion}</p>
 	
 		<div class="row justify-content-center">
-			<button class="col-6">
-				<a href="articulos/${article.id}.html" class="enlaces">Leer mas</a>
-			</button>
+			<div class="centrar">
+				<form>
+					<button type="reset" onclick="location.href='articulos/${article.id}.html'">
+						Leer mas
+					</button>
+				</form>
+			</div>
 		</div>
 	
 		</article><br>
