@@ -54,7 +54,7 @@ const insertArticleInCategory = (file, categorias) => {
 			<p>${file.data.descripcion}</p>
 
 			<div class="centrar">
-				<button>
+				<button class="col-6>
 					<a href="articulos/${file.data.id}.html" class="enlaces">Leer mas</a>
 				</button>
 			</div>

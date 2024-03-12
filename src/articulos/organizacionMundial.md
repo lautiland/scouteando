@@ -11,7 +11,7 @@ Los Scouts contamos con una organización no gubernamental internacional que se 
 
 ![banner de la OMMS](../media/omms_logo.jpg "imagen")
 
-La OMMS cuenta con 6 regiones, que son las siguientes: África, Árabe, Asia-Pacífico, Eurasia, Europa y América. Cada una de ellas cuenta con un comité regional que se encarga de gestionar y organizar los eventos y actividades que se realizan en cada una de ellas. En el caso de Scouts de Argentina (SAAC), pertenecemos a la región Interamericana, junto con otros 32 países. 
+La OMMS cuenta con 6 regiones; África, Árabe, Asia-Pacífico, Eurasia, Europa y América. Cada una de ellas cuenta con un comité regional que se encarga de gestionar y organizar los eventos y actividades que se realizan en cada una de ellas. En el caso de Scouts de Argentina (SAAC), pertenecemos a la región Interamericana, junto con otros 32 países. 
 
 ![logo de la Región Interamericana Scout](../media/ris_logo.jpg "imagen")
 
