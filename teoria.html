@@ -3,7 +3,8 @@
 
 <head>
 	<title>Scouteando</title>	
-	<link rel="icon" href="media/favicon.ico">
+	
+	<link rel="shortcut icon" href="media/logo_black.svg" type="image/x-icon" id="faviconTag">
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,6 +213,16 @@
 			<img src="media/logo.ico" width="100" height="100" alt="logo del sitio" />
 		</div>
 	</footer>
+	<script>
+		const faviconTag = document.getElementById("faviconTag");
+		const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+		const changeFavicon = () => {
+			if (isDark.matches) faviconTag.href = "media/logo_white.svg";
+			else faviconTag.href = "media/logo_black.svg";
+		};
+		changeFavicon();
+		isDark.addEventListener("change", changeFavicon);
+	</script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 
