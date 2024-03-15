@@ -282,3 +282,6 @@ h4 {
   color: #2952A0;
   font-size: 2rem;
   font-family: 'Langar', cursive; }
+
+.tooltip-inner {
+  font-family: 'Eczar';}
