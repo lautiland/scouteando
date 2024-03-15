@@ -65,7 +65,7 @@
 						<a href="historia.html" class="enlaces">Historia</a>
 					</li>
 					<li>
-						<a href="biblioteca.html" class="enlaces">Biblioteca</a>
+						<a role="link" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="<p class='fs-4 fw-bold mx-auto'> ¡Próximamente! </p>" class="enlaces" aria-disabled="true" class="disableItem"> Biblioteca</a>
 					</li>
 				</ul>
 			</div>
@@ -88,7 +88,7 @@
 						<a href="historia.html" class="enlaces">Historia</a>
 					</li>
 					<li>
-						<a href="biblioteca.html" class="enlaces">Biblioteca</a>
+						<a role="link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="<p class='fs-4 fw-bold mx-auto'> ¡Próximamente! </p>" class="enlaces" aria-disabled="true" class="disableItem"> Biblioteca</a>
 					</li>
 				</ul>
 			</div>
@@ -223,7 +223,13 @@
 		changeFavicon();
 		isDark.addEventListener("change", changeFavicon);
 	</script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
 </body>
 
 </html>

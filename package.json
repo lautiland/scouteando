@@ -11,6 +11,7 @@
     "start": "node src/index.js"
   },
   "dependencies": {
+    "@floating-ui/dom": "^1.6.3",
     "bootstrap": "^5.3.3",
     "glob": "^7.2.3",
     "gray-matter": "^4.0.2",
