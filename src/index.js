@@ -146,7 +146,7 @@ const getRecentArticles = (directory) => {
     });
 
     // Obtener los más recientes
-    const recentArticles = validArticles.slice(0, 4);
+    const recentArticles = validArticles.slice(0, 8);
 
     return recentArticles.map(({ data: { titulo, descripcion }, id }) => ({
         titulo,
@@ -167,21 +167,19 @@ const generateIndex = (templatePath, recentArticles) => {
   
 	// Crear el contenido para las entradas recientes
 	const recentEntries = recentArticles.map(article => `
-	<div class="col-sm-12 col-md-6 col-lg-3">
-		<article class="cuadro">
-			<h3>${article.titulo}</h3>
-			<p>${article.descripcion}</p>
-	
-		<div class="row justify-content-center">
-			<div class="centrar">
+	<div class="container col-sm-12 col-md-6 col-lg-3 mb-4">
+		<article class="row cuadro h-100">
+			<div class="row align-self-start display-inline-block">
+				<h3>${article.titulo}</h3>
+				<p>${article.descripcion}</p>
+			</div>
+			<div class="col align-self-end centrar">
 				<form>
 					<button type="reset" onclick="location.href='articulos/${article.id}.html'">
-						Leer mas
+						Leer más
 					</button>
 				</form>
 			</div>
-		</div>
-	
 		</article><br>
 	</div>
 	`).join('');
