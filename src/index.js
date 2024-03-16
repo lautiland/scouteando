@@ -1,28 +1,11 @@
-import { create } from 'domain'
 import fs from 'fs'
 import glob from 'glob'
-import matter from 'gray-matter'
-import marked from 'marked'
 import mkdirp from 'mkdirp'
 import path from 'path'
+import rimraf from 'rimraf'
 
-const readFile = (filename) => {
-    const rawFile = fs.readFileSync(filename, 'utf8');
-    const parsed = matter(rawFile);
-
-    // Verificar que la fecha es válida antes de procesarla
-    const fecha = parsed.data.fecha;
-    const isValidDate = /^\d{1,2}\/\d{1,2}\/\d{4}$/.test(fecha);
-
-    if (!isValidDate) {
-        console.error(`Fecha no válida en el archivo: ${filename}`);
-        return null; // O manejar el caso de fecha no válida según tus necesidades
-    }
-
-    const html = marked(parsed.content);
-
-    return { ...parsed, html };
-};
+import generateIndex from './js/generateIndexModule.js'
+import readFile from './js/readFile.js'
 
 const templatize = (template, {titulo, categoria, autor, fecha, content}) =>
 	template
@@ -38,11 +21,12 @@ const saveFile = (filename, contents) => {
 	fs.writeFileSync(filename, contents)
 }
 
-const getOutputFilename = (id, outPath) => {
-	const basename = path.basename(id.toString())
-	const newfilename = basename + '.html'
-	const outfile = path.join(outPath, newfilename)
-	return outfile
+const getOutputFilename = (basename, categoria) => {
+    // Asegúrate de que la categoría no tenga caracteres no deseados que puedan causar problemas en los nombres de los archivos
+    const safeCategoria = categoria.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+    // Usa el nombre base del archivo en la ruta de salida
+    return path.join(safeCategoria, `${basename}.html`);
 }
 
 const insertArticleInCategory = (file, categorias) => {
@@ -55,14 +39,13 @@ const insertArticleInCategory = (file, categorias) => {
 
 			<div class="centrar">
 				<form>
-					<button type="reset" onclick="location.href='articulos/${file.data.id}.html'">
+					<button type="reset" onclick="location.href='${file.data.categoria}/${file.data.filename}.html'">
 						Leer mas
 					</button>
 				</form>
 			</div>
 		</article>
 	</div>`;
-
 	// Crear el comentario de la categoría
 	const comentarioCategoria = `<!-- ARTICULOS ${file.data.categoria.toUpperCase()}-->`;
 
@@ -88,123 +71,59 @@ const insertArticleInCategory = (file, categorias) => {
 	fs.writeFileSync(categoriaPath, categoriaTemplate);
 }
 
-const processFile = (filename, template, outPath, categorias) => {
-	const file = readFile(filename)
-	const outfilename = getOutputFilename(file.data.id, outPath)
+const processFile = (filename, template, categorias) => {
+    const file = readFile(filename)
+    if (!file) {
+        console.error(`No se pudo leer el archivo: ${filename}`);
+        return;
+    }
 
-	insertArticleInCategory(file, categorias);
+    const basename = path.basename(filename, '.md')
+	file.data.filename = basename;
+    const outfilename = getOutputFilename(basename, file.data.categoria)
 
-	const templatized = templatize(template, {
-		titulo: file.data.titulo,
-		categoria: file.data.categoria,
-		autor: file.data.autor,
-		fecha: file.data.fecha,
-		content: file.html,
-	})
+    insertArticleInCategory(file, categorias);
 
-	saveFile(outfilename, templatized)
-	console.log(`📝 ${outfilename}`) 
+    const templatized = templatize(template, {
+        titulo: file.data.titulo,
+        categoria: file.data.categoria,
+        autor: file.data.autor,
+        fecha: file.data.fecha,
+        content: file.html,
+    })
+
+    saveFile(outfilename, templatized)
+    console.log(`📝 ${outfilename}`) 
 }
 
 const deleteFilesCategory = (categorias) => {
-	Object.keys(categorias).forEach((categoria) => {
-		const categoriaPath = path.join(process.cwd(), `${categoria}.html`);
-		if (fs.existsSync(categoriaPath)) {
-			fs.unlinkSync(categoriaPath);
-		}
-	});
-}
+    Object.keys(categorias).forEach((categoria) => {
+        const categoriaPath = path.join(process.cwd(), `${categoria}.html`);
+        const categoriaDir = path.join(process.cwd(), categoria);
 
-const getRecentArticles = (directory) => {
-    // Leer todos los archivos en el directorio
-    const files = glob.sync(path.join(directory, '*.md'));
-
-    // Leer y parsear cada archivo
-    const articles = files.map(filename => {
-        const article = readFile(filename);
-        if (!article) {
-            console.error(`No se pudo leer el archivo correctamente: ${filename}`);
+        if (fs.existsSync(categoriaPath)) {
+            fs.unlinkSync(categoriaPath);
         }
-        // Usar el id del artículo como id
-        article.id = article.data.id;
-        return article;
-    });
 
-    // Filtrar los artículos con fechas válidas y obtener los más recientes
-    const validArticles = articles.filter(article => {
-        if (!article) {
-            return false;
+        if (fs.existsSync(categoriaDir)) {
+            rimraf.sync(categoriaDir);
         }
-        return !isNaN(new Date(article.data.fecha));
     });
-
-    // Ordenar los artículos por fecha (más reciente primero)
-    validArticles.sort((a, b) => {
-        const dateA = new Date(a.data.fecha.split('/').reverse().join('-'));
-        const dateB = new Date(b.data.fecha.split('/').reverse().join('-'));
-        return dateB - dateA;
-    });
-
-    // Obtener los más recientes
-    const recentArticles = validArticles.slice(0, 8);
-
-    return recentArticles.map(({ data: { titulo, descripcion }, id }) => ({
-        titulo,
-        descripcion,
-        id,
-    }));
-}
-  
-const generateIndex = (templatePath, recentArticles) => {
-	// Eliminar el archivo index.html si existe
-	const indexPath = path.join(process.cwd(), 'index.html');
-	if (fs.existsSync(indexPath)) {
-	  	fs.unlinkSync(indexPath);
-	}
-  
-	// Leer el template
-	let template = fs.readFileSync(templatePath, 'utf8');
-  
-	// Crear el contenido para las entradas recientes
-	const recentEntries = recentArticles.map(article => `
-	<div class="container col-sm-12 col-md-6 col-lg-3 mb-4">
-		<article class="row cuadro h-100">
-			<div class="row align-self-start display-inline-block">
-				<h3>${article.titulo}</h3>
-				<p>${article.descripcion}</p>
-			</div>
-			<div class="col align-self-end centrar">
-				<form>
-					<button type="reset" onclick="location.href='articulos/${article.id}.html'">
-						Leer más
-					</button>
-				</form>
-			</div>
-		</article><br>
-	</div>
-	`).join('');
-  
-	if (recentEntries) {
-	  template = template.replace('<!-- ARTICULOS RECIENTES -->', recentEntries);
-	}
-  
-	// Guardar el nuevo index.html
-	fs.writeFileSync(indexPath, template);
 }
 
 const main = () => {
 	
 	const categorias = {"organizacion":"Organización", "teoria":"Teoría", "campismo":"Campismo", "historia":"Historia"};
+	
 	const srcPath = path.resolve('src')
-	const outPath = path.resolve('articulos')
 	const template = fs.readFileSync(path.join(srcPath, 'templates/articulo_template.html'), 'utf8')
 	const filenames = glob.sync(srcPath + '/articulos/**/*.md')
 
-	deleteFilesCategory(categorias)
-	const recentArticles = getRecentArticles(path.join(srcPath, 'articulos'));
-	generateIndex(path.join(srcPath, 'templates/index_template.html'), recentArticles);
+	deleteFilesCategory(categorias);
+
+	generateIndex(path.join(srcPath, 'templates/index_template.html'), srcPath);
 	filenames.forEach((filename) => {
-		processFile(filename, template, outPath, categorias)
+		processFile(filename, template, categorias)
 	})
 }
 

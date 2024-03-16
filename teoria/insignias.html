@@ -4,7 +4,7 @@
 <head>
 	<title>Scouteando</title>
 	
-	<link rel="shortcut icon" href="media/logo_black.svg" type="image/x-icon" id="faviconTag">
+	<link rel="shortcut icon" href="../src/media/logo_black.svg" type="image/x-icon" id="faviconTag">
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,13 @@
 	<meta property='og:url' content='https://scouteando.net.ar'/>
 	<meta property='og:description' content='Este es sitio dedicado a compartir información sobre el Movimiento Scout con todos aquellos que tengan algún interés o simplemente les de curiosidad.' />
 	<meta property='og:type' content='website'/>
-	<meta property='og:image' content='https://scouteando.net.ar/media/social_media_share.jpg'/>
+	<meta property='og:image' content='https://scouteando.net.ar/src/media/social_media_share.jpg'/>
 	<meta name="description" content="Este sitio dedicado a compartir información sobre el Movimiento Scout con todos aquellos que tengan algún interés o simplemente les de curiosidad.">
 	<meta name="keywords" content="SCOUT, MOVIMIENTO, OMMS, BLOG, INFORMACION, PRINCIPAL, ENTRADAS">
 
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../src/css/reset.css">
+	<link rel="stylesheet" href="../src/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../src/css/styles.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Eczar&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,7 +32,7 @@
 		<div class="top">
 			<a href="../index.html" class="enlaces">
 
-				<img src="../media/logo.ico" width="50" height="50" class="img-fluid" alt="logo del sitio" />
+				<img src="../src/media/logo.ico" width="50" height="50" class="img-fluid" alt="logo del sitio" />
 
 				<h1 id="titulo">Scouteando</h1>
 
@@ -100,15 +100,11 @@
 		<div row justify-content-between>
 			<div class="col-12 cuadro">
 				<h3 class="col-12 text-center">
-					Organización del movimiento a nivel mundial
+					Insignias Scout
 				</h3>
 				<article>
-					<p>Los Scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas. La OMMS (Organización Mundial del Movimiento scout) fue creada en 1920 y tiene su sede central en Ginebra, Suiza. Gracias a ella, contamos con una base principal sobre como trabajar los valores scout establecidos por nuestro fundador. </p>
-<p><img src="../media/omms_logo.jpg" alt="banner de la OMMS" title="imagen"></p>
-<p>La OMMS cuenta con 6 regiones; África, Árabe, Asia-Pacífico, Eurasia, Europa y América. Cada una de ellas cuenta con un comité regional que se encarga de gestionar y organizar los eventos y actividades que se realizan en cada una de ellas. En el caso de Scouts de Argentina (SAAC), pertenecemos a la región Interamericana, junto con otros 32 países. </p>
-<p><img src="../media/ris_logo.jpg" alt="logo de la Región Interamericana Scout" title="imagen"></p>
-<p>Una de las muchas tareas de la OMMS es organizar los Jamboree que son grandes campamentos scout mundiales que se realizan cada 4 años y reúnen a miles de scouts en distintas partes del mundo, para compartir experiencias y aprender de otras culturas. El último Jamboree Mundial se realizó en el año 2023 en Jeolla del Norte, Corea del Sur bajo el título &quot;Dibuja Tu Sueño&quot;, y contó con la participación de más de 40.000 scouts de todo el mundo. El próximo Jamboree Mundial se realizará en el año 2027 en Gdansk, Polonia. </p>
-<p><img src="../media/jamboree_jeolla.png" alt="logo del jamboree de 2023" title="imagen"></p>
+					<p>Proximamente...</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>
 
 					<p class="text-end fst-italic text-black-50">
 						~ lauti <br>
@@ -121,20 +117,20 @@
 
 	<footer id="footer_background">	<!--Etiqueta semántica-->
 		<div id="footer_2">
-			<img src="../media/logo.ico" width="100" height="100" alt="logo del sitio" />
+			<img src="../src/media/logo.ico" width="100" height="100" alt="logo del sitio" />
 		</div>	
 	</footer>
 	<script>
 		const faviconTag = document.getElementById("faviconTag");
 		const isDark = window.matchMedia("(prefers-color-scheme: dark)");
 		const changeFavicon = () => {
-			if (isDark.matches) faviconTag.href = "media/logo_white.svg";
-			else faviconTag.href = "media/logo_black.svg";
+			if (isDark.matches) faviconTag.href = "../src/media/logo_white.svg";
+			else faviconTag.href = "../src/media/logo_black.svg";
 		};
 		changeFavicon();
 		isDark.addEventListener("change", changeFavicon);
 	</script>
-	<script src="../js/bootstrap.bundle.min.js"></script>
+	<script src="../src/js/bootstrap.bundle.min.js"></script>
 	<script>
 		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
