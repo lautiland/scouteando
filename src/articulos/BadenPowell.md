@@ -3,7 +3,7 @@ titulo: Baden Powell
 categoria: historia
 autor: lauti
 fecha: 10/03/2024
-descripcion: Lord Robert Stephenson Smyth Baden-Powell of Gilwell, nuestro fundador, el gran jefe scout. Una persona que un dia decidió que iba a cambiar el mundo y muchas décadas después de su muerte todavía lo sigue haciendo por medio de nosotros.
+descripcion: Lord Robert Stephenson Smyth Baden-Powell of Gilwell, nuestro fundador, el gran Jefe Scout Mundial. Una persona que un dia decidió que iba a cambiar el mundo y muchas décadas después de su muerte todavía lo sigue haciendo por medio de nosotros.
 id: 12
 ---
 

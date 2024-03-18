@@ -3,7 +3,7 @@ titulo: Insignias Scout
 categoria: teoria
 autor: lauti
 fecha: 09/03/2024
-descripcion: A todos los scout se nos entregan en diferentes etapas de nuestra vida distintas insignias que representan pertenencia, progresiones y hasta distintivos que nos brindan reconocimiento por nuestras acciones.
+descripcion: A todos los scout se nos entregan en diferentes etapas de nuestra vida distintas insignias que representan pertenencia, progresiones y hasta superación, que nos brindan reconocimiento por nuestras acciones.
 id: 9
 ---
 

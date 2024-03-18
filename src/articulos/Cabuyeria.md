@@ -1,9 +1,9 @@
 ---
-titulo: Cabulleria
+titulo: Cabuyería
 categoria: campismo
 autor: lauti
 fecha: 10/03/2024
-descripcion: Dominar la cabullería es el arte de poder hacer y deshacer un gran repertorio de nudos en situaciones extraordinarias, ya sea delimitar un campamento al anochecer, poder montar un refugio bajo la lluvia y porque no izar una bandera antes del mate.
+descripcion: Dominar la cabuyería es el arte de poder hacer y deshacer un gran repertorio de nudos en situaciones extraordinarias, ya sea delimitar un campamento al anochecer, poder montar un refugio bajo la lluvia y porque no izar una bandera antes del mate.
 id: 18
 ---
 

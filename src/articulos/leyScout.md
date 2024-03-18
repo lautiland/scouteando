@@ -3,7 +3,7 @@ titulo: Ley Scout
 categoria: teoria
 autor: lauti
 fecha: 09/03/2024
-descripcion: La ley scout son las bases del escultismo, a lo que un Scout acude cuando tiene que tomar una decisión, lo que tenemos que aprender a ser y vivir.
+descripcion: La ley scout son las bases del escultismo, a lo que un scout acude cuando tiene que tomar una decisión, lo que tenemos que aprender a ser y vivir.
 id: 5
 ---
 

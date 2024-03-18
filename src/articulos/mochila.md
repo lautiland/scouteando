@@ -3,7 +3,7 @@ titulo: Armado de mochila
 categoria: campismo
 autor: lauti
 fecha: 10/03/2024
-descripcion: Todo scout debe saber como armar una mochila de campamento, caminata y viaje correctamente, no es ninguna ciencia pero a lo mejor, tomar algunos consejos puede ayudarte a no pasar un mal momento.
+descripcion: Todo scout debe saber como armar una mochila de campamento o caminata correctamente, no es ninguna ciencia pero a lo mejor, tomar algunos recaudos puede ayudarte a no pasar un mal momento.
 id: 16
 ---
 

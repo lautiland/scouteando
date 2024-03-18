@@ -3,7 +3,7 @@ titulo: Kim
 categoria: historia
 autor: lauti
 fecha: 10/03/2024
-descripcion: Kimbal O'Hara o simplemente Kim fue un joven huérfano de madre irlandesa y padre ingles que representaba para lo que BP eran cualidades que todo scout debería tener.
+descripcion: Kimbal O'Hara o simplemente Kim fue un joven huérfano, de madre irlandesa y padre inglés que representaba para lo que BP eran cualidades que todo Scout debería tener.
 id: 14
 ---
 

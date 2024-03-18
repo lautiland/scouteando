@@ -1,0 +1,254 @@
+[
+  {
+    "data": {
+      "titulo": "Organización del movimiento a nivel mundial",
+      "categoria": "organizacion",
+      "autor": "lauti",
+      "fecha": "17/03/2024",
+      "descripcion": "Los scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas y organizar eventos internacionales entre las 172 organizaciones nacionales que actualmente están registradas.",
+      "id": 1
+    },
+    "html": "<p>Los scouts contamos con una organización no gubernamental internacional que se dedica a gestionar, establecer normas, organizar eventos internacionales, entre las 172 organizaciones nacionales que actualmente están registradas. La OMMS (Organización Mundial del Movimiento scout) fue creada en 1920 y tiene su sede central en Ginebra, Suiza. Gracias a ella, contamos con una base principal sobre como trabajar los valores scout establecidos por nuestro fundador. </p>\n<p><img src=\"../src/media/omms_logo.jpg\" alt=\"banner de la OMMS\" title=\"imagen\"></p>\n<p>La OMMS cuenta con 6 regiones; África, Árabe, Asia-Pacífico, Eurasia, Europa y América. Cada una de ellas cuenta con un comité regional que se encarga de gestionar y organizar los eventos y actividades que se realizan en cada una de ellas. En el caso de Scouts de Argentina (SAAC), pertenecemos a la región Interamericana, junto con otros 32 países. </p>\n<p><img src=\"../src/media/ris_logo.jpg\" alt=\"logo de la Región Interamericana Scout\" title=\"imagen\"></p>\n<p>Una de las muchas tareas de la OMMS es organizar los Jamboree que son grandes campamentos scout mundiales que se realizan cada 4 años y reúnen a miles de scouts en distintas partes del mundo, para compartir experiencias y aprender de otras culturas. El último Jamboree Mundial se realizó en el año 2023 en Jeolla del Norte, Corea del Sur bajo el título &quot;Dibuja Tu Sueño&quot;, y contó con la participación de más de 40.000 scouts de todo el mundo. El próximo Jamboree Mundial se realizará en el año 2027 en Gdansk, Polonia. </p>\n<p><img src=\"../src/media/jamboree_jeolla.png\" alt=\"logo del jamboree de 2023\" title=\"imagen\"></p>\n",
+    "filename": "Mundial"
+  },
+  {
+    "data": {
+      "titulo": "Movimiento a nivel nacional en Argentina",
+      "categoria": "organizacion",
+      "autor": "lauti",
+      "fecha": "17/03/2024",
+      "descripcion": "En Scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, allí  se encuentran las oficinas de la organización en las cuales se gestionan las actividades y eventos que se realizan en el movimiento a lo largo del país.",
+      "id": 2
+    },
+    "html": "<p>En Scouts de Argentina, contamos con una sede nacional, ubicada en la ciudad de Buenos Aires, donde se encuentran las oficinas de la organización, en la cual se gestionan las actividades y eventos que se realizan en el país. También contamos con una sede en la ciudad de Rosario, la cual aloja el Centro Nacional de Formación Scout, donde se realizan las capacitaciones para los adultos que forman parte del movimiento.</p>\n<p><img src=\"../src/media/saac_logo.jpg\" alt=\"logo de SAAC\" title=\"imagen\"></p>\n<p>Para facilitar la gestión y asegurar la personalización del movimiento, la organización esta distribuida en 172 asociaciones nacionales que actúan en los distintos países. En el caso de Scouts de Argentina (SAAC), la hemos distribuido en regiones, que a su vez están divididas en en 47 zonas distintas. Dentro de cada zona, encontramos los distritos, y por cada distrito hay por lo menos 5 grupos scouts activos. Todo esto funciona dentro de nuestro país. Para encontrar el grupo que esté más cerca de tu casa ingresa a <a href=\"https://scouts.org.ar/\">www.scouts.org.ar</a>.</p>\n",
+    "filename": "Nacional"
+  },
+  {
+    "data": {
+      "titulo": "Promesa Scout",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "11/03/2024",
+      "descripcion": "Es la ceremonia scout mas importante, en la cual nos comprometemos a vivir la ley y adoptar sus principios y valores para asi ser ciudadanos ejemplares.",
+      "id": 6
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "PromesaScout"
+  },
+  {
+    "data": {
+      "titulo": "Oraciones de cada rama",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "En SAAC la religión predominante es el cristianismo, aunque haya grupos que no lo practiquen, orar en algunos patios de grupos ya es tradición por lo que cada rama posee una oración y patronos correspondientes.",
+      "id": 8
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Oraciones"
+  },
+  {
+    "data": {
+      "titulo": "Baden Powell",
+      "categoria": "historia",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Lord Robert Stephenson Smyth Baden-Powell of Gilwell, nuestro fundador, el gran Jefe Scout Mundial. Una persona que un dia decidió que iba a cambiar el mundo y muchas décadas después de su muerte todavía lo sigue haciendo por medio de nosotros.",
+      "id": 12
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "BadenPowell"
+  },
+  {
+    "data": {
+      "titulo": "Primer Campamento Scout",
+      "categoria": "historia",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "A manos de BP se realizó el primer campamento scout del mundo, en el cual un grupo de jóvenes tuvieron un primer acercamiento a lo que eran los cimientos del método scout en su momento.",
+      "id": 13
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "PrimerCampa"
+  },
+  {
+    "data": {
+      "titulo": "Kim",
+      "categoria": "historia",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Kimbal O'Hara o simplemente Kim fue un joven huérfano, de madre irlandesa y padre inglés que representaba para lo que BP eran cualidades que todo Scout debería tener.",
+      "id": 14
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Kim"
+  },
+  {
+    "data": {
+      "titulo": "Perito Moreno",
+      "categoria": "historia",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Francisco Pascasio Moreno fue uno de los primeros scout en Argentina, una persona que con sus expediciones y viajes tuvo grandes aportes geográficos a la sociedad de ese momento.",
+      "id": 15
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "PeritoMoreno"
+  },
+  {
+    "data": {
+      "titulo": "Armado de mochila",
+      "categoria": "campismo",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Todo scout debe saber como armar una mochila de campamento o caminata correctamente, no es ninguna ciencia pero a lo mejor, tomar algunos recaudos puede ayudarte a no pasar un mal momento.",
+      "id": 16
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Mochila"
+  },
+  {
+    "data": {
+      "titulo": "Fuego",
+      "categoria": "campismo",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Saber como prender una fogata es una habilidad útil, desde el comienzo de los tiempos el humano utilizó el fuego para cocinar, iluminarse y hasta defenderse de posibles amenazas.",
+      "id": 17
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Fuego"
+  },
+  {
+    "data": {
+      "titulo": "Cabuyería",
+      "categoria": "campismo",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Dominar la cabuyería es el arte de poder hacer y deshacer un gran repertorio de nudos en situaciones extraordinarias, ya sea delimitar un campamento al anochecer, poder montar un refugio bajo la lluvia y porque no izar una bandera antes del mate.",
+      "id": 18
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Cabuyeria"
+  },
+  {
+    "data": {
+      "titulo": "La batalla de Mafeking",
+      "categoria": "historia",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "La batalla de Mafeking fue un acontecimiento que vivió BP en el cual se volvió un héroe nacional y de allí sacó varias ideas que luego implementaría a la hora de fijar las bases del movimiento scout.",
+      "id": 19
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Mafeking"
+  },
+  {
+    "data": {
+      "titulo": "Rincon de Patrulla",
+      "categoria": "campismo",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "En todo campamento hay un lugar en donde asentarse y donde no, además hay construcciones y consejos que pueden ayudarte a que aunque estés en medio del bosque no corras peligro alguno y además tengas comodidades extraordinarias.",
+      "id": 20
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Rincon"
+  },
+  {
+    "data": {
+      "titulo": "Supervivencia",
+      "categoria": "campismo",
+      "autor": "lauti",
+      "fecha": "10/03/2024",
+      "descripcion": "Un scout tiene que tener la habilidad de poder sobrevivir en situaciones extraordinarias, asi también como ayudar a otras personas a hacerlo, buscar una fuente de agua, comida y refugio son algunas de las cosas que pueden salvar vidas.",
+      "id": 21
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Supervivencia"
+  },
+  {
+    "data": {
+      "titulo": "Región interamericana",
+      "categoria": "organizacion",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "Introduciendo a la región interamericana de la OMMS y de que actividades se encarga y brinda.",
+      "id": 3
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Interamericana"
+  },
+  {
+    "data": {
+      "titulo": "Grupo scout",
+      "categoria": "organizacion",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "El grupo scout es el lugar donde se desarrollan las actividades todos los sábados, a donde asisten los beneficiarios y dirigentes para cumplir el deber de aprender y enseñar jugando acerca del movimiento.",
+      "id": 4
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Grupo"
+  },
+  {
+    "data": {
+      "titulo": "Ley Scout",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "La ley scout son las bases del escultismo, a lo que un scout acude cuando tiene que tomar una decisión, lo que tenemos que aprender a ser y vivir.",
+      "id": 5
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "LeyScout"
+  },
+  {
+    "data": {
+      "titulo": "Uniforme Scout",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "El uniforme scout nos identifica como los actores de cambio que somos, la camisa y el pañuelo como nuestro escudo y espada para afrontar todo lo que se nos presente.",
+      "id": 7
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "UniformeScout"
+  },
+  {
+    "data": {
+      "titulo": "Insignias Scout",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "A todos los scout se nos entregan en diferentes etapas de nuestra vida distintas insignias que representan pertenencia, progresiones y hasta superación, que nos brindan reconocimiento por nuestras acciones.",
+      "id": 9
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Insignias"
+  },
+  {
+    "data": {
+      "titulo": "Proyección personal",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "Existen diferentes herramientas tanto directas como indirectas que nos permiten un crecimiento personal dentro del escultismo, en las ramas mayores es a cargo de cada scout por medio de su hoja de marcha y PPA con la ayuda de sus educadores.",
+      "id": 10
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "ProyeccionPersonal"
+  },
+  {
+    "data": {
+      "titulo": "Misticas",
+      "categoria": "teoria",
+      "autor": "lauti",
+      "fecha": "09/03/2024",
+      "descripcion": "Ser scout aveces se trata de no entender que es lo que está pasando y entregarse a los momentos con una actitud scout, hay muchas ceremonias, distinciones y tradiciones secretas que se rigen en cada grupo.",
+      "id": 11
+    },
+    "html": "<p>Proximamente...</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas, leo volutpat pretium condimentum, lectus tellus semper arcu, quis semper nunc nibh quis neque. Nunc neque turpis, viverra molestie elit eget, egestas convallis sapien. Nam dolor metus, pulvinar sit amet rhoncus at, lobortis non velit. Ut tempus vitae orci a dapibus. In cursus, diam quis viverra consectetur, turpis tellus dapibus orci, et consequat nisi dolor a diam. Suspendisse fringilla auctor justo non facilisis. Maecenas ullamcorper finibus fermentum. Nulla malesuada ac nunc vel tempus. Maecenas vehicula ut lorem mattis faucibus. Pellentesque pulvinar erat risus, non tempus tellus molestie ut. Nunc at hendrerit felis. Sed finibus nunc id hendrerit ornare. Maecenas consectetur, magna sit amet vehicula consequat, enim nunc rutrum tortor, id imperdiet nunc lorem non arcu.</p>\n",
+    "filename": "Misticas"
+  }
+]

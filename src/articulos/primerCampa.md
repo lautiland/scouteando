@@ -3,7 +3,7 @@ titulo: Primer Campamento Scout
 categoria: historia
 autor: lauti
 fecha: 10/03/2024
-descripcion: A manos de BP se realizo el primer campamento scout del mundo, en el cual un grupo de jóvenes le dieron una probada a lo que eran los cimientos del método scout en su momento.
+descripcion: A manos de BP se realizó el primer campamento scout del mundo, en el cual un grupo de jóvenes tuvieron un primer acercamiento a lo que eran los cimientos del método scout en su momento.
 id: 13
 ---
 

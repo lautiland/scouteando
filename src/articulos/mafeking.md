@@ -3,7 +3,7 @@ titulo: La batalla de Mafeking
 categoria: historia
 autor: lauti
 fecha: 10/03/2024
-descripcion: La batalla de Mafeking fue un acontecimiento que le toco vivir a BP en el cual se volvió un héroe nacional y de la cual sacó varias ideas que luego implementaría a la hora de fijar las bases del movimiento.
+descripcion: La batalla de Mafeking fue un acontecimiento que vivió BP en el cual se volvió un héroe nacional y de allí sacó varias ideas que luego implementaría a la hora de fijar las bases del movimiento scout.
 id: 19
 ---
 

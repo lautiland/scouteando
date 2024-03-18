@@ -3,7 +3,7 @@ titulo: Oraciones de cada rama
 categoria: teoria
 autor: lauti
 fecha: 10/03/2024
-descripcion: En SAAC la religión predominante es el cristianismo, aunque haya gente que no la practique, orar en el patio del grupo ya es tradición por lo que cada rama posee una oración y patronos correspondientes.
+descripcion: En SAAC la religión predominante es el cristianismo, aunque haya grupos que no lo practiquen, orar en algunos patios de grupos ya es tradición por lo que cada rama posee una oración y patronos correspondientes.
 id: 8
 ---
 
