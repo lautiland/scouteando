@@ -21,7 +21,11 @@ const generateTemplates = (templatePath) => {
         ORGANIZACION_PATH: 'organizacion.html',
         TEORIA_PATH: 'teoria.html',
         CAMPISMO_PATH: 'campismo.html',
-        HISTORIA_PATH: 'historia.html'
+        HISTORIA_PATH: 'historia.html',
+        INSTAGRAM_ICO_PATH: 'src/media/instagram.ico',
+        TWITTERX_ICO_PATH: 'src/media/twitterx.ico',
+        PINTEREST_ICO_PATH: 'src/media/pinterest.ico',
+        YOUTUBE_ICO_PATH: 'src/media/youtube.ico',
     };
 
     // Definir el fragmento de código HTML para index_template.html

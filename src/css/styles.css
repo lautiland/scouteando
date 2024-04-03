@@ -220,41 +220,7 @@ footer {
   padding: 2rem;
   background-color: black;
   background-image: url("../media/noche.png");
-  background-size: auto;
-  display: grid;
-  grid-template-areas: "redes logo otras_paginas";
-  justify-content: space-around;
-  align-content: center; }
-  footer h4 {
-    text-align: center; }
-  footer ul {
-    list-style-type: none;
-    padding-left: 0; }
-  footer li {
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 0.3rem;
-    padding: 0.5rem; }
-  footer #footer_1 {
-    align-self: top;
-    grid-area: redes; }
-  footer #footer_2 {
-    align-self: center;
-    grid-area: logo; }
-  footer #footer_3 {
-    align-self: top;
-    grid-area: otras_paginas; }
-  @media screen and (max-width: 560px) {
-    footer {
-      grid-template-areas: "redes"
- "otras_paginas"
- "logo";
-      background-size: cover; }
-      footer #footer_1, footer #footer_2, footer #footer_3 {
-        margin-top: 2rem;
-        text-align: center;
-        width: auto; } }
+  background-size: auto;}
 
 .centrar {
   text-align: center; }
