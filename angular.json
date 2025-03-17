@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myapp": {
+    "scouteando": {
       "projectType": "application",
       "schematics": {},
       "root": "",
