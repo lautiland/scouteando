@@ -45,15 +45,15 @@ export class DriveService {
 
   getFilesByCategory(categoryId: string): Observable<any[]> {
     const cacheKey = `category-${categoryId}`;
-    console.log(`getFilesByCategory: Checking cache for key ${cacheKey}`);
+
 
     return from(this.getCacheData(cacheKey)).pipe(
       switchMap(cachedData => {
         if (cachedData) {
-          console.log(`getFilesByCategory: Cache hit for key ${cacheKey}`);
+      
           return of(cachedData);
         }
-        console.log(`getFilesByCategory: Cache miss for key ${cacheKey}, fetching data`);
+    
         return this.fetchAndProcessData(categoryId, cacheKey);
       })
     );
@@ -62,18 +62,18 @@ export class DriveService {
   private async getCacheData(cacheKey: string): Promise<any> {
     const memoryData = this.memoryCache.get(cacheKey);
     if (memoryData && memoryData.expires > Date.now()) {
-      console.log(`getCacheData: Memory cache hit for key ${cacheKey}`);
+  
       return memoryData.data;
     }
 
     const diskData = await this.driveCache.getItem<{ data: any, expires: number }>(cacheKey);
     if (diskData && diskData.expires > Date.now()) {
-      console.log(`getCacheData: Disk cache hit for key ${cacheKey}`);
+  
       this.memoryCache.set(cacheKey, { data: diskData.data, expires: diskData.expires });
       return diskData.data;
     }
 
-    console.log(`getCacheData: Cache miss for key ${cacheKey}`);
+
     return null;
   }
 
@@ -91,13 +91,13 @@ export class DriveService {
     ].join(',');
 
     const url = `${this.apiUrl}?q=${query}&key=${environment.drive.apiKey}&fields=files(${fields})`;
-    console.log(`fetchAndProcessData: Fetching data from API for category ${categoryId}`);
+
 
     return this.http.get<{ files: any[] }>(url).pipe(
       switchMap(res => this.processFilesInBatches(res.files)),
       map(files => this.formatFiles(files)),
       tap(data => {
-        console.log(`fetchAndProcessData: Updating cache for key ${cacheKey}`);
+    
         this.updateCache(cacheKey, data);
       }),
       catchError(error => {
@@ -234,7 +234,7 @@ export class DriveService {
       const cacheKey = `category-${environment.drive.folders.categorias[categoryId].id}`;
       this.cacheValid(cacheKey).then(isValid => {
         if (!isValid) {
-          console.log(`preloadAllCategories: Preloading category ${categoryId}`);
+      
           this.getFilesByCategory(environment.drive.folders.categorias[categoryId].id).pipe(take(1)).subscribe();
         }
       });
