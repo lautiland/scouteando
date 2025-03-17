@@ -3,7 +3,7 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - master  # Cambiado a master (si es tu rama de despliegue)
+      - main
 
 jobs:
   build:
@@ -24,10 +24,10 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npm run build -- --configuration=production --output-path=dist --base-href=/scouteando/
+        run: npm run build -- --configuration=production --base-href=/scouteando/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist/scouteando
