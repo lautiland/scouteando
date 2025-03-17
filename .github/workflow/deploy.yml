@@ -1,0 +1,33 @@
+name: Deploy Angular App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Cambiado a master (si es tu rama de despliegue)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DRIVE_API_KEY: ${{ secrets.DRIVE_API_KEY }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: npm run build -- --configuration=production --output-path=dist --base-href=/scouteando/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

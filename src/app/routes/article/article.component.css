@@ -1,0 +1,65 @@
+.article-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Your-Preferred-Font', sans-serif; /* Ej: 'Roboto' */
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.article-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Reset de estilos heredados de Google Docs */
+.article-content :where(div, p, span) {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Mantenemos formatos básicos */
+.article-content strong {
+  font-weight: 600;
+}
+
+.article-content em {
+  font-style: italic;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+/* Alineaciones */
+.article-content .c1 { /* Clase para centrado en Docs */
+  text-align: center !important;
+}
+
+.article-content .c2 { /* Clase para alineación derecha en Docs */
+  text-align: right !important;
+}
+
+/* Imágenes */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+}
+
+.article-content a {
+  text-decoration: none;
+  color: #2c5282;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+}
+
+.article-content a:hover {
+  color: #1a365d;
+  border-bottom-color: transparent;
+}

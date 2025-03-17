@@ -1,0 +1,12 @@
+footer {
+    margin-top: 2rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    background-color: black;
+    background-image: url("/assets/images/noche.png");
+    background-size: auto;
+    #copy_text {
+        font-family: 'Eczar';
+        color: lightgray;
+        font-size: 1.3rem; }
+}

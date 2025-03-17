@@ -1,0 +1,57 @@
+<header>
+  <div class="top">
+    <a href="index.html" class="enlaces">
+      <img src="/assets/images/logo.ico" width="50" height="50" class="img-fluid" alt="logo del sitio" />
+      <h1 id="titulo">Scouteando</h1>
+    </a>
+    <input type="checkbox" id="menu_hamb">
+    <label for="menu_hamb" class="label_menu">
+      <span id="span1"></span>
+      <span id="span2"></span>
+      <span id="span3"></span>
+    </label>
+    <br>
+    <div class="menu_des">
+      <ul>
+        <!-- Versión móvil -->
+        <li *ngFor="let categoria of categoriasLista">
+          <a [routerLink]="['/', categoria.clave]" class="enlaces">
+            {{ categoria.nombre }}
+          </a>
+        </li>
+        <li>
+          <a role="link" 
+             class="enlaces disabled-link"
+             data-bs-toggle="tooltip" 
+             data-bs-placement="top"
+             data-bs-html="true"
+             aria-disabled="true"
+             data-bs-title="<p class='fs-3 fw-bold mx-auto'>¡Próximamente!</p>">
+            Biblioteca
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="top2">
+      <ul class="menu">
+        <!-- Versión desktop -->
+        <li *ngFor="let categoria of categoriasLista">
+          <a [routerLink]="['/', categoria.clave]" class="enlaces">
+            {{ categoria.nombre }}
+          </a>
+        </li>
+        <li>
+          <a role="link"
+             class="enlaces disabled-link"
+             data-bs-toggle="tooltip"
+             data-bs-placement="top"
+             data-bs-html="true"
+             aria-disabled="true"
+             data-bs-title="<p class='fs-3 fw-bold mx-auto'>¡Próximamente!</p>">
+            Biblioteca
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
