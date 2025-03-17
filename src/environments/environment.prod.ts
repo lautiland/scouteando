@@ -1,5 +1,5 @@
 export const environment = {
-    production: false,
+    production: true,
     drive: {
       apiKey: "DRIVE_API_KEY",
       folders: {
