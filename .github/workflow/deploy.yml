@@ -1,33 +1,34 @@
-name: Deploy Angular App to GitHub Pages
-
+name: Build and Deploy
 on:
   push:
     branches:
       - main
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      DRIVE_API_KEY: ${{ secrets.DRIVE_API_KEY }}
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: '16'
+          node-version: '10.x'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Angular app
-        run: npm run build -- --configuration=production --base-href=/scouteando/
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - uses: actions/cache@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/scouteando
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Build
+        run: |
+          npm install
+          npm run-script deploy
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist/workshop
