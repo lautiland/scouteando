@@ -1,10 +1,10 @@
-name: Deploy Angular
+name: Deploy Angular to GitHub Pages
 on:
   push:
     branches: [main]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -19,14 +19,16 @@ jobs:
         run: |
           sed -i "s|DRIVE_API_KEY|${{ secrets.DRIVE_API_KEY }}|g" src/environments/environment.prod.ts
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build -- --configuration=production --base-href="/scouteando/"
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Deploy to GH Pages
+      - name: Build Angular App
+        run: npm run build -- --configuration=production --base-href="/scouteando/"
+
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist/scouteando
+          clean: true
