@@ -1,6 +1,6 @@
 header {
   background-color: black;
-  background-image: url("/assets/images/noche.png");
+  background-image: url("assets/images/noche.png");
   .disabled-link {
     cursor: default !important;
     opacity: 0.6;
