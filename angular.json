@@ -13,7 +13,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/scouteando/browser",
+            "outputPath": "dist/scouteando",
+            "baseHref": "/scouteando/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
