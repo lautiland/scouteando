@@ -28,7 +28,7 @@ jobs:
           rm -rf dist/scouteando
           
           # Construye la app (los archivos se generarán en dist/scouteando/browser)
-          npm run build -- --configuration=production --base-href="/scouteando/"
+          npm run build -- --configuration=production --base-href="/scouteando/" --deploy-url="/scouteando/"
 
           # Mueve los archivos de /browser a la raíz de dist/scouteando
           mv dist/scouteando/browser/* dist/scouteando/

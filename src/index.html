@@ -5,9 +5,20 @@
   <title>Scouteando</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" href="assets/images/logo_black.svg" type="image/x-icon" id="faviconTag">
+  <base href="/scouteando/">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+		const faviconTag = document.getElementById("faviconTag");
+		const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+		const changeFavicon = () => {
+			if (isDark.matches) faviconTag.href = "assets/images/logo_white.svg";
+			else faviconTag.href = "assets/images/logo_black.svg";
+		};
+		changeFavicon();
+		isDark.addEventListener("change", changeFavicon);
+	</script>
 </body>
 </html>

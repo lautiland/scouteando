@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/scouteando",
             "baseHref": "/scouteando/",
+            "deployUrl": "/scouteando/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
