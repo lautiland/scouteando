@@ -3,7 +3,7 @@ footer {
     padding: 2rem;
     padding-bottom: 1rem;
     background-color: black;
-    background-image: url("assets/images/noche.png");
+    background-image: url("/scouteando/assets/images/noche.png");
     background-size: auto;
     #copy_text {
         font-family: 'Eczar';
