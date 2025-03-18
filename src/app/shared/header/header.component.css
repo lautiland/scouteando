@@ -60,7 +60,7 @@ header {
       margin-bottom: 0.5rem;
       color: white;
       padding: 2.5rem;
-      font-size: 5rem;
+      font-size: 4.5rem;
       font-family: 'Langar';
       display: inline;
       @media screen and (max-width: 1024px) {
@@ -70,8 +70,7 @@ header {
           font-size: 3rem;
           padding-bottom: 1.5rem;
           padding: auto;
-          margin: 0.5rem; } 
-        }
+          margin: 0.5rem; } }
     }
   .menu_des {
     margin-top: 2.2rem;
