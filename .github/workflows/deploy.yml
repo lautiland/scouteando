@@ -25,8 +25,11 @@ jobs:
       - name: Build Angular App
         run: |
           npm run build -- --configuration=production --base-href="/scouteando/"
-          mv dist/scouteando/browser/* dist/scouteando/
+          
+          # Usa rsync para evitar errores de directorio no vacío
+          rsync -a --remove-source-files dist/scouteando/browser/ dist/scouteando/
           rm -rf dist/scouteando/browser
+          
           touch dist/scouteando/.nojekyll
 
       - name: Deploy to GitHub Pages
