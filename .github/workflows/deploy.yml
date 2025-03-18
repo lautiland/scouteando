@@ -25,7 +25,9 @@ jobs:
       - name: Build Angular App
         run: |
           npm run build -- --configuration=production --base-href="/scouteando/"
-          touch dist/scouteando/.nojekyll  # <-- ¡Este es el paso clave!
+          mv dist/scouteando/browser/* dist/scouteando/
+          rm -rf dist/scouteando/browser
+          touch dist/scouteando/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
