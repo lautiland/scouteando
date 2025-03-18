@@ -24,25 +24,14 @@ jobs:
 
       - name: Build Angular App
         run: |
-          # Limpia la carpeta de build previa
-          rm -rf dist/scouteando
-
-          # Ejecuta el build
           npm run build -- --configuration=production --base-href="/scouteando/"
-
-          # Copia los archivos de /browser a la raíz
-          cp -R dist/scouteando/browser/. dist/scouteando/
-
-          # Elimina la carpeta browser (ya vacía)
-          rm -rf dist/scouteando/browser
-
-          # Crea .nojekyll en la raíz
-          touch dist/scouteando/.nojekyll
+          # Crea .nojekyll dentro de la carpeta browser
+          touch dist/scouteando/browser/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: dist/scouteando
+          folder: dist/scouteando/browser
           clean: true
