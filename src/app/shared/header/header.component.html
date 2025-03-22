@@ -15,18 +15,13 @@
       <ul>
         <!-- Versión móvil -->
         <li *ngFor="let categoria of categoriasLista">
-          <a [routerLink]="['/', categoria.clave]" class="enlaces">
+          <a [routerLink]="['/', categoria.clave]" class="enlaces" (click)="cerrarMenu()">
             {{ categoria.nombre }}
           </a>
         </li>
         <li>
           <a role="link" 
-             class="enlaces disabled-link"
-             data-bs-toggle="tooltip" 
-             data-bs-placement="top"
-             data-bs-html="true"
-             aria-disabled="true"
-             data-bs-title="<p class='fs-3 fw-bold mx-auto'>¡Próximamente!</p>">
+             class="enlaces disabled-link">
             Biblioteca
           </a>
         </li>

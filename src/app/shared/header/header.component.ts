@@ -24,6 +24,13 @@ export class HeaderComponent {
     }));
   }
 
+  
+  cerrarMenu(): void {
+    const menuHamb = document.getElementById("menu_hamb");
+    if (menuHamb) {
+      menuHamb.click();
+    }
+  }
 }
 
 interface Categoria {
