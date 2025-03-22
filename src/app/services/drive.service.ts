@@ -46,7 +46,6 @@ export class DriveService {
   getFilesByCategory(categoryId: string): Observable<any[]> {
     const cacheKey = `category-${categoryId}`;
 
-
     return from(this.getCacheData(cacheKey)).pipe(
       switchMap(cachedData => {
         if (cachedData) {
@@ -108,23 +107,32 @@ export class DriveService {
   }
 
   preloadArticlesInCategory(categoryId: string): void {
-    this.getFilesByCategory(categoryId).pipe(
-      take(1),
-      switchMap(files => {
-        const preloadObservables = files.map(file => this.getArticleContent(file.id).pipe(take(1)));
-        return forkJoin(preloadObservables);
-      }),
-      catchError(error => {
-        console.error('Error preloading articles:', error);
-        return of([]);
-      })
-    ).subscribe(articles => {
-      articles.forEach(article => {
-        if (article) {
-          this.preloadedArticles.set(article.id, article);
-          this.updateCache(`article-${article.id}`, article);
-        }
-      });
+    const cacheKey = `category-${categoryId}`;
+    
+    this.cacheValid(cacheKey).then(isValid => {
+      if (!isValid) {
+        this.getFilesByCategory(categoryId).pipe(
+          take(1),
+          switchMap(files => {
+            const preloadObservables = files.map(file => 
+              this.getArticleContent(file.id).pipe(
+                take(1),
+                tap(article => {
+                  if (article) {
+                    this.preloadedArticles.set(article.id, article);
+                    this.updateCache(`article-${article.id}`, article);
+                  }
+                })
+              )
+            );
+            return forkJoin(preloadObservables);
+          }),
+          catchError(error => {
+            console.error('Error preloading articles:', error);
+            return of([]);
+          })
+        ).subscribe();
+      }
     });
   }
 
