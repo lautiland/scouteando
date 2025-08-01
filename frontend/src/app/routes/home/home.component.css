@@ -19,6 +19,33 @@
   padding: 2rem;
 }
 
+/* Estilos para las tarjetas de categorías */
+.category-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.375rem;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  border-color: var(--bs-primary);
+}
+
+.category-card .card-body {
+  padding: 1.5rem;
+}
+
+.category-card .card-title {
+  color: var(--bs-primary);
+  margin-bottom: 1rem;
+}
+
+.category-card .card-text {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
 .carousel-caption h4 {
   font-family: var(--font-heading);
   font-size: 1.75rem;
