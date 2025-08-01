@@ -1,0 +1,12 @@
+footer {
+    padding: 1.5rem;
+    padding-bottom: 0.3rem;
+    background-color: black;
+    background-image: url("/scouteando/assets/images/noche.png");
+    background-size: auto;
+    #copy_text {
+        font-family: 'Eczar';
+        color: lightgray;
+        font-size: 0.8rem; /* Reducido de 1.3rem a 0.8rem para compensar el cambio de base */
+    }
+}

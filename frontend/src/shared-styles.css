@@ -1,0 +1,57 @@
+/* Estilos compartidos entre componentes */
+
+/* Botones auxiliares - usado en múltiples componentes */
+.btn-aux {
+  font-family: 'Eczar';
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.btn-aux:hover {
+  border: 1px solid #460871;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(70, 8, 113, 0.3);
+}
+
+/* Estilos de contenido de artículo - reutilizable */
+.content-container {
+  padding: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 3rem;
+}
+
+.content-container h1,
+.content-container h2,
+.content-container h3,
+.content-container h4,
+.content-container h5,
+.content-container h6 {
+  font-family: 'Langar', cursive;
+  color: black;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-container p {
+  font-family: 'Eczar', serif;
+  font-size: 1.4rem;
+  color: #535353;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+/* Metadatos reutilizables */
+.metadata {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}

@@ -3,18 +3,43 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "ng serve",
+      "name": "Frontend: Angular App",
       "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      "preLaunchTask": "Frontend: Start Dev Server",
+      "url": "http://localhost:4200/scouteando",
+      "webRoot": "${workspaceFolder}/frontend/src"
     },
     {
-      "name": "ng test",
+      "name": "Backend: Strapi Admin",
       "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: test",
-      "url": "http://localhost:9876/debug.html"
+      "preLaunchTask": "Backend: Start Dev Server",
+      "url": "http://localhost:1337/admin",
+      "webRoot": "${workspaceFolder}/backend"
+    },
+    {
+      "name": "Frontend: Tests",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "Frontend: Test",
+      "url": "http://localhost:9876/debug.html",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    },
+    {
+      "name": "Fullstack: Both Apps",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "Start Both (Frontend + Backend)",
+      "url": "http://localhost:4200/scouteando",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Frontend & Backend",
+      "configurations": ["Frontend: Angular App", "Backend: Strapi Admin"],
+      "stopAll": true
     }
   ]
 }

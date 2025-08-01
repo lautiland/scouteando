@@ -1,0 +1,205 @@
+header {
+  background-color: black;
+  background-image: url("/scouteando/assets/images/noche.png");
+  .disabled-link {
+    cursor: default !important;
+    opacity: 0.6;
+    pointer-events: none;
+    text-decoration: none;
+  }
+  .disabled-link:hover {
+    color: inherit !important;
+  }
+  img {
+    vertical-align: top;}
+  .top {
+    padding-top: 1.25rem; /* Reducido de 2rem a 1.25rem */
+    padding-left: 1.25rem; /* Reducido de 2rem a 1.25rem */
+    padding-right: 1.25rem; /* Reducido de 2rem a 1.25rem */
+    #menu_hamb {
+      display: all;
+      float: right;
+      top: 0.9375rem; /* Reducido de 1.5rem a 0.9375rem */
+      right: 1.25rem; /* Reducido de 2rem a 1.25rem */
+      opacity: 0;
+      width: 1.875rem; /* Reducido de 3rem a 1.875rem */
+      height: 1.875rem; /* Reducido de 3rem a 1.875rem */
+      transform: scale(1.3);
+      cursor: pointer;
+      position: relative;
+      z-index: 100; }
+    #span1, #span2, #span3 {
+      position: absolute;
+      right: -0.78125rem; /* Reducido de -1.25rem a -0.78125rem */
+      top: 0.9375rem; /* Reducido de 1.5rem a 0.9375rem */
+      content: '';
+      background: white;
+      width: 2.1875rem; /* Reducido de 3.5rem a 2.1875rem */
+      height: 0.375rem; /* Reducido de 0.6rem a 0.375rem */
+      border-radius: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+      transition: all 500ms ease; }
+    #menu_hamb:checked ~ .label_menu #span1 {
+      transform: rotate(135deg);
+      top: 1.5625rem; /* Reducido de 2.5rem a 1.5625rem */}
+    #menu_hamb:checked ~ .label_menu #span2 {
+      transform: rotate(360deg);
+      opacity: 0; }
+    #menu_hamb:checked ~ .label_menu #span3 {
+      transform: rotate(-135deg);
+      top: 1.5625rem; /* Reducido de 2.5rem a 1.5625rem */}
+    .label_menu {
+      display: all;
+      z-index: 80;
+      float: right;
+      position: relative;}
+      .label_menu #span2 {
+        top: 1.625rem; /* Reducido de 2.6rem a 1.625rem */}
+      .label_menu #span3 {
+        top: 2.3125rem; /* Reducido de 3.7rem a 2.3125rem */}
+    #titulo {
+      color: white;
+      padding: 1rem;
+      font-size: 2.8rem; /* Reducido de 4.5rem a 2.8rem para compensar el cambio de base */
+      font-family: 'Langar';
+      display: inline;
+      top: 1.5rem;
+      vertical-align: text-top;
+    }
+  .menu_des {
+    margin-top: 1.375rem; /* Reducido de 2.2rem a 1.375rem */
+    display: none;
+    width: 100%;
+    ul {
+      list-style-type: none;
+      li {
+        margin: 0.625rem; /* Reducido de 1rem a 0.625rem */
+        a {
+          color: white;
+          font-size: 1.25rem; /* Reducido de 2rem a 1.25rem */
+          margin: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+          padding: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+          font-family: 'Langar'; }
+        a:hover {
+          background-color: white;
+          color: black;
+          border-radius: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */}
+      }
+    }
+  }
+    .top2 {
+      padding: 0.125rem; /* Reducido de 0.2rem a 0.125rem */
+      width: 100%; 
+      .menu {
+        font-size: 1.25rem; /* Reducido de 2rem a 1.25rem */
+        display: flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+        list-style-type: none;
+        ul {
+          li {
+            min-width: 40%;
+            position: relative;
+            text-align: center;
+          }
+        }
+        a {
+          padding: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+        }
+        li:hover :not(.disabled-link) {
+          background-color: white;
+          border-radius: 0.3125rem; /* Reducido de 0.5rem a 0.3125rem */
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .label_menu {
+    display: none; }
+  header #menu_hamb {
+    display: none; }
+}
+      
+@media screen and (max-width: 1024px) {
+  header .top2 {
+    display: none; }
+  header #menu_hamb:checked ~ .menu_des {
+    display: block; }
+  header {
+    padding-bottom: 1.25rem; /* Reducido de 2rem a 1.25rem */}
+}
+
+/* Media query para resoluciones muy pequeñas (menos de 380px) */
+@media screen and (max-width: 380px) {
+  /* Reducir padding general */
+  header .top {
+    padding-top: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Logo más pequeño */
+  header .top img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  /* Título más pequeño */
+  header #titulo {
+    font-size: 1.5rem !important;
+    padding: 1rem 0.5rem !important;
+  }
+  
+  /* Menú hamburguesa más pequeño */
+  header #menu_hamb {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  
+  /* Spans del menú hamburguesa más pequeños */
+  header #span1, 
+  header #span2, 
+  header #span3 {
+    width: 1.75rem;
+    height: 0.25rem;
+    right: -0.625rem;
+    top: 0.75rem;
+    border-radius: 0.25rem;
+  }
+  
+  header .label_menu #span2 {
+    top: 1.25rem;
+  }
+  
+  header .label_menu #span3 {
+    top: 1.75rem;
+  }
+  
+  /* Ajuste de los spans cuando está activo */
+  header #menu_hamb:checked ~ .label_menu #span1,
+  header #menu_hamb:checked ~ .label_menu #span3 {
+    top: 1.25rem;
+  }
+  
+  /* Menú desplegable más compacto */
+  header .menu_des {
+    margin-top: 1rem;
+  }
+  
+  header .menu_des ul li {
+    margin: 0.5rem;
+  }
+  
+  header .menu_des ul li a {
+    font-size: 1rem;
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+}

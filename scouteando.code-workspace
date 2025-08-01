@@ -1,0 +1,46 @@
+{
+  "folders": [
+    {
+      "name": "🚀 Workspace Root",
+      "path": "."
+    },
+    {
+      "name": "🎨 Frontend (Angular)",
+      "path": "./frontend"
+    },
+    {
+      "name": "⚙️ Backend (Strapi)",
+      "path": "./backend"
+    }
+  ],
+  "settings": {
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.angular": true,
+      "**/.strapi": true,
+      "**/dist": true,
+      "**/build": true
+    },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/dist": true,
+      "**/build": true,
+      "**/.angular": true,
+      "**/.strapi": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "angular.ng-template",
+      "bradlc.vscode-tailwindcss",
+      "ms-vscode.vscode-typescript-next",
+      "esbenp.prettier-vscode",
+      "ms-vscode.vscode-json"
+    ]
+  }
+}

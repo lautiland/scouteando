@@ -1,0 +1,132 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./shared-styles.css";
+
+/* Variables CSS para colores y fuentes - ajustadas para Bootstrap responsive typography */
+:root {
+  --color-primary: #460871;
+  --color-secondary: #5D1F89;
+  --color-text: #535353;
+  --color-text-light: #777;
+  --color-background: #f0efe9;
+  
+  --font-heading: 'Langar', cursive;
+  --font-body: 'Eczar', serif;
+  --font-mono: 'Courier New', monospace;
+  
+  --font-size-base: 100%; /* Cambiar a 16px base estándar */
+  /* Tamaños estándar para trabajar bien con Bootstrap responsive typography */
+  --font-size-large: 2rem; /* 32px con base 16px */
+  --font-size-xlarge: 2.5rem; /* 40px con base 16px */
+  --font-size-medium: 1.125rem; /* 18px con base 16px */
+  --font-size-small: 0.875rem; /* 14px con base 16px */
+}
+
+/* Reset global */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	font-size: var(--font-size-base);
+}
+
+/* Estilos globales comunes para todos los componentes */
+
+/* Títulos - usando Bootstrap responsive typography correctamente */
+h1 {
+  font-family: var(--font-heading) !important;
+  color: white !important;
+  font-size: var(--font-size-xlarge) !important; /* 40px base, Bootstrap lo hará responsive */
+}
+
+h2 {
+  color: var(--color-primary) !important;
+  text-align: center;
+  margin: 0.125rem;
+  padding: 1rem;
+  font-family: var(--font-heading) !important;
+  font-size: var(--font-size-large) !important; /* 32px base, Bootstrap lo hará responsive */
+}
+
+h3 {
+  color: var(--color-secondary) !important;
+  margin: 0.125rem;
+  font-family: var(--font-heading) !important;
+  font-size: 1.5rem !important; /* 24px base, Bootstrap lo hará responsive */
+}
+
+h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-secondary) !important;
+  font-size: 1.5rem !important; /* 14px base, Bootstrap lo hará responsive */
+}
+
+/* Override solo para casos específicos donde necesitemos tamaños exactos */
+.custom-h2 {
+  font-size: var(--font-size-xlarge) !important;
+}
+
+.custom-h3 {
+  font-size: var(--font-size-large) !important;
+}
+
+/* Párrafos - tamaño estándar */
+p {
+  color: var(--color-text);
+  font-size: 1rem; /* 16px estándar */
+  margin: 0.3rem;
+  padding: 0.5rem;
+  font-family: var(--font-body);
+}
+
+/* Contenedor principal de artículo */
+article {
+  min-height: 65vh;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-background);
+}
+
+/* Bootstrap maneja el responsive typography automáticamente */
+/* Los títulos se harán ~1.2x más grandes en desktop (≥1200px) automáticamente */
+
+/* Clases de utilidad para títulos personalizados */
+.article-title {
+  font-size: var(--font-size-xlarge) !important;
+  text-align: left !important;
+  color: var(--color-primary) !important;
+  font-family: var(--font-heading) !important;
+}
+
+.category-title {
+  font-size: var(--font-size-xlarge) !important;
+  text-align: center !important;
+  color: var(--color-primary) !important;
+  font-family: var(--font-heading) !important;
+}
+
+/* Override solo para casos específicos donde necesitemos tamaños exactos */
+.custom-h2 {
+  font-size: var(--font-size-xlarge) !important;
+}
+
+.custom-h3 {
+  font-size: var(--font-size-large) !important;
+}
+
+.large-text {
+  font-size: var(--font-size-medium) !important;
+}
+
+/* Estilos de utilidad */
+.centrar {
+	text-align: center;
+}
+
+.enlaces {
+	text-decoration: none;
+	color: white;
+	font-family: 'Langar', cursive;
+}

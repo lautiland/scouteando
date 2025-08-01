@@ -1,0 +1,41 @@
+/* Estilos específicos del componente Home */
+
+/* Estilos para el carrusel con efecto blur */
+.carousel-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay más oscuro para mejor contraste */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.carousel-caption h4 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  line-height: 1.4;
+  /* Eliminada la text-shadow */
+}
+
+/* Asegurar que el carrusel sea responsive */
+@media (max-width: 768px) {
+  .carousel-caption {
+    padding: 1rem;
+  }
+  
+  .carousel-caption h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Este componente usa principalmente los estilos globales definidos en styles.css */
+/* Solo se mantienen overrides específicos si son necesarios */

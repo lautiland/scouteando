@@ -1,0 +1,54 @@
+name: Strapi CI/CD
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'npm'
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Create .env.production with secrets
+        run: |
+          cat > .env.production << EOF
+          # Production Environment Configuration
+          HOST=0.0.0.0
+          PORT=1337
+          
+          # Security Keys
+          APP_KEYS=${{ secrets.APP_KEYS }}
+          API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
+          ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}
+          TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}
+          JWT_SECRET=${{ secrets.JWT_SECRET }}
+          ENCRYPTION_KEY=${{ secrets.ENCRYPTION_KEY }}
+          
+          # Database Configuration
+          DATABASE_CLIENT=postgres
+          DATABASE_URL=${{ secrets.DATABASE_URL }}
+          DATABASE_SSL=true
+          
+          # Production Settings
+          NODE_ENV=production
+          STRAPI_DISABLE_UPDATE_NOTIFICATION=true
+          EOF
+          
+      - name: Build Strapi
+        run: npm run build
+        
+      - name: Start Strapi
+        run: npm start &
+        
+      - name: Deploy to production
+        run: echo "Add your deployment steps here"

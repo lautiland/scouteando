@@ -1,0 +1,134 @@
+/* Estilos específicos del componente Article */
+
+/* Botón auxiliar */
+.btn-aux {
+  font-family: 'Eczar';
+  font-size: 0.875rem; /* Reducido de 1.2rem a 0.875rem */
+  background-color: transparent;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.btn-aux:hover {
+  border: 1px solid #460871;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(70, 8, 113, 0.3);
+}
+
+/* Título del artículo - override del h2 global */
+.article-title {
+  text-align: left !important;
+  font-size: 2.5rem !important; /* Reducido de 4.2rem a 2.5rem */
+  padding-top: 1rem !important;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .article-title {
+    font-size: 1.8rem !important; /* Reducido de 2.5rem a 1.8rem */
+  }
+}
+
+/* Contenido del artículo */
+.article-content {
+  padding: 0 2rem 2rem 2rem;
+  font-size: 1rem; /* Reducido de 1.4rem a 1rem (16px estándar) */
+  margin-bottom: 3rem;
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-family: 'Langar', cursive;
+  color: black;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Ahora los headers se mapean así: h1→h3, h2→h4, etc. */
+.article-content h3 { font-size: 1.8rem; } /* Era h1 en markdown */
+.article-content h4 { font-size: 1.5rem; } /* Era h2 en markdown */
+.article-content h5 { font-size: 1.3rem; } /* Era h3 en markdown */
+.article-content h6 { font-size: 1.1rem; } /* Era h4 en markdown */
+
+/* Los h1 y h2 originales del contenido ahora son h3 y h4, no necesitan override especial */
+
+.article-content p {
+  font-family: 'Eczar', serif;
+  font-size: 1rem; /* Reducido de 1.4rem a 1rem */
+  color: #535353;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-content li {
+  font-family: 'Eczar', serif;
+  font-size: 1rem; /* Reducido de 1.4rem a 1rem */
+  color: #535353;
+  list-style: "⚜️ ";
+}
+
+.article-content blockquote {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #460871;
+  font-style: italic;
+  font-size: 0.95rem; /* Reducido de 1.3rem a 0.95rem */
+}
+
+.article-content code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem; /* Reducido de 1.1rem a 0.875rem */
+}
+
+.article-content pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.article-content a {
+  text-decoration: none;
+  color: #460871;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.2s;
+}
+
+.article-content a:hover {
+  color: #5D1F89;
+  border-bottom-color: transparent;
+}
+
+/* Metadatos del artículo */
+.article-metadata {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Override del article global para este componente */
+article {
+  min-height: 65vh;
+}

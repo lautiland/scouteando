@@ -1,0 +1,45 @@
+/* Estilos específicos del componente Category */
+
+/* Estilos específicos para las tarjetas de artículos */
+.card-title {
+  font-size: 1.5rem !important; /* Reducido de 2.5rem a 1.5rem para compensar el cambio de base */
+  color: #460871;
+  line-height: 1.3;
+}
+
+.card-text {
+  font-family: 'Eczar', serif;
+  font-size: 0.9rem; /* Reducido de 1.1rem a 0.9rem */
+  color: #535353;
+}
+
+.card-meta {
+  font-size: 0.875rem; /* Reducido de 1.4rem a 0.875rem (14px estándar) */
+  font-family: 'Eczar', serif;
+}
+
+/* Estilos para hacer las cards interactivas */
+.article-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #dee2e6;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  border-color: #460871;
+}
+
+.article-card:hover .card-title {
+  color: #5D1F89;
+}
+
+.article-card:hover .card-img-top {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.card-img-top-container {
+  overflow: hidden;
+}

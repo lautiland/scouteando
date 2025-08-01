@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autors",
+  "info": {
+    "singularName": "autor",
+    "pluralName": "autors",
+    "displayName": "Autor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Identificador": {
+      "type": "uid",
+      "private": true,
+      "required": true,
+      "regex": "^[1-9]\\d*|0$"
+    },
+    "NombreApodo": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Apellido": {
+      "type": "string",
+      "required": true
+    },
+    "Totem": {
+      "type": "string"
+    },
+    "NumeroDeGrupo": {
+      "type": "integer",
+      "required": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "autor"
+    }
+  }
+}

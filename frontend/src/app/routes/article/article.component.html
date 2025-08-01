@@ -1,0 +1,31 @@
+<section class="container">
+  <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <article class="p-4 shadow-lg">
+          <button 
+            class="btn btn-aux" 
+            [routerLink]="['../../']"
+          >
+            ← Volver a categoría
+          </button>
+          <div class="px-4 mb-4">
+            <h2 class="article-title p-2 mt-3">{{ article?.title }}</h2>
+            <div class="article-content text-start" [innerHTML]="(article?.content || '') | safeHtml"></div>
+            <div class="article-metadata text-end">
+              <p class="mb-1"><b>Actualizado:</b> {{ article?.updatedAt | date:'dd/MM/yyyy' }}</p>
+              <p class="mb-1">
+                <i class="bi bi-person"></i> 
+                <b>Autor:</b> {{ article?.author }}
+              </p>
+            </div>
+          </div>
+        
+          <div class="text-center">
+            <button class="btn btn-aux" (click)="scrollToTop()" title="Volver al inicio del artículo">
+              ↑ Subir al inicio
+            </button>
+          </div>
+        </article>
+      </div>
+  </div>
+</section>

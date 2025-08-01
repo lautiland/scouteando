@@ -3,9 +3,14 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Frontend: Start Dev Server",
       "type": "npm",
       "script": "start",
       "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "group": "build",
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",
@@ -21,9 +26,36 @@
       }
     },
     {
+      "label": "Backend: Start Dev Server",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Both (Frontend + Backend)",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Frontend: Test",
       "type": "npm",
       "script": "test",
       "isBackground": true,
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "group": "test",
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",
@@ -37,6 +69,61 @@
           }
         }
       }
+    },
+    {
+      "label": "Frontend: Build",
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc"
+      }
+    },
+    {
+      "label": "Backend: Build",
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Install All Dependencies",
+      "type": "npm",
+      "script": "install:all",
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Install Frontend Dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Install Backend Dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "group": "build",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "problemMatcher": []
     }
   ]
 }

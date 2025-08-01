@@ -1,0 +1,105 @@
+<section class="container">
+  <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <article class="p-4 shadow-lg">
+          <div class="row">
+            <div class="col-12">
+              <!-- Header de la categoría -->
+              <div class="category-header mb-4">
+                <h2>{{ categoryName }}</h2>
+                <p *ngIf="categoryDescription">
+                  {{ categoryDescription }}
+                </p>
+                
+                <!-- Información de debug (solo en desarrollo) -->
+                <small class="text-muted" *ngIf="!isLoading">
+                  <i class="bi bi-info-circle"></i> 
+                  Artículos: {{ articles.length }}
+                </small>
+              </div>
+        
+              <!-- Estado de carga -->
+              <div *ngIf="isLoading" class="text-center my-5">
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Cargando...</span>
+                </div>
+                <p class="mt-2 text-muted">Cargando artículos...</p>
+              </div>
+        
+              <!-- Mensaje de error -->
+              <div *ngIf="error" class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">
+                  <i class="bi bi-exclamation-triangle"></i> Error
+                </h4>
+                <p class="mb-0">{{ error }}</p>
+                <hr>
+                <p class="mb-0">
+                  <a [routerLink]="['/']" class="btn btn-outline-danger">
+                    <i class="bi bi-house"></i> Volver al inicio
+                  </a>
+                </p>
+              </div>
+        
+              <!-- Sin artículos -->
+              <div *ngIf="!isLoading && !error && !hasArticles" class="text-center my-5">
+                <div class="card border-0">
+                  <div class="card-body">
+                    <i class="bi bi-journal-x display-1 text-muted"></i>
+                    <h3 class="card-title mt-3">No hay artículos disponibles</h3>
+                    <p class="card-text text-muted">
+                      Esta categoría aún no tiene contenido publicado.
+                    </p>
+                    <a [routerLink]="['/']" class="btn btn-primary">
+                      <i class="bi bi-house"></i> Volver al inicio
+                    </a>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Lista de artículos -->
+              <div *ngIf="!isLoading && !error && hasArticles" class="row">
+                <div *ngFor="let article of articles" class="col-lg-4 col-md-6 mb-4">
+                  <div class="card h-100 shadow-sm article-card" 
+                      (click)="navigateToArticle(article)">
+                    <!-- Imagen del artículo -->
+                    <div *ngIf="article.imageUrl" class="card-img-top-container">
+                      <img [src]="article.imageUrl" 
+                          [alt]="article.title" 
+                          class="card-img-top"
+                          style="height: 200px; object-fit: cover;">
+                    </div>
+                    
+                    <!-- Contenido de la tarjeta -->
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">
+                        <strong>{{ article.title }}</strong>
+                      </h5>
+                      
+                      <!-- Excerpt -->
+                      <p class="card-text flex-grow-1">
+                        {{ article.excerpt }}
+                      </p>
+
+                      <!-- Metadatos -->
+                      <div class="card-meta text-muted ms-2">
+                          <div class="d-flex justify-content-between">
+                            <span>
+                              <i class="bi bi-calendar3"></i>
+                              {{ article.createdAt | date:'dd/MM/yyyy' }}
+                            </span>
+                            <span>
+                              <i class="bi bi-person"></i>
+                              {{ article.author }}
+                            </span>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+  </div>
+</section>
