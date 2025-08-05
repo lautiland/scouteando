@@ -60,10 +60,33 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.github.ts"
                 }
               ],
               "outputHashing": "all"
+            },
+            "netlify": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "800kB",
+                  "maximumError": "2MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "3kB",
+                  "maximumError": "5kB"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.netlify.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "baseHref": "/",
+              "deployUrl": "/"
             },
             "development": {
               "optimization": false,

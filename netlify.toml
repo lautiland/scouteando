@@ -1,7 +1,6 @@
 [build]
-  base = "frontend"
-  command = "npm install && npm run build -- --configuration=production --base-href='/' --deploy-url='/'"
-  publish = "dist/scouteando"
+  command = "cd frontend && npm install && npm run build -- --configuration=netlify && if [ -d 'dist/scouteando/browser' ]; then mv dist/scouteando/browser/* dist/scouteando/ && rm -rf dist/scouteando/browser; fi"
+  publish = "frontend/dist/scouteando"
 
 [build.processing]
   skip_processing = false

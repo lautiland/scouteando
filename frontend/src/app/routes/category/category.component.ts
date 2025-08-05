@@ -61,16 +61,20 @@ export class CategoryComponent implements OnInit, OnDestroy {
           this.error = `Categoría "${this.categorySlug}" no encontrada`;
           console.warn(`❌ CARGA: Categoría "${this.categorySlug}" no encontrada`);
           this.isLoading = false;
-          // Redirigir al home si no se encuentra la categoría
-          this.router.navigate(['/']);
+          // Esperar 3 segundos antes de redirigir para dar tiempo a ver el error
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 3000);
         }
       },
       error: (error) => {
         console.error(`❌ CARGA: Error cargando categoría "${this.categorySlug}":`, error);
-        this.error = `Error cargando la categoría: ${error.message || error}`;
+        this.error = `Error cargando la categoría: ${error.message || error}. Verificando conectividad...`;
         this.isLoading = false;
-        // Redirigir al home en caso de error
-        this.router.navigate(['/']);
+        // Esperar 5 segundos antes de redirigir para dar tiempo a ver el error
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 5000);
       }
     });
   }

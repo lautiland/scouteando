@@ -8,7 +8,7 @@ echo "📦 Instalando dependencias..."
 npm install
 
 echo "🏗️ Construyendo aplicación para Netlify..."
-npm run build -- --configuration=production --base-href="/" --deploy-url="/"
+npm run build -- --configuration=netlify
 
 echo "📁 Verificando archivos generados..."
 if [ -d "dist/scouteando" ]; then

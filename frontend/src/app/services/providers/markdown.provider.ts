@@ -71,6 +71,8 @@ export class MarkdownProvider implements ContentProvider {
       console.log(`🏷️ MarkdownProvider: Cargando categorías desde "${categoriesUrl}"`);
       const categoriesData = await this.http.get<any>(categoriesUrl).toPromise();
       
+      console.log(`✅ MarkdownProvider: ${categoriesData?.categories?.length || 0} categorías cargadas exitosamente`);
+      
       return categoriesData.categories.map((cat: any) => ({
         id: cat.id,
         name: cat.name,
@@ -79,7 +81,7 @@ export class MarkdownProvider implements ContentProvider {
         imageUrl: cat.imageUrl
       }));
     } catch (error) {
-      console.error('Error cargando categorías:', error);
+      console.error(`❌ MarkdownProvider: Error cargando categorías desde "${this.basePath}/categories.json":`, error);
       return [];
     }
   }
