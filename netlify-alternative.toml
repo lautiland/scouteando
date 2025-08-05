@@ -1,25 +1,10 @@
+# Alternative Netlify configuration - minimal approach
 [build]
-  command = "chmod +x scripts/netlify-build.sh && ./scripts/netlify-build.sh"
+  command = "cd frontend && npm ci && npx ng build --configuration=netlify && if [ -d 'dist/scouteando/browser' ]; then mv dist/scouteando/browser/* dist/scouteando/ && rm -rf dist/scouteando/browser; fi"
   publish = "frontend/dist/scouteando"
 
-# Deshabilitar el plugin automático de Angular
 [build.environment]
   NODE_VERSION = "18"
-  NETLIFY_SKIP_BUILD_PLUGINS = "true"
-
-# Forzar que no use plugins automáticos
-[[plugins]]
-
-[build.processing.css]
-  bundle = true
-  minify = true
-
-[build.processing.js]
-  bundle = true
-  minify = true
-
-[build.processing.html]
-  pretty_urls = true
 
 [[redirects]]
   from = "/*"
