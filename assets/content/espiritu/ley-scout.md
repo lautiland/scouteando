@@ -1,102 +1,60 @@
 ---
 title: La Ley Scout
 date: 2024-01-20
-excerpt: Los 10 artículos de la Ley Scout que guían el comportamiento y los valores de todo scout
+excerpt: Los 10 artículos que guían los valores base del escultismo y son la brújula moral de un scout.
 author: Kimbal O'Hara
 ---
 
-La **Ley Scout** constituye el código de honor que rige la conducta de todos los scouts. Consta de diez artículos que establecen los principios fundamentales del movimiento.
+La **Ley Scout** es el código de valores en el que se basa el movimiento. Este artículo busca informar el origen, adaptación y evolución de la misma.
 
-## Los 10 Artículos de la Ley Scout
+## Origen
+La **Ley Scout** fue escrita por primera vez por **Robert Baden-Powell**, fundador del movimiento scout, en 1908 en una de las primeras revistas que luego se convertiría en el libro "Escultismo para muchachos". Desde entonces, ha sido adaptada y traducida a numerosos idiomas, manteniendo su esencia pero ajustándose a las realidades culturales de cada país.
 
-### 1. El Scout es digno de toda confianza
-La **confianza** es la base de todas las relaciones humanas. Un scout debe ser:
-- Honesto en palabras y acciones
-- Confiable en sus compromisos
-- Íntegro en todas sus decisiones
+## Ley Scout adoptada en Scouts de Argentina
+En Argentina, la Ley Scout fue adoptada oficialmente en 1912 y ha sido un pilar fundamental del movimiento scout en el país. La versión argentina mantiene los principios originales, pero con un enfoque en la identidad cultural local y los valores universales del escultismo.
 
-### 2. El Scout es leal
-La **lealtad** se manifiesta hacia:
-- La familia y amigos
-- El grupo scout y sus compañeros
-- Los principios y valores que profesa
-- Su patria y comunidad
+1. El/La Scout ama a Dios y vive plenamente su fe.
+2. El/La Scout es leal y digno/a de toda confianza.
+3. El/La Scout es generoso/a, cortes y solidario/a.
+4. El/La Scout es respetuoso/a y hermano/a de todos/as.
+5. El/La Scout defiende y valora la familia.
+6. El/La Scout ama y defiende la vida y la naturaleza.
+7. El/La Scout sabe obedecer, elige y actúa con responsabilidad.
+8. El/La Scout es optimista aún en las dificultades.
+9. El/La Scout es económico/a, trabajador/a y respetuoso/a del bien ajeno.
+10. El/La Scout es puro/a y lleva una vida sana.
 
-### 3. El Scout es útil y ayuda a los demás sin esperar recompensa
-El **servicio desinteresado** implica:
-- Estar siempre dispuesto a ayudar
-- No esperar reconocimiento por las buenas acciones
-- Buscar oportunidades de servir a la comunidad
+## Ley scout original
+La versión original de la Ley Scout contenía 10 artículos que reflejaban los valores fundamentales del escultismo. Estos artículos fueron diseñados para ser simples, memorables y aplicables a la vida diaria de un scout. Actualmente es la versión adoptada por la **Organización Mundial del Movimiento Scout (OMMS)** desde 1968, aunque ha habido ligeras modificaciones en la redacción a lo largo de los años.
 
-### 4. El Scout es hermano de todo Scout y amigo de todos
-La **fraternidad scout** trasciende:
-- Fronteras geográficas
-- Diferencias culturales
-- Barreras sociales y económicas
-- Distintas creencias y opiniones
+1. El honor de un Scout es ser digno de confianza.
+2. El scout es leal.
+3. El scout es útil y ayuda a los demás.
+4. El Scout es un amigo para todos y un hermano para los otros Scouts.
+5. El Scout es cortés.
+6. El Scout es amigo de los animales.
+7. El Scout obedece las órdenes de sus padres, de su Guía de Patrulla o su Jefe sin cuestionar.
+8. El Scout sonríe y silba ante las dificultades.
+9. El Scout es económico.
+10. El Scout es limpio en sus pensamientos, sus palabras y sus acciones.
 
-### 5. El Scout es cortés y caballeroso
-La **cortesía** se expresa a través de:
-- Respeto hacia todas las personas
-- Buenos modales y educación
-- Consideración especial hacia los más vulnerables
-- Amabilidad en el trato diario
+Es interesante notar que, aunque la redacción ha cambiado con el tiempo, los principios fundamentales de la Ley Scout se han mantenido constantes. La esencia de ser digno de confianza, leal, útil y respetuoso sigue siendo central en la formación de un scout. Aunque no hay un punto que haga referencia a Dios y la espiritualidad en la versión original, muchos movimientos scouts han incorporado este aspecto en sus adaptaciones locales, reflejando la importancia de la fe en la vida de un scout.
 
-### 6. El Scout ve en la naturaleza la obra de Dios, protege a los animales y las plantas
-El **respeto por la naturaleza** incluye:
-- Conservación del medio ambiente
-- Protección de la fauna y flora
-- Uso responsable de los recursos naturales
-- Educación ambiental
+## La Ley Scout de Scouteando
+Desde Scouteando proponemos una versión adaptada de la Ley Scout que refleja los valores universales del escultismo, pero con un enfoque inclusivo que no discrimia por creencias religiosas o género. Ya que creemos que la Ley Scout debe ser un reflejo de los valores que todos los scouts pueden compartir, independientemente de su trasfondo cultural o religioso.
 
-### 7. El Scout obedece sin réplica y no hace nada a medias
-La **disciplina** y **excelencia** se demuestran:
-- Cumpliendo órdenes de autoridades legítimas
-- Completando tareas con dedicación
-- Esforzándose por dar lo mejor de sí
-- Manteniendo estándares altos
-
-### 8. El Scout sonríe y canta aún en las dificultades
-El **optimismo** y **alegría** ayudan a:
-- Mantener una actitud positiva
-- Superar adversidades con fortaleza
-- Contagiar esperanza a otros
-- Encontrar el lado bueno de las situaciones
-
-### 9. El Scout es económico, trabajador y cuidadoso del bien ajeno
-La **responsabilidad** económica implica:
-- Administrar recursos sabiamente
-- Respetar la propiedad ajena
-- Valorar el trabajo propio y ajeno
-- Evitar el desperdicio
-
-### 10. El Scout es puro en pensamientos, palabras y obras
-La **pureza** abarca:
-- Integridad moral y ética
-- Pensamientos nobles y elevados
-- Lenguaje apropiado y respetuoso
-- Acciones acordes con los valores
-
-## Viviendo la Ley
-
-La Ley Scout no es solo un conjunto de reglas, sino una **filosofía de vida** que:
-
-- Guía las decisiones diarias
-- Forma el carácter del scout
-- Crea una comunidad basada en valores compartidos
-- Contribuye a formar mejores ciudadanos
-
-## Reflexión Personal
-
-Cada scout debe reflexionar regularmente sobre cómo está viviendo la Ley en su vida diaria:
-
-- ¿Estoy siendo digno de confianza?
-- ¿Demuestro lealtad en mis relaciones?
-- ¿Ayudo a otros sin esperar recompensa?
-- ¿Trato a todos como hermanos?
+Ser Scout es…
+1. Vivir plenamente tu Fe.
+2. Mostrar lealtad y honrar toda confianza.
+3. Actuar siempre con generosidad, cortesía y solidaridad.
+4. Ser amable, respetar y con el mundo vivir en hermandad.
+5. Defender y valorar la familia.
+6. Amar y defender la naturaleza.
+7. Saber obedecer, elegir y actuar con responsabilidad.
+8. Ser optimista aún en las dificultades.
+9. Consumir conscientemente, trabajar y respetar el bien ajeno.
+10. Llevar una vida pura y sana.
 
 ## Conclusión
-
-La Ley Scout es más que un código de conducta; es una **brújula moral** que orienta el camino del scout hacia una vida plena, útil y honorable. Su práctica constante transforma no solo al individuo, sino también a la sociedad en su conjunto.
-
-*"La Ley Scout no se impone desde afuera, sino que nace del corazón del scout como expresión natural de sus más nobles aspiraciones."*
+Si bien existen muchas versiones de la Ley Scout, todas comparten un núcleo común de valores que guían a los scouts en su vida diaria. La Ley Scout es más que un simple conjunto de reglas; es una brújula moral que ayuda a los scouts a navegar por el mundo con integridad, respeto y amor hacia los demás y hacia la naturaleza.
+La Ley Scout es un recordatorio constante de que ser scout implica un compromiso con uno mismo, con los demás y con el mundo que nos rodea. A través de la práctica de estos principios, los scouts no solo se convierten en mejores personas, sino que también contribuyen a construir un mundo más justo y solidario.
