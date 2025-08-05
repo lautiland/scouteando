@@ -1,9 +1,9 @@
 export const environment = {
   production: true,
   content: {
-    provider: 'markdown' as const, // En producción usar markdown para GitHub Pages
-    markdownPath: '/scouteando/assets/content', // Ruta absoluta para GitHub Pages
-    strapiUrl: 'https://tudominio.com/scouteando/api' // URL del backend en producción (futuro)
+    provider: 'markdown' as const, // En producción usar markdown
+    markdownPath: '/assets/content', // Ruta para Netlify
+    strapiUrl: 'https://tudominio.com/api' // URL del backend en producción (futuro)
   },
   // Configuración legacy de Drive (se mantendrá hasta migrar completamente)
   drive: {
