@@ -7,9 +7,6 @@
   NODE_VERSION = "18"
   NETLIFY_SKIP_BUILD_PLUGINS = "true"
 
-# Forzar que no use plugins automáticos
-[[plugins]]
-
 [build.processing.css]
   bundle = true
   minify = true
