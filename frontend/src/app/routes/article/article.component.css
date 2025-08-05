@@ -31,6 +31,7 @@
 
 @media screen and (max-width: 767px) {
   .article-title {
+    margin-left: 0;
     font-size: 1.8rem !important; /* Reducido de 2.5rem a 1.8rem */
   }
 }
@@ -40,6 +41,13 @@
   padding: 0 2rem 2rem 2rem;
   font-size: 1rem; /* Reducido de 1.4rem a 1rem (16px estándar) */
   margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .article-content {
+    padding: 0;
+    font-size: 0.9rem; /* Reducido de 1rem a 0.9rem */
+  }
 }
 
 .article-content h1,
@@ -68,6 +76,12 @@
   color: #535353;
   margin-bottom: 0.5rem;
   padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .article-content p {
+    font-size: 0.9rem; /* Reducido de 1rem a 0.9rem */
+  }
 }
 
 .article-content ul,
@@ -132,3 +146,4 @@
 article {
   min-height: 65vh;
 }
+

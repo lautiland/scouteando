@@ -1,6 +1,6 @@
 <section class="container">
   <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="col-12">
         <article class="p-4 shadow-lg">
           <button 
             class="btn btn-aux" 
@@ -8,7 +8,7 @@
           >
             ← Volver a categoría
           </button>
-          <div class="px-4 mb-4">
+          <div class="px-3">
             <h2 class="article-title p-2 mt-3">{{ article?.title }}</h2>
             <div class="article-content text-start" [innerHTML]="(article?.content || '') | safeHtml"></div>
             <div class="article-metadata text-end">
