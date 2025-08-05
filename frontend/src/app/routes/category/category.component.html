@@ -33,6 +33,12 @@
                 </h4>
                 <p class="mb-0">{{ error }}</p>
                 <hr>
+                <div class="small text-muted mb-3">
+                  <strong>Información de debug:</strong><br>
+                  • Categoría solicitada: {{ categorySlug }}<br>
+                  • Proveedor de contenido: markdown<br>
+                  • Revisa la consola del navegador para más detalles
+                </div>
                 <p class="mb-0">
                   <a [routerLink]="['/']" class="btn btn-outline-danger">
                     <i class="bi bi-house"></i> Volver al inicio

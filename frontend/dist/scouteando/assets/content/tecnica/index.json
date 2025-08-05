@@ -1,0 +1,10 @@
+{
+  "articles": [
+    {
+      "id": "nudos-basicos",
+      "title": "Nudos Básicos para Scouts",
+      "slug": "nudos-basicos",
+      "file": "nudos-basicos.md"
+    }
+  ]
+}

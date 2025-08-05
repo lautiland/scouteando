@@ -27,17 +27,26 @@ jobs:
           # Elimina builds anteriores para evitar conflictos
           rm -rf dist/scouteando
           
-          # Construye la app (los archivos se generarán en dist/scouteando/browser)
+          # Construye la app para GitHub Pages
           npm run build -- --configuration=production --base-href="/scouteando/" --deploy-url="/scouteando/"
 
-          # Mueve los archivos de /browser a la raíz de dist/scouteando
-          mv dist/scouteando/browser/* dist/scouteando/
-          
-          # Elimina la carpeta browser (ya vacía)
-          rm -rf dist/scouteando/browser
+          # Mueve los archivos de /browser a la raíz de dist/scouteando (si existe la carpeta browser)
+          if [ -d "dist/scouteando/browser" ]; then
+            mv dist/scouteando/browser/* dist/scouteando/
+            rm -rf dist/scouteando/browser
+          fi
           
           # Crea .nojekyll para desactivar Jekyll
           touch dist/scouteando/.nojekyll
+          
+          # Crea 404.html para manejar rutas de Angular en GitHub Pages
+          cp dist/scouteando/index.html dist/scouteando/404.html
+          
+          # Verifica que los archivos de contenido estén presentes
+          echo "📁 Verificando contenido markdown..."
+          ls -la dist/scouteando/assets/content/
+          echo "📄 Verificando categories.json..."
+          cat dist/scouteando/assets/content/categories.json
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": "espiritu",
+      "name": "Espíritu",
+      "slug": "espiritu",
+      "description": "El corazón del escultismo. Explora los valores fundacionales, la Promesa y la Ley Scout, el compromiso con el servicio, la espiritualidad en la vida diaria y cómo el movimiento forja carácter, ciudadanía activa y una brújula moral para la vida."
+    },
+    {
+      "id": "historia",
+      "name": "Historia", 
+      "slug": "historia",
+      "description": "Un viaje desde Brownsea hasta hoy. Descubre los orígenes con Baden-Powell, hitos clave, la expansión mundial, figuras emblemáticas y cómo el escultismo ha evolucionado adaptándose a los tiempos, manteniendo vivo su legado de más de un siglo."
+    },
+    {
+      "id": "organizacion",
+      "name": "Organización",
+      "slug": "organizacion", 
+      "description": "La estructura que hace posible la aventura. Conoce cómo funciona el movimiento a nivel local, nacional e internacional, las diferentes ramas por edad, roles de responsables, el poder del trabajo en equipo y la democracia juvenil."
+    },
+    {
+      "id": "tecnica",
+      "name": "Técnica",
+      "slug": "tecnica",
+      "description": "¡Manos a la obra! Domina las habilidades prácticas: campismo, pionerismo, orientación, primeros auxilios, cocina al aire libre, observación, rastreo y más. Aprende cómo estas técnicas fomentan la autonomía, la superación personal y el respeto por la naturaleza."
+    }
+  ]
+}

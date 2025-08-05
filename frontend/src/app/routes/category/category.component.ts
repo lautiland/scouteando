@@ -60,13 +60,17 @@ export class CategoryComponent implements OnInit, OnDestroy {
         } else {
           this.error = `Categoría "${this.categorySlug}" no encontrada`;
           console.warn(`❌ CARGA: Categoría "${this.categorySlug}" no encontrada`);
-          this.router.navigate(['/']);
+          this.isLoading = false;
+          // Comentamos la redirección automática para debugging
+          // this.router.navigate(['/']);
         }
       },
       error: (error) => {
         console.error(`❌ CARGA: Error cargando categoría "${this.categorySlug}":`, error);
-        this.error = 'Error cargando la categoría';
+        this.error = `Error cargando la categoría: ${error.message || error}`;
         this.isLoading = false;
+        // Comentamos la redirección automática para debugging
+        // this.router.navigate(['/']);
       }
     });
   }

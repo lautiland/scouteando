@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   content: {
-    provider: 'strapi' as const, // 'markdown' | 'strapi' | 'drive' - Cambiando a Strapi
+    provider: 'markdown' as const, // 'markdown' | 'strapi' | 'drive' - Usando markdown
     markdownPath: '/assets/content',
     strapiUrl: 'http://localhost:1337' // URL del backend Strapi
   },

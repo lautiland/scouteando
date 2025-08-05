@@ -2,23 +2,31 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContentProvider, Article, Category } from '../../interfaces/content.interface';
 import { marked } from 'marked';
+import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class MarkdownProvider implements ContentProvider {
   
-  constructor(private http: HttpClient) {}
+  private basePath: string;
+  
+  constructor(private http: HttpClient) {
+    this.basePath = environment.content.markdownPath;
+    console.log(`📁 MarkdownProvider: Usando ruta base "${this.basePath}"`);
+  }
 
   async getArticlesByCategory(categorySlug: string): Promise<Article[]> {
     try {
       // Cargar el índice de artículos para la categoría
-      const indexUrl = `/assets/content/${categorySlug}/index.json`;
+      const indexUrl = `${this.basePath}/${categorySlug}/index.json`;
+      console.log(`📋 MarkdownProvider: Cargando índice desde "${indexUrl}"`);
       const index = await this.http.get<any>(indexUrl).toPromise();
       
       const articles: Article[] = [];
       
       for (const articleInfo of index.articles) {
         try {
-          const articleUrl = `/assets/content/${categorySlug}/${articleInfo.file}`;
+          const articleUrl = `${this.basePath}/${categorySlug}/${articleInfo.file}`;
+          console.log(`📄 MarkdownProvider: Cargando artículo desde "${articleUrl}"`);
           const markdown = await this.http.get(articleUrl, { responseType: 'text' }).toPromise();
           
           if (markdown) {
@@ -59,7 +67,8 @@ export class MarkdownProvider implements ContentProvider {
 
   async getCategories(): Promise<Category[]> {
     try {
-      const categoriesUrl = '/assets/content/categories.json';
+      const categoriesUrl = `${this.basePath}/categories.json`;
+      console.log(`🏷️ MarkdownProvider: Cargando categorías desde "${categoriesUrl}"`);
       const categoriesData = await this.http.get<any>(categoriesUrl).toPromise();
       
       return categoriesData.categories.map((cat: any) => ({
