@@ -1,14 +1,10 @@
 [build]
-  command = "cd frontend && npm install && npm run build -- --configuration=netlify && if [ -d 'dist/scouteando/browser' ]; then mv dist/scouteando/browser/* dist/scouteando/ && rm -rf dist/scouteando/browser; fi"
-  publish = "frontend/dist/scouteando"
+  command = "cd frontend && npm install && npm run build -- --configuration=netlify"
+  publish = "frontend/dist/scouteando/browser"
 
 # Configuración de Node.js
 [build.environment]
   NODE_VERSION = "18"
-
-# Deshabilitar procesamiento automático que puede interferir
-[build.processing]
-  skip_processing = true
 
 [[redirects]]
   from = "/*"
