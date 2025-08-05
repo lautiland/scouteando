@@ -1,6 +1,7 @@
 [build]
-  command = "cd frontend && npm install && npm run build -- --configuration=netlify"
-  publish = "frontend/dist/scouteando/browser"
+  base = "frontend"
+  command = "npm install && npm run build -- --configuration=netlify"
+  publish = "dist/scouteando/browser"
 
 # Configuración de Node.js
 [build.environment]
