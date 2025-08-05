@@ -5,7 +5,6 @@ export interface Article {
   content: string;
   excerpt: string;
   category: string;
-  slug: string;
   createdAt: Date;
   updatedAt: Date;
   imageUrl?: string;
@@ -23,7 +22,7 @@ export interface Category {
 // Interface para el proveedor de datos
 export interface ContentProvider {
   getArticlesByCategory(categorySlug: string): Promise<Article[]>;
-  getArticleBySlug(slug: string): Promise<Article | null>;
+  getArticleById(id: string): Promise<Article | null>;
   getCategories(): Promise<Category[]>;
   getCategoryBySlug(slug: string): Promise<Category | null>;
 }

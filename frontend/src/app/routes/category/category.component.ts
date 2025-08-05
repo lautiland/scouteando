@@ -126,9 +126,8 @@ export class CategoryComponent implements OnInit, OnDestroy {
    * Navegar a un artículo específico
    */
   navigateToArticle(article: Article): void {
-    // La ruta esperada es: /:category/:fileName/:fileId
-    // Donde fileName puede ser el slug y fileId también el slug para simplicidad
-    const routeParams = [this.categorySlug, article.slug, article.slug];
+    // La ruta simplificada es: /:category/:articleId
+    const routeParams = [this.categorySlug, article.id];
     console.log(`🔗 NAVEGACIÓN: Usuario clickeó en "${article.title}"`);
     console.log(`🔗 NAVEGACIÓN: Redirigiendo a artículo...`, routeParams);
     this.router.navigate(routeParams);

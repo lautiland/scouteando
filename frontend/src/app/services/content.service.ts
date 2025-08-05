@@ -78,11 +78,11 @@ export class ContentService {
     ));
   }
 
-  getArticleBySlug(slug: string): Observable<Article | null> {
-    const cacheKey = `article-${slug}`;
+  getArticleById(id: string): Observable<Article | null> {
+    const cacheKey = `article-${id}`;
     
     return from(this.getCached(cacheKey, () => 
-      this.currentProvider.getArticleBySlug(slug)
+      this.currentProvider.getArticleById(id)
     ));
   }
 

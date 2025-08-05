@@ -45,14 +45,14 @@ export class MarkdownProvider implements ContentProvider {
     }
   }
 
-  async getArticleBySlug(slug: string): Promise<Article | null> {
+  async getArticleById(id: string): Promise<Article | null> {
     try {
       // Buscar en todas las categorías
       const categories = await this.getCategories();
       
       for (const category of categories) {
         const articles = await this.getArticlesByCategory(category.slug);
-        const article = articles.find(a => a.slug === slug);
+        const article = articles.find(a => a.id === id);
         if (article) {
           return article;
         }
@@ -60,7 +60,7 @@ export class MarkdownProvider implements ContentProvider {
       
       return null;
     } catch (error) {
-      console.error(`Error buscando artículo con slug ${slug}:`, error);
+      console.error(`Error buscando artículo con ID ${id}:`, error);
       return null;
     }
   }
@@ -134,16 +134,12 @@ export class MarkdownProvider implements ContentProvider {
     // Generar excerpt del contenido
     const excerpt = this.generateExcerpt(content);
     
-    // Generar slug si no existe
-    const slug = articleInfo.slug || this.generateSlug(frontmatter.title || articleInfo.title || 'sin-titulo');
-    
     return {
-      id: articleInfo.id || slug,
+      id: articleInfo.id || this.generateSlug(frontmatter.title || articleInfo.title || 'sin-titulo'),
       title: frontmatter.title || articleInfo.title || 'Sin título',
       content: htmlContent,
       excerpt: frontmatter.excerpt || excerpt,
       category: categorySlug,
-      slug: slug,
       createdAt: frontmatter.date ? new Date(frontmatter.date) : new Date(),
       updatedAt: frontmatter.updated ? new Date(frontmatter.updated) : new Date(),
       imageUrl: frontmatter.image || articleInfo.imageUrl,

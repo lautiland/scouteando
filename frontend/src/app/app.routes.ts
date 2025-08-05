@@ -6,6 +6,6 @@ import { ArticleComponent } from './routes/article/article.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: ':category', component: CategoryComponent, runGuardsAndResolvers: 'paramsChange' },
-  { path: ':category/:fileName/:fileId', component: ArticleComponent, pathMatch: 'prefix' },
+  { path: ':category/:articleId', component: ArticleComponent },
   { path: '**', redirectTo: '' }
 ];

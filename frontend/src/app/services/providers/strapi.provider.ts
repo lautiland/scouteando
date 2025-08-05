@@ -68,10 +68,10 @@ export class StrapiProvider implements ContentProvider {
     }
   }
 
-  async getArticleBySlug(slug: string): Promise<Article | null> {
+  async getArticleById(id: string): Promise<Article | null> {
     try {
-      console.log(`📄 Strapi: Buscando artículo con slug "${slug}"`);
-      const url = `${this.baseUrl}/articulos?filters[slug][$eq]=${slug}&populate=*`;
+      console.log(`📄 Strapi: Buscando artículo con ID "${id}"`);
+      const url = `${this.baseUrl}/articulos/${id}?populate=*`;
       
       const response = await fetch(url, {
         headers: this.getHeaders()
@@ -84,15 +84,15 @@ export class StrapiProvider implements ContentProvider {
       
       const data = await response.json();
       
-      if (data.data && data.data.length > 0) {
-        console.log(`✅ Strapi: Artículo "${slug}" encontrado`);
-        return this.mapStrapiToArticle(data.data[0]);
+      if (data.data) {
+        console.log(`✅ Strapi: Artículo "${id}" encontrado`);
+        return this.mapStrapiToArticle(data.data);
       }
       
-      console.log(`⚠️ Strapi: Artículo "${slug}" no encontrado`);
+      console.log(`⚠️ Strapi: Artículo "${id}" no encontrado`);
       return null;
     } catch (error) {
-      console.error(`❌ Error buscando artículo en Strapi con slug ${slug}:`, error);
+      console.error(`❌ Error buscando artículo en Strapi con ID ${id}:`, error);
       return null;
     }
   }
@@ -159,7 +159,6 @@ export class StrapiProvider implements ContentProvider {
     return {
       id: strapiItem.id?.toString() || attributes.slug,
       title: attributes.title || attributes.titulo,
-      slug: attributes.slug,
       excerpt: attributes.excerpt || attributes.resumen || '',
       content: attributes.content || attributes.contenido || '',
       category: attributes.categoria?.data?.attributes?.slug || attributes.category?.data?.attributes?.slug || '',

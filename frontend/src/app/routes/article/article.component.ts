@@ -15,7 +15,7 @@ import { Article } from '../../interfaces/content.interface';
 })
 export class ArticleComponent implements OnInit {
   article: Article | null = null;
-  fileId: string = '';
+  articleId: string = '';
   category: string = '';
 
   constructor(
@@ -26,32 +26,28 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.category = params.get('category') || '';
-      // El fileId en nuestra implementación es realmente el slug del artículo
-      const articleSlug = params.get('fileId') || '';
-      this.fileId = articleSlug;
+      this.articleId = params.get('articleId') || '';
       
-      console.log('🔗 Navegando a artículo:', { category: this.category, slug: articleSlug });
+      console.log('🔗 Navegando a artículo:', { category: this.category, articleId: this.articleId });
       this.loadArticle();
     });
   }
 
   private loadArticle(): void {
-    console.log('📄 Cargando artículo con slug:', this.fileId, 'en categoría:', this.category);
+    console.log('📄 Cargando artículo con ID:', this.articleId, 'en categoría:', this.category);
     
-    // En el sistema actual, el fileId es realmente el slug del artículo
     this.contentService.getArticlesByCategory(this.category).subscribe({
       next: (articles: Article[]) => {
         console.log('📚 Artículos encontrados:', articles.length);
-        this.article = articles.find(article => article.slug === this.fileId) || null;
+        this.article = articles.find(article => article.id === this.articleId) || null;
         
         if (this.article) {
           console.log('✅ Artículo encontrado:', this.article.title);
         } else {
-          console.log('❌ Artículo no encontrado con slug:', this.fileId);
+          console.log('❌ Artículo no encontrado con ID:', this.articleId);
           this.article = {
             id: 'not-found',
             title: 'Artículo no encontrado',
-            slug: 'not-found',
             content: 'El contenido del artículo no está disponible.',
             excerpt: '',
             createdAt: new Date(),
@@ -66,7 +62,6 @@ export class ArticleComponent implements OnInit {
         this.article = {
           id: 'error',
           title: 'Error al cargar artículo',
-          slug: 'error',
           content: 'Hubo un problema al cargar el artículo.',
           excerpt: '',
           createdAt: new Date(),
