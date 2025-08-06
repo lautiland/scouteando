@@ -1,7 +1,17 @@
+<!-- Hero Image Banner - Fuera del contenedor para máximo ancho -->
+<div *ngIf="article?.imageUrl" class="hero-banner">
+  <img 
+    [src]="article?.imageUrl" 
+    [alt]="article?.title" 
+    class="hero-image"
+  >
+  <div class="hero-overlay"></div>
+</div>
+
 <section class="container">
   <div class="row justify-content-center">
-      <div class="col-12">
-        <article class="p-4 shadow-lg">
+      <div class="col-12">        
+        <article class="p-4 shadow-lg" [class.no-hero-image]="!article?.imageUrl">
           <button 
             class="btn btn-aux" 
             [routerLink]="['/', category]"
@@ -10,6 +20,7 @@
           </button>
           <div class="px-3">
             <h2 class="article-title p-2 mt-3">{{ article?.title }}</h2>
+            
             <div class="article-content text-start" [innerHTML]="(article?.content || '') | safeHtml"></div>
             <div class="article-metadata text-end">
               <p class="mb-1"><b>Actualizado:</b> {{ article?.updatedAt | date:'dd/MM/yyyy' }}</p>

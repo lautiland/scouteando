@@ -1,5 +1,66 @@
 /* Estilos específicos del componente Article */
 
+/* Hero Banner con imagen de fondo */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Aumentado de 300px a 400px */
+  margin-bottom: -120px; /* Aumentado de -80px a -120px para más superposición */
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  transform: scale(1.05); /* Para compensar el blur y evitar bordes */
+  transition: all 0.3s ease;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(70, 8, 113, 0.2) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+/* Efectos hover para el hero banner */
+.hero-banner:hover .hero-image {
+  filter: blur(1px);
+  transform: scale(1.08);
+}
+
+/* Estilos antiguos de la imagen destacada - los mantenemos por si acaso */
+.article-hero-image {
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.article-hero-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.article-hero-image img:hover {
+  transform: scale(1.02);
+}
+
 /* Botón auxiliar */
 .btn-aux {
   font-family: 'Eczar';
@@ -226,5 +287,93 @@
 /* Override del article global para este componente */
 article {
   min-height: 65vh;
+  position: relative;
+  z-index: 10; /* Para asegurar que esté por encima del hero banner */
+  background: white;
+  border-radius: 12px 12px 0 0; /* Esquinas redondeadas en la parte superior */
+  margin-top: 0;
+}
+
+/* Estilo para artículos sin imagen hero */
+article.no-hero-image {
+  margin-top: 2rem; /* Margen superior cuando no hay imagen */
+  border-radius: 12px; /* Esquinas redondeadas completas */
+}
+
+/* Contenedor principal con z-index */
+.container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Responsive para el hero banner */
+@media screen and (max-width: 768px) {
+  .hero-banner {
+    height: 250px; /* Aumentado de 200px a 280px */
+    margin-bottom: -90px; /* Aumentado de -60px a -90px para más superposición */
+  }
+  
+  .hero-image {
+    filter: blur(1.5px);
+  }
+  
+  article {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  /* Artículos sin imagen en tablet */
+  article.no-hero-image {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-banner {
+    height: 220px; /* Aumentado de 150px a 220px */
+    margin-bottom: -60px; /* Aumentado de -40px a -60px para más superposición */
+  }
+  
+  .hero-image {
+    filter: blur(1px);
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(70, 8, 113, 0.3) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+  
+  article {
+    border-radius: 6px 6px 0 0;
+  }
+  
+  /* Artículos sin imagen en móvil */
+  article.no-hero-image {
+    margin-top: 1rem;
+    border-radius: 6px;
+  }
+}
+
+/* Responsive para la imagen destacada (mantenido por compatibilidad) */
+@media screen and (max-width: 768px) {
+  .article-hero-image img {
+    max-height: 250px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .article-hero-image {
+    margin: 1rem 0;
+  }
+  
+  .article-hero-image img {
+    max-height: 200px;
+    border-radius: 4px;
+  }
 }
 
