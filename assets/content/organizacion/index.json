@@ -6,9 +6,10 @@
       "file": "sistema-patrullas.md"
     },
     {
-      "id": "rovers",
-      "title": "Rovers",
-      "file": "rovers.md"
+      "id": "scouts-de-argentina",
+      "title": "Scouts de Argentina",
+      "file": "scouts-de-argentina.md",
+      "imageUrl": "/assets/images/bandera-saac.jpg"
     }
   ]
 }
