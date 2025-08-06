@@ -1,6 +1,6 @@
 ---
 title: La Ley Scout
-date: 2024-01-20
+date: 2025-08-06
 excerpt: Los 10 artículos que guían los valores base del escultismo y son la brújula moral de un scout.
 author: Kimbal O'Hara
 ---

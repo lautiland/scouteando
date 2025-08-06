@@ -131,7 +131,7 @@ header {
   header #menu_hamb:checked ~ .menu_des {
     display: block; }
   header {
-    padding-bottom: 1.25rem; /* Reducido de 2rem a 1.25rem */}
+    padding-bottom: 1.25rem; /* Reducido de 2rem a 1.25rem */ }
 }
 
 /* Media query para resoluciones muy pequeñas (menos de 380px) */

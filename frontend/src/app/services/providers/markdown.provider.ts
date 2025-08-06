@@ -128,8 +128,31 @@ export class MarkdownProvider implements ContentProvider {
     // Reducir niveles de headers en 2 (h1→h3, h2→h4, etc.) para evitar conflictos con estilos globales
     content = this.reduceHeaderLevels(content);
 
+    // Debug: Verificar si hay blockquotes en el contenido
+    const hasBlockquote = content.includes('> "');
+    console.log('� DEBUG: ¿Contiene blockquote?', hasBlockquote);
+    if (hasBlockquote) {
+      console.log('📄 DEBUG: Posición del blockquote:', content.indexOf('> "'));
+    }
+
+    // Configurar marked específicamente para este procesamiento
+    marked.setOptions({
+      breaks: false,  // No convertir saltos de línea simples en <br>
+      gfm: true,      // Habilitar GitHub Flavored Markdown
+      pedantic: false // No usar reglas estrictas de markdown original
+    });
+
     // Convertir markdown a HTML
     const htmlContent = await marked(content);
+    
+    // Debug: Verificar si el HTML contiene blockquote
+    const hasBlockquoteHTML = htmlContent.includes('<blockquote>');
+    console.log('🌐 DEBUG: ¿HTML contiene <blockquote>?', hasBlockquoteHTML);
+    if (hasBlockquoteHTML) {
+      const blockquoteStart = htmlContent.indexOf('<blockquote>');
+      const blockquoteEnd = htmlContent.indexOf('</blockquote>') + 13;
+      console.log('🌐 DEBUG: Blockquote HTML:', htmlContent.substring(blockquoteStart, blockquoteEnd));
+    }
     
     // Generar excerpt del contenido
     const excerpt = this.generateExcerpt(content);

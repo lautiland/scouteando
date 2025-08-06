@@ -24,6 +24,9 @@ export class ArticleComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // Scroll al inicio inmediatamente al abrir el componente
+    window.scrollTo(0, 0);
+    
     this.route.paramMap.subscribe(params => {
       this.category = params.get('category') || '';
       this.articleId = params.get('articleId') || '';

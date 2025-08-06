@@ -40,7 +40,6 @@
 .article-content {
   padding: 0 2rem 2rem 2rem;
   font-size: 1rem; /* Reducido de 1.4rem a 1rem (16px estándar) */
-  margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -84,37 +83,119 @@
   }
 }
 
-.article-content ul,
-.article-content ol {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+/* Estilos mejorados para listas */
+::ng-deep .article-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
 }
 
-.article-content li {
+::ng-deep .article-content ol {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: custom-counter;
+}
+
+::ng-deep .article-content ul li {
   font-family: 'Eczar', serif;
-  font-size: 1rem; /* Reducido de 1.4rem a 1rem */
+  font-size: 1rem;
   color: #535353;
-  list-style: "⚜️ ";
+  margin-bottom: 0.8rem;
+  padding-left: 2.5rem;
+  position: relative;
+  line-height: 1.6;
 }
 
-.article-content blockquote {
+::ng-deep .article-content ol li {
+  font-family: 'Eczar', serif;
+  font-size: 1rem;
+  color: #535353;
+  margin-bottom: 0.8rem;
+  padding-left: 2.5rem;
+  position: relative;
+  line-height: 1.6;
+  counter-increment: custom-counter;
+}
+
+/* Bullet personalizado para listas no numeradas */
+::ng-deep .article-content ul li::before {
+  content: "⚜️";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  font-size: 1.1rem;
+}
+
+/* Numeración personalizada para listas numeradas */
+::ng-deep .article-content ol li::before {
+  content: counter(custom-counter) ".";
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  font-weight: bold;
+  color: #460871;
+  font-size: 1.1rem;
+  min-width: 1.5rem;
+  text-align: left;
+  font-family: 'Langar', cursive;
+}
+
+/* Ajustes responsivos para listas */
+@media screen and (max-width: 767px) {
+  ::ng-deep .article-content ul li,
+  ::ng-deep .article-content ol li {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  ::ng-deep .article-content ol li {
+    padding-left: 2.5rem;
+  }
+  
+  ::ng-deep .article-content ul li::before {
+    left: 0.3rem;
+    font-size: 1rem;
+  }
+  
+  ::ng-deep .article-content ol li::before {
+    left: 0.3rem;
+    font-size: 1rem;
+    min-width: 1.2rem;
+  }
+}
+
+
+
+/* Estilos para elementos de markdown en contenido dinámico */
+::ng-deep .article-content blockquote {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 1rem;
   margin: 1rem 0;
   border-left: 4px solid #460871;
   font-style: italic;
-  font-size: 0.95rem; /* Reducido de 1.3rem a 0.95rem */
+  font-size: 0.95rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.article-content code {
+::ng-deep .article-content blockquote p {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  color: #555;
+}
+
+::ng-deep .article-content code {
   background-color: #f4f4f4;
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-family: 'Courier New', monospace;
-  font-size: 0.875rem; /* Reducido de 1.1rem a 0.875rem */
+  font-size: 0.875rem;
 }
 
-.article-content pre {
+::ng-deep .article-content pre {
   background-color: #f4f4f4;
   padding: 1rem;
   border-radius: 5px;

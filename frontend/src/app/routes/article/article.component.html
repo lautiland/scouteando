@@ -4,9 +4,9 @@
         <article class="p-4 shadow-lg">
           <button 
             class="btn btn-aux" 
-            [routerLink]="['../../']"
+            [routerLink]="['/', category]"
           >
-            ← Volver a categoría
+            ← Volver a {{ category }}
           </button>
           <div class="px-3">
             <h2 class="article-title p-2 mt-3">{{ article?.title }}</h2>

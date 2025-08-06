@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     console.log('🏠 CARGA: Pantalla principal cargada correctamente');
+    // Scroll al inicio inmediatamente al abrir el componente
+    window.scrollTo(0, 0);
     this.loadCategories();
   }
 

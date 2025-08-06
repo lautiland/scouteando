@@ -11,7 +11,7 @@ export class SafeHtmlPipe implements PipeTransform {
 
   transform(html: string): SafeHtml {
     const clean = DOMPurify.sanitize(html, {
-      ALLOWED_TAGS: ['p', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'img', 'div', 'span', 'table', 'tr', 'td', 'th'],
+      ALLOWED_TAGS: ['p', 'strong', 'em', 'u', 'a', 'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'img', 'div', 'span', 'table', 'tr', 'td', 'th', 'blockquote', 'code', 'pre'],
       ALLOWED_ATTR: ['href', 'style', 'src', 'alt', 'class', 'target']
     });
     

@@ -30,6 +30,9 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     console.log(`🎯 CategoryComponent: Inicializando...`);
+    // Scroll al inicio inmediatamente al abrir el componente
+    window.scrollTo(0, 0);
+    
     this.routeSub = this.route.params.subscribe(params => {
       console.log(`📄 Parámetros de ruta recibidos:`, params);
       this.categorySlug = params['category'];
