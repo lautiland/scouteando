@@ -4,6 +4,11 @@
       "id": "sistema-patrullas",
       "title": "El Sistema de Patrullas",
       "file": "sistema-patrullas.md"
+    },
+    {
+      "id": "rovers",
+      "title": "Rovers",
+      "file": "rovers.md"
     }
   ]
 }
