@@ -1,5 +1,10 @@
-<app-header></app-header>
-<div class="router-container">
+<ng-container *ngIf="!isErrorPage">
+    <app-header></app-header>
+    <div class="router-container">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+</ng-container>
+<ng-container *ngIf="isErrorPage">
     <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+</ng-container>

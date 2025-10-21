@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Observable, from } from 'rxjs';
+import { Observable, from, catchError, throwError } from 'rxjs';
 import { ContentProvider, Article, Category, ProviderType } from '../interfaces/content.interface';
 import { MarkdownProvider } from './providers/markdown.provider';
 import { StrapiProvider } from './providers/strapi.provider';
 import { environment } from '../../environments/environment';
+import { ErrorHandlingService } from './error-handling.service';
 
 @Injectable({ providedIn: 'root' })
 export class ContentService {
   private currentProvider!: ContentProvider;
-  private readonly cache = new Map<string, { data: any, expires: number }>();
+  private readonly cache = new Map<string, { data: any; expires: number }>();
   private readonly CACHE_TTL = 300000; // 5 minutos
 
   constructor(
     private markdownProvider: MarkdownProvider,
-    private strapiProvider: StrapiProvider
+    private strapiProvider: StrapiProvider,
+    private errorHandler: ErrorHandlingService
   ) {
     console.log(`🔧 ContentService: Inicializando con provider "${environment.content?.provider || 'markdown'}"`);
     this.setProvider(environment.content?.provider || 'markdown');
@@ -44,9 +46,14 @@ export class ContentService {
       return cached.data;
     }
 
-    const data = await fetchFn();
-    this.cache.set(key, { data, expires: now + this.CACHE_TTL });
-    return data;
+    try {
+      const data = await fetchFn();
+      this.cache.set(key, { data, expires: now + this.CACHE_TTL });
+      return data;
+    } catch (error) {
+      this.errorHandler.handleError(error);
+      throw error;
+    }
   }
 
   clearCache(): void {
@@ -67,7 +74,12 @@ export class ContentService {
       }
       
       return allArticles;
-    }));
+    })).pipe(
+      catchError(error => {
+        this.errorHandler.handleError(error);
+        throw error;
+      })
+    );
   }
 
   getArticlesByCategory(categorySlug: string): Observable<Article[]> {
@@ -75,7 +87,12 @@ export class ContentService {
     
     return from(this.getCached(cacheKey, () => 
       this.currentProvider.getArticlesByCategory(categorySlug)
-    ));
+    )).pipe(
+      catchError(error => {
+        this.errorHandler.handleError(error);
+        throw error;
+      })
+    );
   }
 
   getArticleById(id: string): Observable<Article | null> {
@@ -91,25 +108,36 @@ export class ContentService {
     
     return from(this.getCached(cacheKey, () => 
       this.currentProvider.getCategories()
-    ));
+    )).pipe(
+      catchError(error => {
+        this.errorHandler.handleError(error);
+        throw error;
+      })
+    );
   }
 
   getCategoryBySlug(slug: string): Observable<Category | null> {
     const cacheKey = `category-${slug}`;
     console.log(`🎯 ContentService: Buscando categoría "${slug}" (provider actual: ${this.currentProvider.constructor.name})`);
     
-    return from(this.getCached(cacheKey, () => 
+    return from(this.getCached(cacheKey, () =>
       this.currentProvider.getCategoryBySlug(slug)
-    ));
+    )).pipe(
+      catchError(error => {
+        this.errorHandler.handleError(error);
+        throw error;
+      })
+    );
   }
 
   preloadArticlesByCategory(categorySlug: string): void {
     this.getArticlesByCategory(categorySlug).subscribe({
-      next: (articles) => {
+      next: (articles: Article[]) => {
         console.log(`✅ PRECARGA: ${articles.length} artículos de "${categorySlug}" precargados correctamente`);
       },
-      error: (error) => {
+      error: (error: any) => {
         console.error(`❌ ERROR PRECARGA: Falló precarga de artículos para "${categorySlug}":`, error);
+        this.errorHandler.handleError(error);
       }
     });
   }

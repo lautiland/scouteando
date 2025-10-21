@@ -1,0 +1,129 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Main container */
+.error-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Eczar', serif;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Central content */
+.error-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+  width: 85%;
+  margin: 2.5rem;
+}
+
+.error-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1);
+}
+
+.error-code {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.error-title {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.return-button {
+  background: #460871;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, background-color 0.15s ease-out;
+  border-radius: 25px;
+  display: inline-block;
+  will-change: transform;
+}
+
+.return-button:hover {
+  transform: translateY(-2px);
+  background: #5D1F89;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .error-image {
+    width: 150px;
+  }
+  
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .error-title {
+    font-size: 1.5rem;
+  }
+  
+  .error-message {
+    font-size: 1rem;
+  }
+  
+  .error-content {
+    padding: 1.5rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+  }
+}
+

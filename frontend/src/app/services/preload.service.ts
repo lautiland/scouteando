@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ContentService } from './content.service';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, pairwise } from 'rxjs/operators';
+import { Category } from '../interfaces/content.interface';
 
 @Injectable({ providedIn: 'root' })
 export class PreloadService {
@@ -15,12 +16,12 @@ export class PreloadService {
    */
   preloadAllCategories(): void {
     this.contentService.getCategories().subscribe({
-      next: (categories) => {
+      next: (categories: Category[]) => {
         categories.forEach(category => {
           this.contentService.preloadArticlesByCategory(category.slug);
         });
       },
-      error: (error) => {
+      error: (error: any) => {
         console.error('Error precargando categorías:', error);
       }
     });
@@ -63,7 +64,7 @@ export class PreloadService {
     
     // Precargar categorías
     this.contentService.getCategories().subscribe({
-      next: (categories) => {
+      next: (categories: Category[]) => {
         console.log(`✅ PRECARGA: ${categories.length} categorías disponibles`);
         
         // Precargar artículos de la primera categoría (más probable de ser visitada)
@@ -73,7 +74,7 @@ export class PreloadService {
           this.preloadCategoryArticles(firstCategory.slug);
         }
       },
-      error: (error) => {
+      error: (error: any) => {
         console.warn('❌ PRECARGA: Error obteniendo categorías:', error);
       }
     });

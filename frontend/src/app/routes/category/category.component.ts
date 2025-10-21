@@ -5,11 +5,12 @@ import { Article, Category } from '../../interfaces/content.interface';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SkeletonLoaderComponent } from '../../shared/skeleton-loader/skeleton-loader.component';
 
 @Component({
   selector: 'app-category',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SkeletonLoaderComponent],
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css']
 })
@@ -61,23 +62,15 @@ export class CategoryComponent implements OnInit, OnDestroy {
           console.log(`✅ CARGA: Categoría "${category.name}" cargada correctamente`);
           this.loadArticles();
         } else {
-          this.error = `Categoría "${this.categorySlug}" no encontrada`;
           console.warn(`❌ CARGA: Categoría "${this.categorySlug}" no encontrada`);
           this.isLoading = false;
-          // Esperar 3 segundos antes de redirigir para dar tiempo a ver el error
-          setTimeout(() => {
-            this.router.navigate(['/']);
-          }, 3000);
+          this.router.navigate(['/error', '404']);
         }
       },
       error: (error) => {
         console.error(`❌ CARGA: Error cargando categoría "${this.categorySlug}":`, error);
-        this.error = `Error cargando la categoría: ${error.message || error}. Verificando conectividad...`;
         this.isLoading = false;
-        // Esperar 5 segundos antes de redirigir para dar tiempo a ver el error
-        setTimeout(() => {
-          this.router.navigate(['/']);
-        }, 5000);
+        this.router.navigate(['/error', '500']);
       }
     });
   }

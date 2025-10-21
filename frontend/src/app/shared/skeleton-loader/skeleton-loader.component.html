@@ -1,0 +1,61 @@
+<!-- Skeleton para cards de artículos -->
+<div *ngIf="type === 'card'" class="skeleton-grid">
+  <div *ngFor="let _ of skeletonArray; trackBy: trackByIndex" class="skeleton-card">
+    <!-- Imagen skeleton -->
+    <div *ngIf="hasImage" class="skeleton-image"></div>
+    
+    <!-- Contenido skeleton -->
+    <div class="skeleton-content">
+      <!-- Título -->
+      <div class="skeleton-title"></div>
+      
+      <!-- Excerpt (2 líneas) -->
+      <div class="skeleton-text"></div>
+      <div class="skeleton-text skeleton-text-short"></div>
+      
+      <!-- Metadatos -->
+      <div class="skeleton-metadata">
+        <div class="skeleton-meta-item"></div>
+        <div class="skeleton-meta-item"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skeleton para artículo completo -->
+<div *ngIf="type === 'article'" class="skeleton-article">
+  <!-- Hero banner skeleton -->
+  <div *ngIf="hasImage" class="skeleton-hero"></div>
+  
+  <!-- Contenido del artículo -->
+  <div class="skeleton-article-content">
+    <!-- Título principal -->
+    <div class="skeleton-article-title"></div>
+    
+    <!-- Párrafos -->
+    <div class="skeleton-paragraph">
+      <div class="skeleton-text"></div>
+      <div class="skeleton-text"></div>
+      <div class="skeleton-text skeleton-text-short"></div>
+    </div>
+    
+    <!-- Subtítulo -->
+    <div class="skeleton-subtitle"></div>
+    
+    <!-- Más párrafos -->
+    <div class="skeleton-paragraph">
+      <div class="skeleton-text"></div>
+      <div class="skeleton-text skeleton-text-short"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Skeleton para lista simple -->
+<div *ngIf="type === 'list'" class="skeleton-list">
+  <div *ngFor="let _ of skeletonArray; trackBy: trackByIndex" class="skeleton-list-item">
+    <div class="skeleton-list-content">
+      <div class="skeleton-list-title"></div>
+      <div class="skeleton-list-subtitle"></div>
+    </div>
+  </div>
+</div>

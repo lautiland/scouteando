@@ -1,15 +1,25 @@
-<!-- Hero Image Banner - Fuera del contenedor para máximo ancho -->
-<div *ngIf="article?.imageUrl" class="hero-banner">
-  <img 
-    [src]="article?.imageUrl" 
-    [alt]="article?.title" 
-    class="hero-image"
-  >
-  <div class="hero-overlay"></div>
-</div>
+<!-- Skeleton loader mientras carga -->
+<ng-container *ngIf="isLoading">
+  <app-skeleton-loader 
+    type="article"
+    [hasImage]="true"
+  ></app-skeleton-loader>
+</ng-container>
 
-<section class="container">
-  <div class="row justify-content-center">
+<!-- Contenido del artículo cuando está cargado -->
+<ng-container *ngIf="!isLoading">
+  <!-- Hero Image Banner - Fuera del contenedor para máximo ancho -->
+  <div *ngIf="article?.imageUrl" class="hero-banner">
+    <img 
+      [src]="article?.imageUrl" 
+      [alt]="article?.title" 
+      class="hero-image"
+    >
+    <div class="hero-overlay"></div>
+  </div>
+
+  <section class="container">
+    <div class="row justify-content-center">
       <div class="col-12">        
         <article class="p-4 shadow-lg" [class.no-hero-image]="!article?.imageUrl">
           <button 
@@ -38,5 +48,6 @@
           </div>
         </article>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
+</ng-container>

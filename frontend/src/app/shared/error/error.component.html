@@ -1,0 +1,14 @@
+<div class="error-container">
+  <app-starry-background [backgroundColor]="'black'"></app-starry-background>
+  <div class="error-content">
+    <img *ngIf="errorImage" [src]="errorImage" alt="Error Illustration" class="error-image">
+    <div class="error-code">{{ errorCode }}</div>
+    <h1 class="error-title">{{ errorTitle }}</h1>
+    <p class="error-message">{{ errorMessage }}</p>
+    <div class="error-actions">
+      <button class="return-button" (click)="goHome()">
+        Volver al campa
+      </button>
+    </div>
+  </div>
+</div>
