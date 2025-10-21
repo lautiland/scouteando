@@ -1,379 +1,58 @@
-/* Estilos específicos del componente Article */
-
-/* Hero Banner con imagen de fondo */
-.hero-banner {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Aumentado de 300px a 400px */
-  margin-bottom: -120px; /* Aumentado de -80px a -120px para más superposición */
-  overflow: hidden;
-  border-radius: 0;
+:root{--a-purple:#460871;--a-text:#535353;--a-gap:2rem;--a-rad:12px;--a-f-text:"Eczar",serif;--a-f-title:"Langar",cursive;--a-trans:.3s ease;--a-shadow:0 4px 12px #0002}
+.hero-banner{position:relative;width:100%;height:400px;margin-bottom:-120px;overflow:hidden}
+.hero-image{width:100%;height:100%;object-fit:cover;filter:blur(2px);transform:scale(1.05);transition:var(--a-trans)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,#0005,var(--a-purple)33,#0006);pointer-events:none}
+.hero-banner:hover .hero-image{filter:blur(1px);transform:scale(1.08)}
+.article-hero-image{text-align:center;max-width:100%;overflow:hidden}
+.article-hero-image img{max-width:100%;height:auto;max-height:400px;object-fit:cover;border-radius:var(--a-rad);box-shadow:var(--a-shadow);transition:var(--a-trans)}
+.article-hero-image img:hover{transform:scale(1.02)}
+.btn-aux{font:.875rem var(--a-f-text);background:0 0;color:#000;padding:.5rem 1rem;border-radius:5px;text-decoration:none;display:inline-block;cursor:pointer;transition:var(--a-trans);transform:translateY(0)}
+.btn-aux:hover{border:1px solid var(--a-purple);transform:translateY(-2px);box-shadow:0 4px 12px var(--a-purple)4d}
+.article-title{text-align:left!important;font-size:2.5rem!important;padding-top:1rem!important;margin-left:var(--a-gap)}
+.article-content{padding:0 var(--a-gap) var(--a-gap);font-size:1rem}
+.article-content h1,.article-content h2,.article-content h3,.article-content h4,.article-content h5,.article-content h6{font:inherit var(--a-f-title);color:#000;margin:2rem 0 1rem}
+.article-content h3{font-size:1.8rem}
+.article-content h4{font-size:1.5rem}
+.article-content h5{font-size:1.3rem}
+.article-content h6{font-size:1.1rem}
+.article-content p{font:1rem var(--a-f-text);color:var(--a-text);margin:.5rem 0}
+.article-content a{color:var(--a-purple);text-decoration:none;border-bottom:1px solid;transition:.2s}
+.article-content a:hover{color:#5d1f89;border-color:transparent}
+::ng-deep .article-content ul,::ng-deep .article-content ol{margin:1.5rem 0;padding:0;list-style:none}
+::ng-deep .article-content ol{counter-reset:c}
+::ng-deep .article-content ul li,::ng-deep .article-content ol li{font:1rem var(--a-f-text);color:var(--a-text);margin:.8rem 0;padding-left:2.5rem;position:relative;line-height:1.6}
+::ng-deep .article-content ol li{counter-increment:c}
+::ng-deep .article-content ul li::before{content:"⚜️";position:absolute;left:.5rem;top:0;font-size:1.1rem}
+::ng-deep .article-content ol li::before{content:counter(c) ".";position:absolute;left:.5rem;top:0;font-weight:700;color:var(--a-purple);font:1.1rem var(--a-f-title);min-width:1.5rem;text-align:left}
+::ng-deep .article-content blockquote{background:#0000000d;padding:1rem;margin:1rem 0;border-left:4px solid var(--a-purple);font:italic .95rem var(--a-f-text);border-radius:4px;box-shadow:0 1px 3px #0001}
+::ng-deep .article-content blockquote p{margin:0;font-style:italic;color:#555}
+::ng-deep .article-content code{background:#f4f4f4;padding:.2rem .4rem;border-radius:3px;font:.875rem Courier New,monospace}
+::ng-deep .article-content pre{background:#f4f4f4;padding:1rem;border-radius:5px;overflow-x:auto;margin:1rem 0}
+.article-metadata{border-top:1px solid #e0e0e0;padding-top:1rem;font-size:.9rem;color:#777}
+article{min-height:65vh;position:relative;z-index:10;background:#fff;border-radius:var(--a-rad) var(--a-rad) 0 0}
+article.no-hero-image{margin-top:var(--a-gap);border-radius:var(--a-rad)}
+.container{position:relative;z-index:5}
+@media (max-width:767px){
+.article-title{margin:0;font-size:1.8rem!important}
+.article-content,.article-content p,::ng-deep .article-content ul li,::ng-deep .article-content ol li{padding:0;font-size:.9rem}
+::ng-deep .article-content ul li,::ng-deep .article-content ol li{padding-left:2rem;margin:.6rem 0}
+::ng-deep .article-content ol li{padding-left:2.5rem}
+::ng-deep .article-content ul li::before,::ng-deep .article-content ol li::before{left:.3rem;font-size:1rem;min-width:1.2rem}
 }
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(2px);
-  transform: scale(1.05); /* Para compensar el blur y evitar bordes */
-  transition: all 0.3s ease;
+@media (max-width:768px){
+.hero-banner{height:250px;margin-bottom:-90px}
+.hero-image{filter:blur(1.5px)}
+article{border-radius:8px 8px 0 0}
+article.no-hero-image{margin-top:1.5rem;border-radius:8px}
+.article-hero-image img{max-height:250px;border-radius:6px}
 }
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(70, 8, 113, 0.2) 50%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-  pointer-events: none;
-}
-
-/* Efectos hover para el hero banner */
-.hero-banner:hover .hero-image {
-  filter: blur(1px);
-  transform: scale(1.08);
-}
-
-/* Estilos antiguos de la imagen destacada - los mantenemos por si acaso */
-.article-hero-image {
-  text-align: center;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.article-hero-image img {
-  max-width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.article-hero-image img:hover {
-  transform: scale(1.02);
-}
-
-/* Botón auxiliar */
-.btn-aux {
-  font-family: 'Eczar';
-  font-size: 0.875rem; /* Reducido de 1.2rem a 0.875rem */
-  background-color: transparent;
-  color: black;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  transform: translateY(0);
-}
-
-.btn-aux:hover {
-  border: 1px solid #460871;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(70, 8, 113, 0.3);
-}
-
-/* Título del artículo - override del h2 global */
-.article-title {
-  text-align: left !important;
-  font-size: 2.5rem !important; /* Reducido de 4.2rem a 2.5rem */
-  padding-top: 1rem !important;
-  margin-left: 2rem;
-}
-
-@media screen and (max-width: 767px) {
-  .article-title {
-    margin-left: 0;
-    font-size: 1.8rem !important; /* Reducido de 2.5rem a 1.8rem */
-  }
-}
-
-/* Contenido del artículo */
-.article-content {
-  padding: 0 2rem 2rem 2rem;
-  font-size: 1rem; /* Reducido de 1.4rem a 1rem (16px estándar) */
-}
-
-@media screen and (max-width: 767px) {
-  .article-content {
-    padding: 0;
-    font-size: 0.9rem; /* Reducido de 1rem a 0.9rem */
-  }
-}
-
-.article-content h1,
-.article-content h2,
-.article-content h3,
-.article-content h4,
-.article-content h5,
-.article-content h6 {
-  font-family: 'Langar', cursive;
-  color: black;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-/* Ahora los headers se mapean así: h1→h3, h2→h4, etc. */
-.article-content h3 { font-size: 1.8rem; } /* Era h1 en markdown */
-.article-content h4 { font-size: 1.5rem; } /* Era h2 en markdown */
-.article-content h5 { font-size: 1.3rem; } /* Era h3 en markdown */
-.article-content h6 { font-size: 1.1rem; } /* Era h4 en markdown */
-
-/* Los h1 y h2 originales del contenido ahora son h3 y h4, no necesitan override especial */
-
-.article-content p {
-  font-family: 'Eczar', serif;
-  font-size: 1rem; /* Reducido de 1.4rem a 1rem */
-  color: #535353;
-  margin-bottom: 0.5rem;
-  padding: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .article-content p {
-    font-size: 0.9rem; /* Reducido de 1rem a 0.9rem */
-  }
-}
-
-/* Estilos mejorados para listas */
-::ng-deep .article-content ul {
-  margin: 1.5rem 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-::ng-deep .article-content ol {
-  margin: 1.5rem 0;
-  padding-left: 0;
-  list-style: none;
-  counter-reset: custom-counter;
-}
-
-::ng-deep .article-content ul li {
-  font-family: 'Eczar', serif;
-  font-size: 1rem;
-  color: #535353;
-  margin-bottom: 0.8rem;
-  padding-left: 2.5rem;
-  position: relative;
-  line-height: 1.6;
-}
-
-::ng-deep .article-content ol li {
-  font-family: 'Eczar', serif;
-  font-size: 1rem;
-  color: #535353;
-  margin-bottom: 0.8rem;
-  padding-left: 2.5rem;
-  position: relative;
-  line-height: 1.6;
-  counter-increment: custom-counter;
-}
-
-/* Bullet personalizado para listas no numeradas */
-::ng-deep .article-content ul li::before {
-  content: "⚜️";
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  font-size: 1.1rem;
-}
-
-/* Numeración personalizada para listas numeradas */
-::ng-deep .article-content ol li::before {
-  content: counter(custom-counter) ".";
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  font-weight: bold;
-  color: #460871;
-  font-size: 1.1rem;
-  min-width: 1.5rem;
-  text-align: left;
-  font-family: 'Langar', cursive;
-}
-
-/* Ajustes responsivos para listas */
-@media screen and (max-width: 767px) {
-  ::ng-deep .article-content ul li,
-  ::ng-deep .article-content ol li {
-    font-size: 0.9rem;
-    padding-left: 2rem;
-    margin-bottom: 0.6rem;
-  }
-  
-  ::ng-deep .article-content ol li {
-    padding-left: 2.5rem;
-  }
-  
-  ::ng-deep .article-content ul li::before {
-    left: 0.3rem;
-    font-size: 1rem;
-  }
-  
-  ::ng-deep .article-content ol li::before {
-    left: 0.3rem;
-    font-size: 1rem;
-    min-width: 1.2rem;
-  }
-}
-
-
-
-/* Estilos para elementos de markdown en contenido dinámico */
-::ng-deep .article-content blockquote {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 1rem;
-  margin: 1rem 0;
-  border-left: 4px solid #460871;
-  font-style: italic;
-  font-size: 0.95rem;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-::ng-deep .article-content blockquote p {
-  margin: 0;
-  padding: 0;
-  font-style: italic;
-  color: #555;
-}
-
-::ng-deep .article-content code {
-  background-color: #f4f4f4;
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-family: 'Courier New', monospace;
-  font-size: 0.875rem;
-}
-
-::ng-deep .article-content pre {
-  background-color: #f4f4f4;
-  padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-.article-content a {
-  text-decoration: none;
-  color: #460871;
-  border-bottom: 1px solid currentColor;
-  transition: all 0.2s;
-}
-
-.article-content a:hover {
-  color: #5D1F89;
-  border-bottom-color: transparent;
-}
-
-/* Metadatos del artículo */
-.article-metadata {
-  border-top: 1px solid #e0e0e0;
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: #777;
-}
-
-/* Override del article global para este componente */
-article {
-  min-height: 65vh;
-  position: relative;
-  z-index: 10; /* Para asegurar que esté por encima del hero banner */
-  background: white;
-  border-radius: 12px 12px 0 0; /* Esquinas redondeadas en la parte superior */
-  margin-top: 0;
-}
-
-/* Estilo para artículos sin imagen hero */
-article.no-hero-image {
-  margin-top: 2rem; /* Margen superior cuando no hay imagen */
-  border-radius: 12px; /* Esquinas redondeadas completas */
-}
-
-/* Contenedor principal con z-index */
-.container {
-  position: relative;
-  z-index: 5;
-}
-
-/* Responsive para el hero banner */
-@media screen and (max-width: 768px) {
-  .hero-banner {
-    height: 250px; /* Aumentado de 200px a 280px */
-    margin-bottom: -90px; /* Aumentado de -60px a -90px para más superposición */
-  }
-  
-  .hero-image {
-    filter: blur(1.5px);
-  }
-  
-  article {
-    border-radius: 8px 8px 0 0;
-  }
-  
-  /* Artículos sin imagen en tablet */
-  article.no-hero-image {
-    margin-top: 1.5rem;
-    border-radius: 8px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-banner {
-    height: 220px; /* Aumentado de 150px a 220px */
-    margin-bottom: -60px; /* Aumentado de -40px a -60px para más superposición */
-  }
-  
-  .hero-image {
-    filter: blur(1px);
-  }
-  
-  .hero-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(70, 8, 113, 0.3) 50%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-  }
-  
-  article {
-    border-radius: 6px 6px 0 0;
-  }
-  
-  /* Artículos sin imagen en móvil */
-  article.no-hero-image {
-    margin-top: 1rem;
-    border-radius: 6px;
-  }
-}
-
-/* Responsive para la imagen destacada (mantenido por compatibilidad) */
-@media screen and (max-width: 768px) {
-  .article-hero-image img {
-    max-height: 250px;
-    border-radius: 6px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .article-hero-image {
-    margin: 1rem 0;
-  }
-  
-  .article-hero-image img {
-    max-height: 200px;
-    border-radius: 4px;
-  }
+@media (max-width:480px){
+.hero-banner{height:220px;margin-bottom:-60px}
+.hero-image{filter:blur(1px)}
+.hero-overlay{background:linear-gradient(135deg,#0006,var(--a-purple)4d,#0008)}
+article{border-radius:6px 6px 0 0}
+article.no-hero-image{margin-top:1rem;border-radius:6px}
+.article-hero-image{margin:1rem 0}
+.article-hero-image img{max-height:200px;border-radius:4px}
 }
 

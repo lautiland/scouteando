@@ -25,12 +25,7 @@ footer {
         background-image: 
             radial-gradient(1.4px 1.4px at 23px 37px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
             radial-gradient(1.2px 1.2px at 163px 82px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-            radial-gradient(1.3px 1.3px at 93px 35px, rgba(255,255,255,0.75), rgba(0,0,0,0)),
-            radial-gradient(1.1px 1.1px at 187px 25px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-            radial-gradient(1.5px 1.5px at 85px 93px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-            radial-gradient(1.2px 1.2px at 234px 57px, rgba(255,255,255,0.75), rgba(0,0,0,0)),
-            radial-gradient(1.3px 1.3px at 312px 78px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-            radial-gradient(1.4px 1.4px at 178px 112px, rgba(255,255,255,0.75), rgba(0,0,0,0));
+            radial-gradient(1.3px 1.3px at 93px 35px, rgba(255,255,255,0.75), rgba(0,0,0,0));
         animation: twinkle-1 22s ease-in-out infinite;
     }
 
@@ -38,12 +33,7 @@ footer {
         background-image: 
             radial-gradient(1px 1px at 57px 52px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
             radial-gradient(0.8px 0.8px at 203px 73px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-            radial-gradient(0.9px 0.9px at 113px 27px, rgba(255,255,255,0.65), rgba(0,0,0,0)),
-            radial-gradient(1.1px 1.1px at 33px 89px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-            radial-gradient(0.7px 0.7px at 167px 95px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-            radial-gradient(0.9px 0.9px at 278px 42px, rgba(255,255,255,0.65), rgba(0,0,0,0)),
-            radial-gradient(0.8px 0.8px at 345px 63px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-            radial-gradient(1px 1px at 223px 103px, rgba(255,255,255,0.65), rgba(0,0,0,0));
+            radial-gradient(0.9px 0.9px at 113px 27px, rgba(255,255,255,0.65), rgba(0,0,0,0));
         animation: twinkle-2 25s ease-in-out infinite 5.5s;
     }
 
@@ -51,12 +41,7 @@ footer {
         background-image: 
             radial-gradient(0.6px 0.6px at 143px 73px, rgba(255,255,255,0.5), rgba(0,0,0,0)),
             radial-gradient(0.4px 0.4px at 83px 18px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.5px 0.5px at 128px 58px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-            radial-gradient(0.3px 0.3px at 195px 45px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.5px 0.5px at 45px 95px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-            radial-gradient(0.4px 0.4px at 256px 67px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.5px 0.5px at 289px 83px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-            radial-gradient(0.3px 0.3px at 167px 123px, rgba(255,255,255,0.4), rgba(0,0,0,0));
+            radial-gradient(0.5px 0.5px at 128px 58px, rgba(255,255,255,0.45), rgba(0,0,0,0));
         animation: twinkle-3 28s ease-in-out infinite 8s;
     }
 
@@ -74,12 +59,7 @@ footer {
         background-image: 
             radial-gradient(0.5px 0.5px at 178px 43px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
             radial-gradient(0.3px 0.3px at 267px 92px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-            radial-gradient(0.4px 0.4px at 156px 87px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.2px 0.2px at 89px 65px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-            radial-gradient(0.4px 0.4px at 223px 34px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.3px 0.3px at 145px 108px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-            radial-gradient(0.4px 0.4px at 312px 56px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-            radial-gradient(0.2px 0.2px at 198px 78px, rgba(255,255,255,0.35), rgba(0,0,0,0));
+            radial-gradient(0.4px 0.4px at 156px 87px, rgba(255,255,255,0.4), rgba(0,0,0,0));
         animation: twinkle-4 30s ease-in-out infinite 12s;
     }
 

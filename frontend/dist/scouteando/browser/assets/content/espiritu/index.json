@@ -3,13 +3,11 @@
     {
       "id": "promesa-scout",
       "title": "La Promesa Scout",
-      "slug": "promesa-scout",
       "file": "promesa-scout.md"
     },
     {
       "id": "ley-scout",
       "title": "La Ley Scout",
-      "slug": "ley-scout", 
       "file": "ley-scout.md"
     }
   ]

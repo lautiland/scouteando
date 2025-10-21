@@ -1,44 +1,64 @@
-/* Animación base del skeleton */
+:root {
+  --skeleton-bg: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  --skeleton-anim: shimmer 1.5s infinite ease-in-out;
+  --skeleton-size: 200px 100%;
+  --skeleton-radius: 4px;
+  --skeleton-shadow: 0 4px 12px #0001;
+  --skeleton-spacing: 2rem;
+  --skeleton-shine: linear-gradient(90deg, transparent, #4608711a, transparent);
+}
+
 @keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
+  0% { background-position: -200px 0 }
+  100% { background-position: calc(200px + 100%) 0 }
 }
 
-.skeleton-base {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
+@keyframes pulse {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.8 }
 }
 
-/* Grid de cards skeleton */
+@keyframes scout-shine {
+  from { left: -100% }
+  to { left: 100% }
+}
+
 .skeleton-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
+  gap: var(--skeleton-spacing);
+  padding: var(--skeleton-spacing) 0;
 }
 
-/* Card skeleton individual */
 .skeleton-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--skeleton-shadow);
   position: relative;
   animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  background: var(--skeleton-shine);
+  animation: scout-shine 2s infinite;
+  pointer-events: none;
+}
+
+[class*="skeleton-"]:not(.skeleton-grid,.skeleton-card,.skeleton-content,.skeleton-article,.skeleton-list,.skeleton-list-item,.skeleton-list-content,.skeleton-paragraph,.skeleton-metadata) {
+  background: var(--skeleton-bg);
+  background-size: var(--skeleton-size);
+  animation: var(--skeleton-anim);
+  border-radius: var(--skeleton-radius);
 }
 
 .skeleton-image {
   width: 100%;
   height: 200px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
   border-radius: 0;
 }
 
@@ -48,20 +68,12 @@
 
 .skeleton-title {
   height: 1.5rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
   margin-bottom: 1rem;
   width: 80%;
 }
 
 .skeleton-text {
   height: 1rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
   margin-bottom: 0.5rem;
   width: 100%;
 }
@@ -79,13 +91,8 @@
 .skeleton-meta-item {
   height: 0.8rem;
   width: 80px;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
 }
 
-/* Skeleton para artículo completo */
 .skeleton-article {
   width: 100%;
 }
@@ -93,48 +100,36 @@
 .skeleton-hero {
   height: 400px;
   width: 100%;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
   border-radius: 0;
-  margin-bottom: 2rem;
+  margin-bottom: var(--skeleton-spacing);
 }
 
 .skeleton-article-content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--skeleton-spacing);
 }
 
 .skeleton-article-title {
   height: 3rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
-  margin-bottom: 2rem;
+  margin-bottom: var(--skeleton-spacing);
   width: 70%;
 }
 
 .skeleton-subtitle {
   height: 2rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
-  margin: 2rem 0 1rem 0;
+  margin: var(--skeleton-spacing) 0 1rem;
   width: 50%;
 }
 
 .skeleton-paragraph {
-  margin-bottom: 2rem;
+  margin-bottom: var(--skeleton-spacing);
 }
 
 .skeleton-paragraph .skeleton-text {
   margin-bottom: 0.8rem;
 }
 
-/* Skeleton para lista simple */
 .skeleton-list {
   display: flex;
   flex-direction: column;
@@ -147,7 +142,7 @@
   padding: 1rem;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px #0001;
 }
 
 .skeleton-list-content {
@@ -156,61 +151,15 @@
 
 .skeleton-list-title {
   height: 1.2rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
   margin-bottom: 0.5rem;
   width: 60%;
 }
 
 .skeleton-list-subtitle {
   height: 1rem;
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite ease-in-out;
-  border-radius: 4px;
   width: 40%;
 }
 
-/* Animación de pulse para todo el componente */
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-}
-
-/* Efectos especiales scout */
-.skeleton-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(70, 8, 113, 0.1),
-    transparent
-  );
-  animation: scout-shine 2s infinite;
-  pointer-events: none;
-}
-
-@keyframes scout-shine {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-/* Responsive */
 @media screen and (max-width: 768px) {
   .skeleton-grid {
     grid-template-columns: 1fr;
@@ -218,16 +167,13 @@
     padding: 1rem 0;
   }
   
-  .skeleton-content {
-    padding: 1rem;
+  .skeleton-content,
+  .skeleton-article-content {
+    padding: 0 1rem;
   }
   
   .skeleton-hero {
     height: 250px;
-  }
-  
-  .skeleton-article-content {
-    padding: 0 1rem;
   }
   
   .skeleton-article-title {

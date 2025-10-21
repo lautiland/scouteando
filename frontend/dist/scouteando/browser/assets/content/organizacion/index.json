@@ -1,0 +1,15 @@
+{
+  "articles": [
+    {
+      "id": "sistema-patrullas",
+      "title": "El Sistema de Patrullas",
+      "file": "sistema-patrullas.md"
+    },
+    {
+      "id": "scouts-de-argentina",
+      "title": "Scouts de Argentina",
+      "file": "scouts-de-argentina.md",
+      "imageUrl": "/assets/images/bandera-saac.jpg"
+    }
+  ]
+}

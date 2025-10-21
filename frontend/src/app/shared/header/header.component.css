@@ -1,6 +1,12 @@
-@import '../styles/starry-background.css';
-
 header {
+  --star-color: 255, 255, 255;
+  --star-layer-1: radial-gradient(1.4px 1.4px at 23px 37px, rgba(var(--star-color),0.8), transparent),
+                  radial-gradient(1.2px 1.2px at 163px 82px, rgba(var(--star-color),0.7), transparent);
+  --star-layer-2: radial-gradient(1px 1px at 57px 52px, rgba(var(--star-color),0.7), transparent),
+                  radial-gradient(0.8px 0.8px at 203px 73px, rgba(var(--star-color),0.6), transparent);
+  --star-layer-3: radial-gradient(0.6px 0.6px at 143px 73px, rgba(var(--star-color),0.5), transparent),
+                  radial-gradient(0.4px 0.4px at 83px 18px, rgba(var(--star-color),0.4), transparent);
+  
   background-color: #000000;
   position: relative;
   z-index: 1;
@@ -18,46 +24,21 @@ header {
     z-index: -1;
     background-repeat: repeat;
     background-size: 300px 150px;
-    will-change: transform, opacity;
   }
 
   &::before {
-    background-image: 
-      radial-gradient(1.4px 1.4px at 23px 37px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 163px 82px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-      radial-gradient(1.3px 1.3px at 93px 35px, rgba(255,255,255,0.75), rgba(0,0,0,0)),
-      radial-gradient(1.1px 1.1px at 187px 25px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-      radial-gradient(1.5px 1.5px at 85px 93px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-      radial-gradient(1.2px 1.2px at 234px 57px, rgba(255,255,255,0.75), rgba(0,0,0,0)),
-      radial-gradient(1.3px 1.3px at 312px 78px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-      radial-gradient(1.4px 1.4px at 178px 112px, rgba(255,255,255,0.75), rgba(0,0,0,0));
-    animation: twinkle-1 22s ease-in-out infinite;
+    background-image: var(--star-layer-1);
+    opacity: 0.9;
   }
 
   &::after {
-    background-image: 
-      radial-gradient(1px 1px at 57px 52px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-      radial-gradient(0.8px 0.8px at 203px 73px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-      radial-gradient(0.9px 0.9px at 113px 27px, rgba(255,255,255,0.65), rgba(0,0,0,0)),
-      radial-gradient(1.1px 1.1px at 33px 89px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-      radial-gradient(0.7px 0.7px at 167px 95px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-      radial-gradient(0.9px 0.9px at 278px 42px, rgba(255,255,255,0.65), rgba(0,0,0,0)),
-      radial-gradient(0.8px 0.8px at 345px 63px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-      radial-gradient(1px 1px at 223px 103px, rgba(255,255,255,0.65), rgba(0,0,0,0));
-    animation: twinkle-2 25s ease-in-out infinite 5.5s;
+    background-image: var(--star-layer-2);
+    opacity: 0.8;
   }
 
   .stars-layer-1 {
-    background-image: 
-      radial-gradient(0.6px 0.6px at 143px 73px, rgba(255,255,255,0.5), rgba(0,0,0,0)),
-      radial-gradient(0.4px 0.4px at 83px 18px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.5px 0.5px at 128px 58px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-      radial-gradient(0.3px 0.3px at 195px 45px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.5px 0.5px at 45px 95px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-      radial-gradient(0.4px 0.4px at 256px 67px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.5px 0.5px at 289px 83px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-      radial-gradient(0.3px 0.3px at 167px 123px, rgba(255,255,255,0.4), rgba(0,0,0,0));
-    animation: twinkle-3 28s ease-in-out infinite 8s;
+    background-image: var(--star-layer-3);
+    opacity: 0.7;
   }
 
   .stars-layer-2 {
@@ -70,17 +51,8 @@ header {
     z-index: -1;
     background-repeat: repeat;
     background-size: 300px 150px;
-    will-change: transform, opacity;
-    background-image: 
-      radial-gradient(0.5px 0.5px at 178px 43px, rgba(255,255,255,0.45), rgba(0,0,0,0)),
-      radial-gradient(0.3px 0.3px at 267px 92px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-      radial-gradient(0.4px 0.4px at 156px 87px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.2px 0.2px at 89px 65px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-      radial-gradient(0.4px 0.4px at 223px 34px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.3px 0.3px at 145px 108px, rgba(255,255,255,0.35), rgba(0,0,0,0)),
-      radial-gradient(0.4px 0.4px at 312px 56px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-      radial-gradient(0.2px 0.2px at 198px 78px, rgba(255,255,255,0.35), rgba(0,0,0,0));
-    animation: twinkle-4 30s ease-in-out infinite 12s;
+    background-image: var(--star-layer-1);
+    opacity: 0.6;
   }
 
   .disabled-link {
@@ -216,65 +188,7 @@ header {
     padding-bottom: 1.25rem; /* Reducido de 2rem a 1.25rem */ }
 }
 
-@keyframes twinkle-1 {
-  0%, 100% { 
-    opacity: 0.8;
-    transform: translateX(0);
-  }
-  30% { 
-    opacity: 0.3;
-    transform: translateX(-10px);
-  }
-  70% {
-    opacity: 0.2;
-    transform: translateX(-15px);
-  }
-}
 
-@keyframes twinkle-2 {
-  0%, 100% { 
-    opacity: 0.7;
-    transform: translateX(0) translateY(0);
-  }
-  45% { 
-    opacity: 0.2;
-    transform: translateX(8px) translateY(-3px);
-  }
-  65% {
-    opacity: 0.15;
-    transform: translateX(10px) translateY(-5px);
-  }
-}
-
-@keyframes twinkle-3 {
-  0%, 100% { 
-    opacity: 0.6;
-    transform: translateY(0);
-  }
-  25% {
-    opacity: 0.2;
-    transform: translateY(4px);
-  }
-  75% {
-    opacity: 0.1;
-    transform: translateY(8px);
-  }
-}
-
-@keyframes twinkle-4 {
-  0%, 100% { 
-    opacity: 0.5;
-    transform: translateX(0) translateY(0);
-  }
-  35% {
-    opacity: 0.15;
-    transform: translateX(-5px) translateY(3px);
-  }
-  85% {
-    opacity: 0.1;
-    transform: translateX(-8px) translateY(5px);
-  }
-}
 
 /* Media query para resoluciones muy pequeñas (menos de 380px) */
 @media screen and (max-width: 380px) {
