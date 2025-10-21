@@ -1,3 +1,5 @@
+@import '../styles/starry-background.css';
+
 header {
   background-color: #000000;
   position: relative;
@@ -79,9 +81,6 @@ header {
       radial-gradient(0.4px 0.4px at 312px 56px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
       radial-gradient(0.2px 0.2px at 198px 78px, rgba(255,255,255,0.35), rgba(0,0,0,0));
     animation: twinkle-4 30s ease-in-out infinite 12s;
-    animation: twinkle-2 4s ease-in-out infinite 2s;
-    animation: stars-animation 80s linear infinite;
-    transform: rotate(30deg);
   }
 
   .disabled-link {
